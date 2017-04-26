@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BB53B8B1EB09AD600D8E5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B8A1EB09AD600D8E5B5 /* main.m */; };
+		2BB53B8E1EB09AD600D8E5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B8D1EB09AD600D8E5B5 /* AppDelegate.m */; };
+		2BB53B911EB09AD600D8E5B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B901EB09AD600D8E5B5 /* ViewController.m */; };
+		2BB53B941EB09AD600D8E5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB53B921EB09AD600D8E5B5 /* Main.storyboard */; };
+		2BB53B961EB09AD600D8E5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB53B951EB09AD600D8E5B5 /* Assets.xcassets */; };
+		2BB53B991EB09AD600D8E5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB53B971EB09AD600D8E5B5 /* LaunchScreen.storyboard */; };
+		2BB53BA41EB09AD700D8E5B5 /* PrismDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BA31EB09AD700D8E5B5 /* PrismDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BB53BA01EB09AD700D8E5B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BB53B7E1EB09AD600D8E5B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BB53B851EB09AD600D8E5B5;
+			remoteInfo = PrismDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BB53B861EB09AD600D8E5B5 /* PrismDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrismDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB53B8A1EB09AD600D8E5B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BB53B8C1EB09AD600D8E5B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BB53B8D1EB09AD600D8E5B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BB53B8F1EB09AD600D8E5B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2BB53B901EB09AD600D8E5B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BB53B931EB09AD600D8E5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BB53B951EB09AD600D8E5B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BB53B981EB09AD600D8E5B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BB53B9A1EB09AD600D8E5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB53B9F1EB09AD700D8E5B5 /* PrismDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrismDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB53BA31EB09AD700D8E5B5 /* PrismDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrismDemoTests.m; sourceTree = "<group>"; };
+		2BB53BA51EB09AD700D8E5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BB53B831EB09AD600D8E5B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB53B9C1EB09AD700D8E5B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BB53B7D1EB09AD600D8E5B5 = {
+			isa = PBXGroup;
+			children = (
+				2BB53B881EB09AD600D8E5B5 /* PrismDemo */,
+				2BB53BA21EB09AD700D8E5B5 /* PrismDemoTests */,
+				2BB53B871EB09AD600D8E5B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BB53B871EB09AD600D8E5B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53B861EB09AD600D8E5B5 /* PrismDemo.app */,
+				2BB53B9F1EB09AD700D8E5B5 /* PrismDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BB53B881EB09AD600D8E5B5 /* PrismDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53B8C1EB09AD600D8E5B5 /* AppDelegate.h */,
+				2BB53B8D1EB09AD600D8E5B5 /* AppDelegate.m */,
+				2BB53B8F1EB09AD600D8E5B5 /* ViewController.h */,
+				2BB53B901EB09AD600D8E5B5 /* ViewController.m */,
+				2BB53B921EB09AD600D8E5B5 /* Main.storyboard */,
+				2BB53B951EB09AD600D8E5B5 /* Assets.xcassets */,
+				2BB53B971EB09AD600D8E5B5 /* LaunchScreen.storyboard */,
+				2BB53B9A1EB09AD600D8E5B5 /* Info.plist */,
+				2BB53B891EB09AD600D8E5B5 /* Supporting Files */,
+			);
+			path = PrismDemo;
+			sourceTree = "<group>";
+		};
+		2BB53B891EB09AD600D8E5B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53B8A1EB09AD600D8E5B5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BB53BA21EB09AD700D8E5B5 /* PrismDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53BA31EB09AD700D8E5B5 /* PrismDemoTests.m */,
+				2BB53BA51EB09AD700D8E5B5 /* Info.plist */,
+			);
+			path = PrismDemoTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BB53B851EB09AD600D8E5B5 /* PrismDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB53BA81EB09AD700D8E5B5 /* Build configuration list for PBXNativeTarget "PrismDemo" */;
+			buildPhases = (
+				2BB53B821EB09AD600D8E5B5 /* Sources */,
+				2BB53B831EB09AD600D8E5B5 /* Frameworks */,
+				2BB53B841EB09AD600D8E5B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrismDemo;
+			productName = PrismDemo;
+			productReference = 2BB53B861EB09AD600D8E5B5 /* PrismDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BB53B9E1EB09AD700D8E5B5 /* PrismDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB53BAB1EB09AD700D8E5B5 /* Build configuration list for PBXNativeTarget "PrismDemoTests" */;
+			buildPhases = (
+				2BB53B9B1EB09AD700D8E5B5 /* Sources */,
+				2BB53B9C1EB09AD700D8E5B5 /* Frameworks */,
+				2BB53B9D1EB09AD700D8E5B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BB53BA11EB09AD700D8E5B5 /* PBXTargetDependency */,
+			);
+			name = PrismDemoTests;
+			productName = PrismDemoTests;
+			productReference = 2BB53B9F1EB09AD700D8E5B5 /* PrismDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BB53B7E1EB09AD600D8E5B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tany;
+				TargetAttributes = {
+					2BB53B851EB09AD600D8E5B5 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = ZW52Q3KXX4;
+						ProvisioningStyle = Automatic;
+					};
+					2BB53B9E1EB09AD700D8E5B5 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = ZW52Q3KXX4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BB53B851EB09AD600D8E5B5;
+					};
+				};
+			};
+			buildConfigurationList = 2BB53B811EB09AD600D8E5B5 /* Build configuration list for PBXProject "PrismDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BB53B7D1EB09AD600D8E5B5;
+			productRefGroup = 2BB53B871EB09AD600D8E5B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BB53B851EB09AD600D8E5B5 /* PrismDemo */,
+				2BB53B9E1EB09AD700D8E5B5 /* PrismDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BB53B841EB09AD600D8E5B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB53B991EB09AD600D8E5B5 /* LaunchScreen.storyboard in Resources */,
+				2BB53B961EB09AD600D8E5B5 /* Assets.xcassets in Resources */,
+				2BB53B941EB09AD600D8E5B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB53B9D1EB09AD700D8E5B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BB53B821EB09AD600D8E5B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB53B911EB09AD600D8E5B5 /* ViewController.m in Sources */,
+				2BB53B8E1EB09AD600D8E5B5 /* AppDelegate.m in Sources */,
+				2BB53B8B1EB09AD600D8E5B5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB53B9B1EB09AD700D8E5B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB53BA41EB09AD700D8E5B5 /* PrismDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BB53BA11EB09AD700D8E5B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BB53B851EB09AD600D8E5B5 /* PrismDemo */;
+			targetProxy = 2BB53BA01EB09AD700D8E5B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BB53B921EB09AD600D8E5B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BB53B931EB09AD600D8E5B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BB53B971EB09AD600D8E5B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BB53B981EB09AD600D8E5B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BB53BA61EB09AD700D8E5B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BB53BA71EB09AD700D8E5B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BB53BA91EB09AD700D8E5B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZW52Q3KXX4;
+				INFOPLIST_FILE = PrismDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tany.PrismDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2BB53BAA1EB09AD700D8E5B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZW52Q3KXX4;
+				INFOPLIST_FILE = PrismDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tany.PrismDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2BB53BAC1EB09AD700D8E5B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZW52Q3KXX4;
+				INFOPLIST_FILE = PrismDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tany.PrismDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrismDemo.app/PrismDemo";
+			};
+			name = Debug;
+		};
+		2BB53BAD1EB09AD700D8E5B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZW52Q3KXX4;
+				INFOPLIST_FILE = PrismDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tany.PrismDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrismDemo.app/PrismDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BB53B811EB09AD600D8E5B5 /* Build configuration list for PBXProject "PrismDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB53BA61EB09AD700D8E5B5 /* Debug */,
+				2BB53BA71EB09AD700D8E5B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BB53BA81EB09AD700D8E5B5 /* Build configuration list for PBXNativeTarget "PrismDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB53BA91EB09AD700D8E5B5 /* Debug */,
+				2BB53BAA1EB09AD700D8E5B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2BB53BAB1EB09AD700D8E5B5 /* Build configuration list for PBXNativeTarget "PrismDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB53BAC1EB09AD700D8E5B5 /* Debug */,
+				2BB53BAD1EB09AD700D8E5B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BB53B7E1EB09AD600D8E5B5 /* Project object */;
+}

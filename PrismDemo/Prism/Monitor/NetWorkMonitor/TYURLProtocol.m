@@ -7,7 +7,6 @@
 //
 
 #import "TYURLProtocol.h"
-#import "NSURLSessionConfiguration+TYURLProtocol.h"
 
 #define kTYURLRequestKey @"TYURLRequestKey"
 

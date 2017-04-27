@@ -8,8 +8,6 @@
 
 #import "TYCoreDataRecord.h"
 
-//static NSString * const ManagedObjectModelResourceName = @"TYCoreDataRecord";
-//static NSString * const PersistentStorePath = @"TYCoreDataRecord.sqlite";
 static NSString * const ManagedObjectModelExtension = @"momd";
 
 @interface TYCoreDataRecord ()

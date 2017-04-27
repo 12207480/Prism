@@ -9,10 +9,7 @@
 #import "TYPrismManager.h"
 #import "TYPrismView.h"
 #import "TYPrismTabBarController.h"
-#import "TYLogCoreDataRecord.h"
-#import "TYCrashCoreDataRecord.h"
-#import "TYANRCoreDataRecord.h"
-#import "TYNetworkCoreDataRecord.h"
+#import "TYPrismRecord.h"
 
 @interface TYPrismManager () <TYPrismViewDelegate>
 

@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,7 +20,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rv7-hH-KPT">
+                                <rect key="frame" x="131" y="170" width="112" height="30"/>
+                                <state key="normal" title="Exception Crash"/>
+                                <connections>
+                                    <action selector="testExceptionCrashAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5M-RW-FLn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkm-MX-uOt">
+                                <rect key="frame" x="144" y="228" width="87" height="30"/>
+                                <state key="normal" title="Signal Crash"/>
+                                <connections>
+                                    <action selector="testSignalCrashAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="asb-DW-1bx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QK1-n8-8gb">
+                                <rect key="frame" x="155" y="285" width="64" height="30"/>
+                                <state key="normal" title="Test ANR"/>
+                                <connections>
+                                    <action selector="testANR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Xx-pk-Cfe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmr-KS-CeN">
+                                <rect key="frame" x="142" y="342" width="91" height="30"/>
+                                <state key="normal" title="Test Network"/>
+                                <connections>
+                                    <action selector="testNetwork:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kzG-Yf-e1c"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tmr-KS-CeN" firstAttribute="top" secondItem="QK1-n8-8gb" secondAttribute="bottom" constant="27" id="1dZ-wZ-cbX"/>
+                            <constraint firstItem="jkm-MX-uOt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3oa-D2-m0I"/>
+                            <constraint firstItem="jkm-MX-uOt" firstAttribute="top" secondItem="rv7-hH-KPT" secondAttribute="bottom" constant="28" id="G7U-B3-Xu4"/>
+                            <constraint firstItem="tmr-KS-CeN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UKr-DW-h6V"/>
+                            <constraint firstItem="rv7-hH-KPT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="jTc-DG-EfO"/>
+                            <constraint firstItem="QK1-n8-8gb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p6n-ZT-fqd"/>
+                            <constraint firstItem="rv7-hH-KPT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wYQ-fe-GVT"/>
+                            <constraint firstItem="QK1-n8-8gb" firstAttribute="top" secondItem="jkm-MX-uOt" secondAttribute="bottom" constant="27" id="x28-vr-UlE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

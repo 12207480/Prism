@@ -14,6 +14,54 @@
 		2BB53B961EB09AD600D8E5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB53B951EB09AD600D8E5B5 /* Assets.xcassets */; };
 		2BB53B991EB09AD600D8E5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB53B971EB09AD600D8E5B5 /* LaunchScreen.storyboard */; };
 		2BB53BA41EB09AD700D8E5B5 /* PrismDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BA31EB09AD700D8E5B5 /* PrismDemoTests.m */; };
+		2BB53C341EB09D9C00D8E5B5 /* __BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BD91EB09D9C00D8E5B5 /* __BSBacktraceLogger.m */; };
+		2BB53C351EB09D9C00D8E5B5 /* TYANRLogInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BDB1EB09D9C00D8E5B5 /* TYANRLogInfo.m */; };
+		2BB53C361EB09D9C00D8E5B5 /* TYGCDANRMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BDE1EB09D9C00D8E5B5 /* TYGCDANRMonitor.m */; };
+		2BB53C371EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BE01EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m */; };
+		2BB53C381EB09D9C00D8E5B5 /* TYCrashMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BE31EB09D9C00D8E5B5 /* TYCrashMonitor.m */; };
+		2BB53C391EB09D9C00D8E5B5 /* TYASLogMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BE61EB09D9C00D8E5B5 /* TYASLogMonitor.m */; };
+		2BB53C3A1EB09D9C00D8E5B5 /* TYGCDLogMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BE81EB09D9C00D8E5B5 /* TYGCDLogMonitor.m */; };
+		2BB53C3B1EB09D9C00D8E5B5 /* TYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BEA1EB09D9C00D8E5B5 /* TYGCDTimer.m */; };
+		2BB53C3C1EB09D9C00D8E5B5 /* TYLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BEC1EB09D9C00D8E5B5 /* TYLogMessage.m */; };
+		2BB53C3D1EB09D9C00D8E5B5 /* NSURLSessionConfiguration+TYURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BF01EB09D9C00D8E5B5 /* NSURLSessionConfiguration+TYURLProtocol.m */; };
+		2BB53C3E1EB09D9C00D8E5B5 /* TYNetWorkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BF21EB09D9C00D8E5B5 /* TYNetWorkInfo.m */; };
+		2BB53C3F1EB09D9C00D8E5B5 /* TYNetWorkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BF41EB09D9C00D8E5B5 /* TYNetWorkMonitor.m */; };
+		2BB53C401EB09D9C00D8E5B5 /* TYURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BF61EB09D9C00D8E5B5 /* TYURLProtocol.m */; };
+		2BB53C411EB09D9C00D8E5B5 /* TYANRCoreDataRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BFB1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.m */; };
+		2BB53C421EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BFC1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodeld */; };
+		2BB53C431EB09D9C00D8E5B5 /* TYANRDateRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BFF1EB09D9C00D8E5B5 /* TYANRDateRecord.m */; };
+		2BB53C441EB09D9C00D8E5B5 /* TYANRInfoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C011EB09D9C00D8E5B5 /* TYANRInfoRecord.m */; };
+		2BB53C451EB09D9C00D8E5B5 /* TYCoreDataRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C041EB09D9C00D8E5B5 /* TYCoreDataRecord.m */; };
+		2BB53C461EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C071EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.m */; };
+		2BB53C471EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C081EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.xcdatamodeld */; };
+		2BB53C481EB09D9C00D8E5B5 /* TYCrashInfoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C0B1EB09D9C00D8E5B5 /* TYCrashInfoRecord.m */; };
+		2BB53C491EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C0E1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld */; };
+		2BB53C4A1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C121EB09D9C00D8E5B5 /* TYLogCoreDataRecord.m */; };
+		2BB53C4B1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C131EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld */; };
+		2BB53C4C1EB09D9C00D8E5B5 /* TYLogDateRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C161EB09D9C00D8E5B5 /* TYLogDateRecord.m */; };
+		2BB53C4D1EB09D9C00D8E5B5 /* TYLogMsgRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C181EB09D9C00D8E5B5 /* TYLogMsgRecord.m */; };
+		2BB53C4E1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C1C1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.m */; };
+		2BB53C4F1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C1D1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodeld */; };
+		2BB53C501EB09D9C00D8E5B5 /* TYNetworkDateRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C201EB09D9C00D8E5B5 /* TYNetworkDateRecord.m */; };
+		2BB53C511EB09D9C00D8E5B5 /* TYNetworkInfoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C221EB09D9C00D8E5B5 /* TYNetworkInfoRecord.m */; };
+		2BB53C541EB09EC400D8E5B5 /* TYPrismManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C531EB09EC400D8E5B5 /* TYPrismManager.m */; };
+		2BB53C8D1EB0A00200D8E5B5 /* TYANRRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C6B1EB0A00200D8E5B5 /* TYANRRecordController.m */; };
+		2BB53C8E1EB0A00200D8E5B5 /* TYANRRecordDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C6D1EB0A00200D8E5B5 /* TYANRRecordDataController.m */; };
+		2BB53C8F1EB0A00200D8E5B5 /* TYCrashRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C701EB0A00200D8E5B5 /* TYCrashRecordController.m */; };
+		2BB53C901EB0A00200D8E5B5 /* TYLogRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C731EB0A00200D8E5B5 /* TYLogRecordController.m */; };
+		2BB53C911EB0A00200D8E5B5 /* TYLogRecordDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C751EB0A00200D8E5B5 /* TYLogRecordDataController.m */; };
+		2BB53C921EB0A00200D8E5B5 /* TYNetworkRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C781EB0A00200D8E5B5 /* TYNetworkRecordController.m */; };
+		2BB53C931EB0A00200D8E5B5 /* TYNetworkRecordDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C7A1EB0A00200D8E5B5 /* TYNetworkRecordDataController.m */; };
+		2BB53C941EB0A00200D8E5B5 /* TYNetworkRecordDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C7C1EB0A00200D8E5B5 /* TYNetworkRecordDetailController.m */; };
+		2BB53C951EB0A00200D8E5B5 /* TYPrismView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C7F1EB0A00200D8E5B5 /* TYPrismView.m */; };
+		2BB53C971EB0A00200D8E5B5 /* TYPrismRecordItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C841EB0A00200D8E5B5 /* TYPrismRecordItem.m */; };
+		2BB53C981EB0A00200D8E5B5 /* TYRecordConsoleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C861EB0A00200D8E5B5 /* TYRecordConsoleCell.m */; };
+		2BB53C991EB0A00200D8E5B5 /* TYRecordConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C881EB0A00200D8E5B5 /* TYRecordConsoleController.m */; };
+		2BB53C9A1EB0A00200D8E5B5 /* TYRecordDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C8A1EB0A00200D8E5B5 /* TYRecordDateCell.m */; };
+		2BB53C9B1EB0A00200D8E5B5 /* TYRecordDateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C8C1EB0A00200D8E5B5 /* TYRecordDateController.m */; };
+		2BB53C9E1EB0A05600D8E5B5 /* TYPrismRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C9D1EB0A05600D8E5B5 /* TYPrismRecordController.m */; };
+		2BB53CA61EB1CFA400D8E5B5 /* TYPrismTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53CA51EB1CFA400D8E5B5 /* TYPrismTabBarController.m */; };
+		2BB53CA91EB1D43100D8E5B5 /* TestANRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53CA81EB1D43100D8E5B5 /* TestANRViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +88,103 @@
 		2BB53B9F1EB09AD700D8E5B5 /* PrismDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrismDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB53BA31EB09AD700D8E5B5 /* PrismDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrismDemoTests.m; sourceTree = "<group>"; };
 		2BB53BA51EB09AD700D8E5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB53BD81EB09D9C00D8E5B5 /* __BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __BSBacktraceLogger.h; sourceTree = "<group>"; };
+		2BB53BD91EB09D9C00D8E5B5 /* __BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __BSBacktraceLogger.m; sourceTree = "<group>"; };
+		2BB53BDA1EB09D9C00D8E5B5 /* TYANRLogInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYANRLogInfo.h; sourceTree = "<group>"; };
+		2BB53BDB1EB09D9C00D8E5B5 /* TYANRLogInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYANRLogInfo.m; sourceTree = "<group>"; };
+		2BB53BDC1EB09D9C00D8E5B5 /* TYANRMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYANRMonitor.h; sourceTree = "<group>"; };
+		2BB53BDD1EB09D9C00D8E5B5 /* TYGCDANRMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYGCDANRMonitor.h; sourceTree = "<group>"; };
+		2BB53BDE1EB09D9C00D8E5B5 /* TYGCDANRMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYGCDANRMonitor.m; sourceTree = "<group>"; };
+		2BB53BDF1EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRunLoopANRMonitor.h; sourceTree = "<group>"; };
+		2BB53BE01EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRunLoopANRMonitor.m; sourceTree = "<group>"; };
+		2BB53BE21EB09D9C00D8E5B5 /* TYCrashMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCrashMonitor.h; sourceTree = "<group>"; };
+		2BB53BE31EB09D9C00D8E5B5 /* TYCrashMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCrashMonitor.m; sourceTree = "<group>"; };
+		2BB53BE51EB09D9C00D8E5B5 /* TYASLogMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYASLogMonitor.h; sourceTree = "<group>"; };
+		2BB53BE61EB09D9C00D8E5B5 /* TYASLogMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYASLogMonitor.m; sourceTree = "<group>"; };
+		2BB53BE71EB09D9C00D8E5B5 /* TYGCDLogMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYGCDLogMonitor.h; sourceTree = "<group>"; };
+		2BB53BE81EB09D9C00D8E5B5 /* TYGCDLogMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYGCDLogMonitor.m; sourceTree = "<group>"; };
+		2BB53BE91EB09D9C00D8E5B5 /* TYGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYGCDTimer.h; sourceTree = "<group>"; };
+		2BB53BEA1EB09D9C00D8E5B5 /* TYGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYGCDTimer.m; sourceTree = "<group>"; };
+		2BB53BEB1EB09D9C00D8E5B5 /* TYLogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogMessage.h; sourceTree = "<group>"; };
+		2BB53BEC1EB09D9C00D8E5B5 /* TYLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLogMessage.m; sourceTree = "<group>"; };
+		2BB53BED1EB09D9C00D8E5B5 /* TYLogMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogMonitor.h; sourceTree = "<group>"; };
+		2BB53BEF1EB09D9C00D8E5B5 /* NSURLSessionConfiguration+TYURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionConfiguration+TYURLProtocol.h"; sourceTree = "<group>"; };
+		2BB53BF01EB09D9C00D8E5B5 /* NSURLSessionConfiguration+TYURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionConfiguration+TYURLProtocol.m"; sourceTree = "<group>"; };
+		2BB53BF11EB09D9C00D8E5B5 /* TYNetWorkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetWorkInfo.h; sourceTree = "<group>"; };
+		2BB53BF21EB09D9C00D8E5B5 /* TYNetWorkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetWorkInfo.m; sourceTree = "<group>"; };
+		2BB53BF31EB09D9C00D8E5B5 /* TYNetWorkMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetWorkMonitor.h; sourceTree = "<group>"; };
+		2BB53BF41EB09D9C00D8E5B5 /* TYNetWorkMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetWorkMonitor.m; sourceTree = "<group>"; };
+		2BB53BF51EB09D9C00D8E5B5 /* TYURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYURLProtocol.h; sourceTree = "<group>"; };
+		2BB53BF61EB09D9C00D8E5B5 /* TYURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYURLProtocol.m; sourceTree = "<group>"; };
+		2BB53BF71EB09D9C00D8E5B5 /* PrismMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrismMonitor.h; sourceTree = "<group>"; };
+		2BB53BFA1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYANRCoreDataRecord.h; sourceTree = "<group>"; };
+		2BB53BFB1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYANRCoreDataRecord.m; sourceTree = "<group>"; };
+		2BB53BFD1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TYANRCoreDataRecord.xcdatamodel; sourceTree = "<group>"; };
+		2BB53BFE1EB09D9C00D8E5B5 /* TYANRDateRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYANRDateRecord.h; sourceTree = "<group>"; };
+		2BB53BFF1EB09D9C00D8E5B5 /* TYANRDateRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYANRDateRecord.m; sourceTree = "<group>"; };
+		2BB53C001EB09D9C00D8E5B5 /* TYANRInfoRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYANRInfoRecord.h; sourceTree = "<group>"; };
+		2BB53C011EB09D9C00D8E5B5 /* TYANRInfoRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYANRInfoRecord.m; sourceTree = "<group>"; };
+		2BB53C031EB09D9C00D8E5B5 /* TYCoreDataRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCoreDataRecord.h; sourceTree = "<group>"; };
+		2BB53C041EB09D9C00D8E5B5 /* TYCoreDataRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCoreDataRecord.m; sourceTree = "<group>"; };
+		2BB53C061EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCrashCoreDataRecord.h; sourceTree = "<group>"; };
+		2BB53C071EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCrashCoreDataRecord.m; sourceTree = "<group>"; };
+		2BB53C091EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TYCrashCoreDataRecord.xcdatamodel; sourceTree = "<group>"; };
+		2BB53C0A1EB09D9C00D8E5B5 /* TYCrashInfoRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCrashInfoRecord.h; sourceTree = "<group>"; };
+		2BB53C0B1EB09D9C00D8E5B5 /* TYCrashInfoRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCrashInfoRecord.m; sourceTree = "<group>"; };
+		2BB53C0F1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TYLogCoreDataRecord.xcdatamodel; sourceTree = "<group>"; };
+		2BB53C101EB09D9C00D8E5B5 /* TYDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDLog.h; sourceTree = "<group>"; };
+		2BB53C111EB09D9C00D8E5B5 /* TYLogCoreDataRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogCoreDataRecord.h; sourceTree = "<group>"; };
+		2BB53C121EB09D9C00D8E5B5 /* TYLogCoreDataRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLogCoreDataRecord.m; sourceTree = "<group>"; };
+		2BB53C141EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TYLogCoreDataRecord.xcdatamodel; sourceTree = "<group>"; };
+		2BB53C151EB09D9C00D8E5B5 /* TYLogDateRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogDateRecord.h; sourceTree = "<group>"; };
+		2BB53C161EB09D9C00D8E5B5 /* TYLogDateRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLogDateRecord.m; sourceTree = "<group>"; };
+		2BB53C171EB09D9C00D8E5B5 /* TYLogMsgRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogMsgRecord.h; sourceTree = "<group>"; };
+		2BB53C181EB09D9C00D8E5B5 /* TYLogMsgRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLogMsgRecord.m; sourceTree = "<group>"; };
+		2BB53C191EB09D9C00D8E5B5 /* TYLogRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogRecord.h; sourceTree = "<group>"; };
+		2BB53C1B1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetworkCoreDataRecord.h; sourceTree = "<group>"; };
+		2BB53C1C1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetworkCoreDataRecord.m; sourceTree = "<group>"; };
+		2BB53C1E1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TYNetworkCoreDataRecord.xcdatamodel; sourceTree = "<group>"; };
+		2BB53C1F1EB09D9C00D8E5B5 /* TYNetworkDateRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetworkDateRecord.h; sourceTree = "<group>"; };
+		2BB53C201EB09D9C00D8E5B5 /* TYNetworkDateRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetworkDateRecord.m; sourceTree = "<group>"; };
+		2BB53C211EB09D9C00D8E5B5 /* TYNetworkInfoRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetworkInfoRecord.h; sourceTree = "<group>"; };
+		2BB53C221EB09D9C00D8E5B5 /* TYNetworkInfoRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetworkInfoRecord.m; sourceTree = "<group>"; };
+		2BB53C231EB09D9C00D8E5B5 /* PrismRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrismRecord.h; sourceTree = "<group>"; };
+		2BB53C521EB09EC400D8E5B5 /* TYPrismManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismManager.h; sourceTree = "<group>"; };
+		2BB53C531EB09EC400D8E5B5 /* TYPrismManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismManager.m; sourceTree = "<group>"; };
+		2BB53C6A1EB0A00200D8E5B5 /* TYANRRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYANRRecordController.h; sourceTree = "<group>"; };
+		2BB53C6B1EB0A00200D8E5B5 /* TYANRRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYANRRecordController.m; sourceTree = "<group>"; };
+		2BB53C6C1EB0A00200D8E5B5 /* TYANRRecordDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYANRRecordDataController.h; sourceTree = "<group>"; };
+		2BB53C6D1EB0A00200D8E5B5 /* TYANRRecordDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYANRRecordDataController.m; sourceTree = "<group>"; };
+		2BB53C6F1EB0A00200D8E5B5 /* TYCrashRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCrashRecordController.h; sourceTree = "<group>"; };
+		2BB53C701EB0A00200D8E5B5 /* TYCrashRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCrashRecordController.m; sourceTree = "<group>"; };
+		2BB53C721EB0A00200D8E5B5 /* TYLogRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogRecordController.h; sourceTree = "<group>"; };
+		2BB53C731EB0A00200D8E5B5 /* TYLogRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLogRecordController.m; sourceTree = "<group>"; };
+		2BB53C741EB0A00200D8E5B5 /* TYLogRecordDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogRecordDataController.h; sourceTree = "<group>"; };
+		2BB53C751EB0A00200D8E5B5 /* TYLogRecordDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLogRecordDataController.m; sourceTree = "<group>"; };
+		2BB53C771EB0A00200D8E5B5 /* TYNetworkRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetworkRecordController.h; sourceTree = "<group>"; };
+		2BB53C781EB0A00200D8E5B5 /* TYNetworkRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetworkRecordController.m; sourceTree = "<group>"; };
+		2BB53C791EB0A00200D8E5B5 /* TYNetworkRecordDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetworkRecordDataController.h; sourceTree = "<group>"; };
+		2BB53C7A1EB0A00200D8E5B5 /* TYNetworkRecordDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetworkRecordDataController.m; sourceTree = "<group>"; };
+		2BB53C7B1EB0A00200D8E5B5 /* TYNetworkRecordDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetworkRecordDetailController.h; sourceTree = "<group>"; };
+		2BB53C7C1EB0A00200D8E5B5 /* TYNetworkRecordDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetworkRecordDetailController.m; sourceTree = "<group>"; };
+		2BB53C7E1EB0A00200D8E5B5 /* TYPrismView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismView.h; sourceTree = "<group>"; };
+		2BB53C7F1EB0A00200D8E5B5 /* TYPrismView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismView.m; sourceTree = "<group>"; };
+		2BB53C831EB0A00200D8E5B5 /* TYPrismRecordItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismRecordItem.h; sourceTree = "<group>"; };
+		2BB53C841EB0A00200D8E5B5 /* TYPrismRecordItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismRecordItem.m; sourceTree = "<group>"; };
+		2BB53C851EB0A00200D8E5B5 /* TYRecordConsoleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRecordConsoleCell.h; sourceTree = "<group>"; };
+		2BB53C861EB0A00200D8E5B5 /* TYRecordConsoleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRecordConsoleCell.m; sourceTree = "<group>"; };
+		2BB53C871EB0A00200D8E5B5 /* TYRecordConsoleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRecordConsoleController.h; sourceTree = "<group>"; };
+		2BB53C881EB0A00200D8E5B5 /* TYRecordConsoleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRecordConsoleController.m; sourceTree = "<group>"; };
+		2BB53C891EB0A00200D8E5B5 /* TYRecordDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRecordDateCell.h; sourceTree = "<group>"; };
+		2BB53C8A1EB0A00200D8E5B5 /* TYRecordDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRecordDateCell.m; sourceTree = "<group>"; };
+		2BB53C8B1EB0A00200D8E5B5 /* TYRecordDateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRecordDateController.h; sourceTree = "<group>"; };
+		2BB53C8C1EB0A00200D8E5B5 /* TYRecordDateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRecordDateController.m; sourceTree = "<group>"; };
+		2BB53C9C1EB0A05600D8E5B5 /* TYPrismRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismRecordController.h; sourceTree = "<group>"; };
+		2BB53C9D1EB0A05600D8E5B5 /* TYPrismRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismRecordController.m; sourceTree = "<group>"; };
+		2BB53CA41EB1CFA400D8E5B5 /* TYPrismTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismTabBarController.h; sourceTree = "<group>"; };
+		2BB53CA51EB1CFA400D8E5B5 /* TYPrismTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismTabBarController.m; sourceTree = "<group>"; };
+		2BB53CA71EB1D43100D8E5B5 /* TestANRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestANRViewController.h; sourceTree = "<group>"; };
+		2BB53CA81EB1D43100D8E5B5 /* TestANRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestANRViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +226,13 @@
 		2BB53B881EB09AD600D8E5B5 /* PrismDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2BB53BAE1EB09D9C00D8E5B5 /* Prism */,
 				2BB53B8C1EB09AD600D8E5B5 /* AppDelegate.h */,
 				2BB53B8D1EB09AD600D8E5B5 /* AppDelegate.m */,
 				2BB53B8F1EB09AD600D8E5B5 /* ViewController.h */,
 				2BB53B901EB09AD600D8E5B5 /* ViewController.m */,
+				2BB53CA71EB1D43100D8E5B5 /* TestANRViewController.h */,
+				2BB53CA81EB1D43100D8E5B5 /* TestANRViewController.m */,
 				2BB53B921EB09AD600D8E5B5 /* Main.storyboard */,
 				2BB53B951EB09AD600D8E5B5 /* Assets.xcassets */,
 				2BB53B971EB09AD600D8E5B5 /* LaunchScreen.storyboard */,
@@ -109,6 +257,276 @@
 				2BB53BA51EB09AD700D8E5B5 /* Info.plist */,
 			);
 			path = PrismDemoTests;
+			sourceTree = "<group>";
+		};
+		2BB53BAE1EB09D9C00D8E5B5 /* Prism */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53BD61EB09D9C00D8E5B5 /* Monitor */,
+				2BB53BF81EB09D9C00D8E5B5 /* Record */,
+				2BB53BAF1EB09D9C00D8E5B5 /* Controller */,
+				2BB53C521EB09EC400D8E5B5 /* TYPrismManager.h */,
+				2BB53C531EB09EC400D8E5B5 /* TYPrismManager.m */,
+			);
+			path = Prism;
+			sourceTree = "<group>";
+		};
+		2BB53BAF1EB09D9C00D8E5B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53CA31EB1CF7800D8E5B5 /* Main */,
+				2BB53C681EB0A00200D8E5B5 /* Record */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2BB53BD61EB09D9C00D8E5B5 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53BD71EB09D9C00D8E5B5 /* ANRMonitor */,
+				2BB53BE11EB09D9C00D8E5B5 /* CrashMonitor */,
+				2BB53BE41EB09D9C00D8E5B5 /* LogMonitor */,
+				2BB53BEE1EB09D9C00D8E5B5 /* NetWorkMonitor */,
+				2BB53BF71EB09D9C00D8E5B5 /* PrismMonitor.h */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		2BB53BD71EB09D9C00D8E5B5 /* ANRMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53BD81EB09D9C00D8E5B5 /* __BSBacktraceLogger.h */,
+				2BB53BD91EB09D9C00D8E5B5 /* __BSBacktraceLogger.m */,
+				2BB53BDA1EB09D9C00D8E5B5 /* TYANRLogInfo.h */,
+				2BB53BDB1EB09D9C00D8E5B5 /* TYANRLogInfo.m */,
+				2BB53BDC1EB09D9C00D8E5B5 /* TYANRMonitor.h */,
+				2BB53BDD1EB09D9C00D8E5B5 /* TYGCDANRMonitor.h */,
+				2BB53BDE1EB09D9C00D8E5B5 /* TYGCDANRMonitor.m */,
+				2BB53BDF1EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.h */,
+				2BB53BE01EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m */,
+			);
+			path = ANRMonitor;
+			sourceTree = "<group>";
+		};
+		2BB53BE11EB09D9C00D8E5B5 /* CrashMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53BE21EB09D9C00D8E5B5 /* TYCrashMonitor.h */,
+				2BB53BE31EB09D9C00D8E5B5 /* TYCrashMonitor.m */,
+			);
+			path = CrashMonitor;
+			sourceTree = "<group>";
+		};
+		2BB53BE41EB09D9C00D8E5B5 /* LogMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53BE51EB09D9C00D8E5B5 /* TYASLogMonitor.h */,
+				2BB53BE61EB09D9C00D8E5B5 /* TYASLogMonitor.m */,
+				2BB53BE71EB09D9C00D8E5B5 /* TYGCDLogMonitor.h */,
+				2BB53BE81EB09D9C00D8E5B5 /* TYGCDLogMonitor.m */,
+				2BB53BE91EB09D9C00D8E5B5 /* TYGCDTimer.h */,
+				2BB53BEA1EB09D9C00D8E5B5 /* TYGCDTimer.m */,
+				2BB53BEB1EB09D9C00D8E5B5 /* TYLogMessage.h */,
+				2BB53BEC1EB09D9C00D8E5B5 /* TYLogMessage.m */,
+				2BB53BED1EB09D9C00D8E5B5 /* TYLogMonitor.h */,
+			);
+			path = LogMonitor;
+			sourceTree = "<group>";
+		};
+		2BB53BEE1EB09D9C00D8E5B5 /* NetWorkMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53BEF1EB09D9C00D8E5B5 /* NSURLSessionConfiguration+TYURLProtocol.h */,
+				2BB53BF01EB09D9C00D8E5B5 /* NSURLSessionConfiguration+TYURLProtocol.m */,
+				2BB53BF11EB09D9C00D8E5B5 /* TYNetWorkInfo.h */,
+				2BB53BF21EB09D9C00D8E5B5 /* TYNetWorkInfo.m */,
+				2BB53BF31EB09D9C00D8E5B5 /* TYNetWorkMonitor.h */,
+				2BB53BF41EB09D9C00D8E5B5 /* TYNetWorkMonitor.m */,
+				2BB53BF51EB09D9C00D8E5B5 /* TYURLProtocol.h */,
+				2BB53BF61EB09D9C00D8E5B5 /* TYURLProtocol.m */,
+			);
+			path = NetWorkMonitor;
+			sourceTree = "<group>";
+		};
+		2BB53BF81EB09D9C00D8E5B5 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C021EB09D9C00D8E5B5 /* CoreData */,
+				2BB53BF91EB09D9C00D8E5B5 /* ANRRecord */,
+				2BB53C051EB09D9C00D8E5B5 /* CrashRecord */,
+				2BB53C0C1EB09D9C00D8E5B5 /* LogRecord */,
+				2BB53C1A1EB09D9C00D8E5B5 /* NetWorkRecord */,
+				2BB53C231EB09D9C00D8E5B5 /* PrismRecord.h */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		2BB53BF91EB09D9C00D8E5B5 /* ANRRecord */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53BFA1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.h */,
+				2BB53BFB1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.m */,
+				2BB53BFC1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodeld */,
+				2BB53BFE1EB09D9C00D8E5B5 /* TYANRDateRecord.h */,
+				2BB53BFF1EB09D9C00D8E5B5 /* TYANRDateRecord.m */,
+				2BB53C001EB09D9C00D8E5B5 /* TYANRInfoRecord.h */,
+				2BB53C011EB09D9C00D8E5B5 /* TYANRInfoRecord.m */,
+			);
+			path = ANRRecord;
+			sourceTree = "<group>";
+		};
+		2BB53C021EB09D9C00D8E5B5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C031EB09D9C00D8E5B5 /* TYCoreDataRecord.h */,
+				2BB53C041EB09D9C00D8E5B5 /* TYCoreDataRecord.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2BB53C051EB09D9C00D8E5B5 /* CrashRecord */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C061EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.h */,
+				2BB53C071EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.m */,
+				2BB53C081EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.xcdatamodeld */,
+				2BB53C0A1EB09D9C00D8E5B5 /* TYCrashInfoRecord.h */,
+				2BB53C0B1EB09D9C00D8E5B5 /* TYCrashInfoRecord.m */,
+			);
+			path = CrashRecord;
+			sourceTree = "<group>";
+		};
+		2BB53C0C1EB09D9C00D8E5B5 /* LogRecord */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C0D1EB09D9C00D8E5B5 /* CoreData */,
+				2BB53C101EB09D9C00D8E5B5 /* TYDLog.h */,
+				2BB53C111EB09D9C00D8E5B5 /* TYLogCoreDataRecord.h */,
+				2BB53C121EB09D9C00D8E5B5 /* TYLogCoreDataRecord.m */,
+				2BB53C131EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld */,
+				2BB53C151EB09D9C00D8E5B5 /* TYLogDateRecord.h */,
+				2BB53C161EB09D9C00D8E5B5 /* TYLogDateRecord.m */,
+				2BB53C171EB09D9C00D8E5B5 /* TYLogMsgRecord.h */,
+				2BB53C181EB09D9C00D8E5B5 /* TYLogMsgRecord.m */,
+				2BB53C191EB09D9C00D8E5B5 /* TYLogRecord.h */,
+			);
+			path = LogRecord;
+			sourceTree = "<group>";
+		};
+		2BB53C0D1EB09D9C00D8E5B5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C0E1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2BB53C1A1EB09D9C00D8E5B5 /* NetWorkRecord */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C1B1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.h */,
+				2BB53C1C1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.m */,
+				2BB53C1D1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodeld */,
+				2BB53C1F1EB09D9C00D8E5B5 /* TYNetworkDateRecord.h */,
+				2BB53C201EB09D9C00D8E5B5 /* TYNetworkDateRecord.m */,
+				2BB53C211EB09D9C00D8E5B5 /* TYNetworkInfoRecord.h */,
+				2BB53C221EB09D9C00D8E5B5 /* TYNetworkInfoRecord.m */,
+			);
+			path = NetWorkRecord;
+			sourceTree = "<group>";
+		};
+		2BB53C681EB0A00200D8E5B5 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C691EB0A00200D8E5B5 /* ANRController */,
+				2BB53C6E1EB0A00200D8E5B5 /* CrashController */,
+				2BB53C711EB0A00200D8E5B5 /* LogController */,
+				2BB53C761EB0A00200D8E5B5 /* NetWorkController */,
+				2BB53C7D1EB0A00200D8E5B5 /* PrismView */,
+				2BB53C801EB0A00200D8E5B5 /* RecordController */,
+				2BB53C9C1EB0A05600D8E5B5 /* TYPrismRecordController.h */,
+				2BB53C9D1EB0A05600D8E5B5 /* TYPrismRecordController.m */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		2BB53C691EB0A00200D8E5B5 /* ANRController */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C6A1EB0A00200D8E5B5 /* TYANRRecordController.h */,
+				2BB53C6B1EB0A00200D8E5B5 /* TYANRRecordController.m */,
+				2BB53C6C1EB0A00200D8E5B5 /* TYANRRecordDataController.h */,
+				2BB53C6D1EB0A00200D8E5B5 /* TYANRRecordDataController.m */,
+			);
+			path = ANRController;
+			sourceTree = "<group>";
+		};
+		2BB53C6E1EB0A00200D8E5B5 /* CrashController */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C6F1EB0A00200D8E5B5 /* TYCrashRecordController.h */,
+				2BB53C701EB0A00200D8E5B5 /* TYCrashRecordController.m */,
+			);
+			path = CrashController;
+			sourceTree = "<group>";
+		};
+		2BB53C711EB0A00200D8E5B5 /* LogController */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C721EB0A00200D8E5B5 /* TYLogRecordController.h */,
+				2BB53C731EB0A00200D8E5B5 /* TYLogRecordController.m */,
+				2BB53C741EB0A00200D8E5B5 /* TYLogRecordDataController.h */,
+				2BB53C751EB0A00200D8E5B5 /* TYLogRecordDataController.m */,
+			);
+			path = LogController;
+			sourceTree = "<group>";
+		};
+		2BB53C761EB0A00200D8E5B5 /* NetWorkController */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C771EB0A00200D8E5B5 /* TYNetworkRecordController.h */,
+				2BB53C781EB0A00200D8E5B5 /* TYNetworkRecordController.m */,
+				2BB53C791EB0A00200D8E5B5 /* TYNetworkRecordDataController.h */,
+				2BB53C7A1EB0A00200D8E5B5 /* TYNetworkRecordDataController.m */,
+				2BB53C7B1EB0A00200D8E5B5 /* TYNetworkRecordDetailController.h */,
+				2BB53C7C1EB0A00200D8E5B5 /* TYNetworkRecordDetailController.m */,
+			);
+			path = NetWorkController;
+			sourceTree = "<group>";
+		};
+		2BB53C7D1EB0A00200D8E5B5 /* PrismView */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C7E1EB0A00200D8E5B5 /* TYPrismView.h */,
+				2BB53C7F1EB0A00200D8E5B5 /* TYPrismView.m */,
+			);
+			path = PrismView;
+			sourceTree = "<group>";
+		};
+		2BB53C801EB0A00200D8E5B5 /* RecordController */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53C831EB0A00200D8E5B5 /* TYPrismRecordItem.h */,
+				2BB53C841EB0A00200D8E5B5 /* TYPrismRecordItem.m */,
+				2BB53C851EB0A00200D8E5B5 /* TYRecordConsoleCell.h */,
+				2BB53C861EB0A00200D8E5B5 /* TYRecordConsoleCell.m */,
+				2BB53C871EB0A00200D8E5B5 /* TYRecordConsoleController.h */,
+				2BB53C881EB0A00200D8E5B5 /* TYRecordConsoleController.m */,
+				2BB53C891EB0A00200D8E5B5 /* TYRecordDateCell.h */,
+				2BB53C8A1EB0A00200D8E5B5 /* TYRecordDateCell.m */,
+				2BB53C8B1EB0A00200D8E5B5 /* TYRecordDateController.h */,
+				2BB53C8C1EB0A00200D8E5B5 /* TYRecordDateController.m */,
+			);
+			path = RecordController;
+			sourceTree = "<group>";
+		};
+		2BB53CA31EB1CF7800D8E5B5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2BB53CA41EB1CFA400D8E5B5 /* TYPrismTabBarController.h */,
+				2BB53CA51EB1CFA400D8E5B5 /* TYPrismTabBarController.m */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +633,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB53C8D1EB0A00200D8E5B5 /* TYANRRecordController.m in Sources */,
+				2BB53C4C1EB09D9C00D8E5B5 /* TYLogDateRecord.m in Sources */,
+				2BB53C511EB09D9C00D8E5B5 /* TYNetworkInfoRecord.m in Sources */,
+				2BB53C3E1EB09D9C00D8E5B5 /* TYNetWorkInfo.m in Sources */,
+				2BB53C421EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodeld in Sources */,
+				2BB53C8E1EB0A00200D8E5B5 /* TYANRRecordDataController.m in Sources */,
+				2BB53C9A1EB0A00200D8E5B5 /* TYRecordDateCell.m in Sources */,
+				2BB53C981EB0A00200D8E5B5 /* TYRecordConsoleCell.m in Sources */,
+				2BB53C951EB0A00200D8E5B5 /* TYPrismView.m in Sources */,
+				2BB53C901EB0A00200D8E5B5 /* TYLogRecordController.m in Sources */,
+				2BB53C501EB09D9C00D8E5B5 /* TYNetworkDateRecord.m in Sources */,
+				2BB53C3C1EB09D9C00D8E5B5 /* TYLogMessage.m in Sources */,
+				2BB53C971EB0A00200D8E5B5 /* TYPrismRecordItem.m in Sources */,
+				2BB53C381EB09D9C00D8E5B5 /* TYCrashMonitor.m in Sources */,
+				2BB53C441EB09D9C00D8E5B5 /* TYANRInfoRecord.m in Sources */,
+				2BB53C451EB09D9C00D8E5B5 /* TYCoreDataRecord.m in Sources */,
+				2BB53C991EB0A00200D8E5B5 /* TYRecordConsoleController.m in Sources */,
+				2BB53C371EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m in Sources */,
+				2BB53C3A1EB09D9C00D8E5B5 /* TYGCDLogMonitor.m in Sources */,
+				2BB53C4F1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodeld in Sources */,
+				2BB53C351EB09D9C00D8E5B5 /* TYANRLogInfo.m in Sources */,
+				2BB53C4A1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.m in Sources */,
+				2BB53CA91EB1D43100D8E5B5 /* TestANRViewController.m in Sources */,
+				2BB53C8F1EB0A00200D8E5B5 /* TYCrashRecordController.m in Sources */,
+				2BB53C9B1EB0A00200D8E5B5 /* TYRecordDateController.m in Sources */,
+				2BB53CA61EB1CFA400D8E5B5 /* TYPrismTabBarController.m in Sources */,
+				2BB53C4D1EB09D9C00D8E5B5 /* TYLogMsgRecord.m in Sources */,
 				2BB53B911EB09AD600D8E5B5 /* ViewController.m in Sources */,
+				2BB53C391EB09D9C00D8E5B5 /* TYASLogMonitor.m in Sources */,
+				2BB53C481EB09D9C00D8E5B5 /* TYCrashInfoRecord.m in Sources */,
+				2BB53C9E1EB0A05600D8E5B5 /* TYPrismRecordController.m in Sources */,
+				2BB53C3F1EB09D9C00D8E5B5 /* TYNetWorkMonitor.m in Sources */,
+				2BB53C411EB09D9C00D8E5B5 /* TYANRCoreDataRecord.m in Sources */,
+				2BB53C3B1EB09D9C00D8E5B5 /* TYGCDTimer.m in Sources */,
 				2BB53B8E1EB09AD600D8E5B5 /* AppDelegate.m in Sources */,
+				2BB53C931EB0A00200D8E5B5 /* TYNetworkRecordDataController.m in Sources */,
+				2BB53C941EB0A00200D8E5B5 /* TYNetworkRecordDetailController.m in Sources */,
+				2BB53C341EB09D9C00D8E5B5 /* __BSBacktraceLogger.m in Sources */,
+				2BB53C471EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.xcdatamodeld in Sources */,
 				2BB53B8B1EB09AD600D8E5B5 /* main.m in Sources */,
+				2BB53C541EB09EC400D8E5B5 /* TYPrismManager.m in Sources */,
+				2BB53C491EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld in Sources */,
+				2BB53C461EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.m in Sources */,
+				2BB53C921EB0A00200D8E5B5 /* TYNetworkRecordController.m in Sources */,
+				2BB53C3D1EB09D9C00D8E5B5 /* NSURLSessionConfiguration+TYURLProtocol.m in Sources */,
+				2BB53C401EB09D9C00D8E5B5 /* TYURLProtocol.m in Sources */,
+				2BB53C911EB0A00200D8E5B5 /* TYLogRecordDataController.m in Sources */,
+				2BB53C4B1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld in Sources */,
+				2BB53C361EB09D9C00D8E5B5 /* TYGCDANRMonitor.m in Sources */,
+				2BB53C431EB09D9C00D8E5B5 /* TYANRDateRecord.m in Sources */,
+				2BB53C4E1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +766,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -343,7 +809,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,6 +823,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZW52Q3KXX4;
 				INFOPLIST_FILE = PrismDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tany.PrismDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -369,6 +836,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZW52Q3KXX4;
 				INFOPLIST_FILE = PrismDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tany.PrismDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,6 +888,7 @@
 				2BB53BAA1EB09AD700D8E5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BB53BAB1EB09AD700D8E5B5 /* Build configuration list for PBXNativeTarget "PrismDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -428,8 +897,62 @@
 				2BB53BAD1EB09AD700D8E5B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2BB53BFC1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BB53BFD1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodel */,
+			);
+			currentVersion = 2BB53BFD1EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodel */;
+			path = TYANRCoreDataRecord.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		2BB53C081EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BB53C091EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.xcdatamodel */,
+			);
+			currentVersion = 2BB53C091EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.xcdatamodel */;
+			path = TYCrashCoreDataRecord.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		2BB53C0E1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BB53C0F1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodel */,
+			);
+			currentVersion = 2BB53C0F1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodel */;
+			path = TYLogCoreDataRecord.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		2BB53C131EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BB53C141EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodel */,
+			);
+			currentVersion = 2BB53C141EB09D9C00D8E5B5 /* TYLogCoreDataRecord.xcdatamodel */;
+			path = TYLogCoreDataRecord.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		2BB53C1D1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BB53C1E1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodel */,
+			);
+			currentVersion = 2BB53C1E1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodel */;
+			path = TYNetworkCoreDataRecord.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2BB53B7E1EB09AD600D8E5B5 /* Project object */;
 }

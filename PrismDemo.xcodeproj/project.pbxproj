@@ -443,12 +443,12 @@
 		2BB53C681EB0A00200D8E5B5 /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				2BB53C801EB0A00200D8E5B5 /* RecordController */,
 				2BB53C691EB0A00200D8E5B5 /* ANRController */,
 				2BB53C6E1EB0A00200D8E5B5 /* CrashController */,
 				2BB53C711EB0A00200D8E5B5 /* LogController */,
 				2BB53C761EB0A00200D8E5B5 /* NetWorkController */,
 				2BB53C7D1EB0A00200D8E5B5 /* PrismView */,
-				2BB53C801EB0A00200D8E5B5 /* RecordController */,
 				2BB53C9C1EB0A05600D8E5B5 /* TYPrismRecordController.h */,
 				2BB53C9D1EB0A05600D8E5B5 /* TYPrismRecordController.m */,
 			);

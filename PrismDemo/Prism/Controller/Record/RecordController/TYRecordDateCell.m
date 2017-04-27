@@ -39,7 +39,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    _titleLabel.frame = CGRectMake(kTitleLabelLeftEdge, 0, CGRectGetWidth(self.frame)-kTitleLabelLeftEdge-kTitleLabelRightEdge, CGRectGetHeight(self.frame));
+    _titleLabel.frame = CGRectMake(self.separatorInset.left + kTitleLabelLeftEdge, 0, CGRectGetWidth(self.frame)-kTitleLabelLeftEdge-kTitleLabelRightEdge-self.separatorInset.left, CGRectGetHeight(self.frame));
 }
 
 @end

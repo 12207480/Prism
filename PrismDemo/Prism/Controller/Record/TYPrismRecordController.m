@@ -35,6 +35,11 @@ static NSString * const cellId = @"UITableViewCell";
     [self addItems];
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    _tableView.frame = self.view.bounds;
+}
+
 - (void)addTableView {
     UITableView *tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     tableView.delegate = self;

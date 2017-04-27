@@ -39,7 +39,7 @@
 - (void)parseReponseData {
     // 引用自https://github.com/coderyi/NetworkEye
     NSString *mimeType = _response.MIMEType;
-    if ([mimeType isEqualToString:@"application/json"]) {
+    if ([mimeType isEqualToString:@"application/json"] || [mimeType isEqualToString:@"text/plain"] || [mimeType isEqualToString:@"text/html"]) {
         _responseData = [self responseJSONFromData:self.data];
     } else if ([mimeType isEqualToString:@"text/javascript"]) {
         // try to parse json if it is jsonp request
@@ -59,7 +59,7 @@
             }
         }
         
-    }else if ([mimeType isEqualToString:@"application/xml"] ||[mimeType isEqualToString:@"text/xml"]){
+    }else if ([mimeType isEqualToString:@"application/xml"] || [mimeType isEqualToString:@"text/xml"]){
         NSString *xmlString = [[NSString alloc]initWithData:self.data encoding:NSUTF8StringEncoding];
         if (xmlString && xmlString.length>0) {
             _responseData = xmlString;//example http://webservice.webxml.com.cn/webservices/qqOnlineWebService.asmx/qqCheckOnline?qqCode=2121

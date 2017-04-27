@@ -7,6 +7,7 @@
 //
 
 #import "TYPrismTabBarController.h"
+#import "TYPrismNavigationController.h"
 #import "TYPrismRecordController.h"
 
 @interface TYPrismTabBarController ()
@@ -29,7 +30,7 @@
 
 - (void)addRecordController {
     TYPrismRecordController *recordVC = [[TYPrismRecordController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:recordVC];
+    TYPrismNavigationController *nav = [[TYPrismNavigationController alloc] initWithRootViewController:recordVC];
     recordVC.tabBarItem.title = @"Record";
     [self addChildViewController:nav];
 }

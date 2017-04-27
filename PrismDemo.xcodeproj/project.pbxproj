@@ -62,6 +62,7 @@
 		2BB53C9E1EB0A05600D8E5B5 /* TYPrismRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53C9D1EB0A05600D8E5B5 /* TYPrismRecordController.m */; };
 		2BB53CA61EB1CFA400D8E5B5 /* TYPrismTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53CA51EB1CFA400D8E5B5 /* TYPrismTabBarController.m */; };
 		2BB53CA91EB1D43100D8E5B5 /* TestANRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53CA81EB1D43100D8E5B5 /* TestANRViewController.m */; };
+		2BB53CAC1EB1DB6C00D8E5B5 /* TYPrismNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53CAB1EB1DB6C00D8E5B5 /* TYPrismNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +186,8 @@
 		2BB53CA51EB1CFA400D8E5B5 /* TYPrismTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismTabBarController.m; sourceTree = "<group>"; };
 		2BB53CA71EB1D43100D8E5B5 /* TestANRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestANRViewController.h; sourceTree = "<group>"; };
 		2BB53CA81EB1D43100D8E5B5 /* TestANRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestANRViewController.m; sourceTree = "<group>"; };
+		2BB53CAA1EB1DB6C00D8E5B5 /* TYPrismNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismNavigationController.h; sourceTree = "<group>"; };
+		2BB53CAB1EB1DB6C00D8E5B5 /* TYPrismNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B8FAD311EB1E11E00B2CF70 /* System */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		2BB53B7D1EB09AD600D8E5B5 = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +284,7 @@
 		2BB53BAF1EB09D9C00D8E5B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B8FAD311EB1E11E00B2CF70 /* System */,
 				2BB53CA31EB1CF7800D8E5B5 /* Main */,
 				2BB53C681EB0A00200D8E5B5 /* Record */,
 			);
@@ -525,6 +536,8 @@
 			children = (
 				2BB53CA41EB1CFA400D8E5B5 /* TYPrismTabBarController.h */,
 				2BB53CA51EB1CFA400D8E5B5 /* TYPrismTabBarController.m */,
+				2BB53CAA1EB1DB6C00D8E5B5 /* TYPrismNavigationController.h */,
+				2BB53CAB1EB1DB6C00D8E5B5 /* TYPrismNavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -648,6 +661,7 @@
 				2BB53C971EB0A00200D8E5B5 /* TYPrismRecordItem.m in Sources */,
 				2BB53C381EB09D9C00D8E5B5 /* TYCrashMonitor.m in Sources */,
 				2BB53C441EB09D9C00D8E5B5 /* TYANRInfoRecord.m in Sources */,
+				2BB53CAC1EB1DB6C00D8E5B5 /* TYPrismNavigationController.m in Sources */,
 				2BB53C451EB09D9C00D8E5B5 /* TYCoreDataRecord.m in Sources */,
 				2BB53C991EB0A00200D8E5B5 /* TYRecordConsoleController.m in Sources */,
 				2BB53C371EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m in Sources */,

@@ -22,7 +22,7 @@
 }
 
 - (NSString *)message {
-    return [NSString stringWithFormat:@"*******************************\n[EXCEPTION DATE]: %@\n[NAME]:%@\n[REASON]:%@\n[CALLBACKTREATH]:\n%@\n",self.date,self.name,self.reason,self.callBackTrace];
+    return [NSString stringWithFormat:@"\n************************************\n[EXCEPTION DATE]: %@\n[NAME]:%@\n[REASON]:%@\n[CALLBACKTREATH]:\n%@\n",self.date,self.name,self.reason,self.callBackTrace];
 }
 
 @end

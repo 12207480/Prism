@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gzS-29-Pbf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PrismDemo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -22,28 +22,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rv7-hH-KPT">
-                                <rect key="frame" x="131" y="170" width="112" height="30"/>
+                                <rect key="frame" x="131" y="214" width="112" height="30"/>
                                 <state key="normal" title="Exception Crash"/>
                                 <connections>
                                     <action selector="testExceptionCrashAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5M-RW-FLn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkm-MX-uOt">
-                                <rect key="frame" x="144" y="228" width="87" height="30"/>
+                                <rect key="frame" x="144" y="272" width="87" height="30"/>
                                 <state key="normal" title="Signal Crash"/>
                                 <connections>
                                     <action selector="testSignalCrashAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="asb-DW-1bx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QK1-n8-8gb">
-                                <rect key="frame" x="155" y="285" width="64" height="30"/>
+                                <rect key="frame" x="155" y="329" width="64" height="30"/>
                                 <state key="normal" title="Test ANR"/>
                                 <connections>
                                     <action selector="testANR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Xx-pk-Cfe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmr-KS-CeN">
-                                <rect key="frame" x="142" y="342" width="91" height="30"/>
+                                <rect key="frame" x="142" y="386" width="91" height="30"/>
                                 <state key="normal" title="Test Network"/>
                                 <connections>
                                     <action selector="testNetwork:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kzG-Yf-e1c"/>
@@ -62,9 +62,29 @@
                             <constraint firstItem="QK1-n8-8gb" firstAttribute="top" secondItem="jkm-MX-uOt" secondAttribute="bottom" constant="27" id="x28-vr-UlE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="PrismDemo" id="7WT-sl-xU4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1080.8" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ro5-qZ-23n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gzS-29-Pbf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Xt-sH-u9W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Qd-Hh-dxV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waj-F8-szk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="-543.77811094452773"/>
         </scene>
     </scenes>
 </document>

@@ -8,7 +8,7 @@
 
 #import "TYRecordDateCell.h"
 
-#define kTitleLabelLeftEdge 15
+#define kTitleLabelLeftEdge 0
 #define kTitleLabelRightEdge 50
 
 @implementation TYRecordDateCell

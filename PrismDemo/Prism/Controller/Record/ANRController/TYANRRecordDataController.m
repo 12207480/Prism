@@ -50,7 +50,7 @@
     TYANRInfoRecord *ANRInfo = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSNumber *cellHeight = [self.cellHeightCache objectForKey:ANRInfo.time];
     if (!cellHeight) {
-        NSInteger textHeight = [self heightForText:ANRInfo.message font:self.consoleTextFont constrainedToSize:CGSizeMake(CGRectGetWidth(tableView.frame) - kConsoleCellTitleLabelHorEdge*2, 1000)];
+        NSInteger textHeight = [self heightForText:ANRInfo.message font:self.consoleTextFont constrainedToSize:CGSizeMake(CGRectGetWidth(tableView.frame) - kConsoleCellTitleLabelHorEdge*2, 10000)];
         cellHeight = @(textHeight + kConsoleCellTitleLabelVerEdge*2);
         self.cellHeightCache[ANRInfo.time] = cellHeight;
     }

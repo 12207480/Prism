@@ -20,7 +20,7 @@
 }
 
 - (NSString *)message {
-    return [NSString stringWithFormat:@"\n\n*******************************************\nARN Time:%@\n%@",self.date,self.content];
+    return [NSString stringWithFormat:@"\n*******************************************\nARN Time:%@\n%@\n",self.date,self.content];
 }
 
 @end

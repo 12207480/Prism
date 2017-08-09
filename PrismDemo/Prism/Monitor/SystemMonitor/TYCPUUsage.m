@@ -7,8 +7,9 @@
 //
 
 #import "TYCPUUsage.h"
-#include <stdio.h>
 #import <mach/mach.h>
+#import <sys/sysctl.h>
+#import <mach-o/arch.h>
 
 @implementation TYCPUUsage
 
@@ -66,7 +67,7 @@
     kern_return_t kr;
     static host_cpu_load_info_data_t pre_cpu_load_info;
     host_cpu_load_info_data_t cpu_load_info;
-    ty_system_cpu_usage  system_cpu_usage = {0,0,0,0};
+    ty_system_cpu_usage  system_cpu_usage = {0,0,0,0,0};
     
     kr = host_statistics(mach_host_self(), HOST_CPU_LOAD_INFO, (host_info_t)&cpu_load_info, &count);
     if (kr != KERN_SUCCESS) {
@@ -81,20 +82,37 @@
     pre_cpu_load_info = cpu_load_info;
     
     natural_t total_cpu = user_cpu_differ + system_cpu_differ + idle_cpu_differ + nice_cpu_differ;
-    
     system_cpu_usage.user = 100.0*user_cpu_differ/total_cpu;
     system_cpu_usage.system = 100.0*system_cpu_differ/total_cpu;
     system_cpu_usage.nice = 100.0*nice_cpu_differ/total_cpu;
     system_cpu_usage.idle = 100.0*idle_cpu_differ/total_cpu;
-
+    system_cpu_usage.total = system_cpu_usage.user + system_cpu_usage.system + system_cpu_usage.nice;
     return system_cpu_usage;
 }
 
 + (float)getSystemCPUUsage {
     ty_system_cpu_usage  system_cpu_usage = [self getSystemCPUUsageStruct];
-    return system_cpu_usage.user + system_cpu_usage.system + system_cpu_usage.nice;
+    return system_cpu_usage.total;
 }
 
++ (NSInteger)getCPUCoreNumber {
+    return [NSProcessInfo processInfo].activeProcessorCount;
+}
 
++ (NSUInteger)getSysInfo:(uint)typeSpecifier {
+    size_t size = sizeof(int);
+    int results;
+    int mib[2] = {CTL_HW, typeSpecifier};
+    sysctl(mib, 2, &results, &size, NULL, 0);
+    return (NSUInteger)results;
+}
+
++ (NSUInteger)getCPUFrequency {
+    return [self getSysInfo:HW_CPU_FREQ];
+}
+
++ (NSString *)getCPUArchitectureString {
+    return [NSString stringWithUTF8String:NXGetLocalArchInfo()->description];
+}
 
 @end

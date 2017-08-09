@@ -10,8 +10,9 @@
 #import "TYGCDTimer.h"
 #import "TYDLog.h"
 #import "TestANRViewController.h"
+#import "TYSystemMonitor.h"
 
-@interface ViewController ()
+@interface ViewController ()<TYSystemMonitorDelegate>
 
 @property (nonatomic, strong) TYGCDTimer* timer1;
 @property (nonatomic, strong) TYGCDTimer* timer2;
@@ -29,6 +30,16 @@
     NSLog(@"start");
     _timer1 = [TYGCDTimer scheduledTimerOnAsynWithInterval:1.0 target:self selector:@selector(time1) repeats:YES];
     //_timer2 = [TYGCDTimer scheduledTimerOnAsynWithInterval:1.0 target:self selector:@selector(time2) repeats:YES];
+    [TYSystemMonitor sharedInstance].delegate = self;
+    [[TYSystemMonitor sharedInstance] start];
+}
+
+- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemCPUUsage:(ty_system_cpu_usage)system_cpu_usage {
+    NSLog(@"system cpu %.1f",system_cpu_usage.total);
+}
+
+- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppCPUUsage:(ty_app_cpu_usage)app_cpu_usage {
+    NSLog(@"app cpu %.1f",app_cpu_usage.cpu_usage);
 }
 
 - (void)time1 {

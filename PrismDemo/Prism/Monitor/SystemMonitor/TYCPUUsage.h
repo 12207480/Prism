@@ -13,6 +13,7 @@ typedef struct ty_system_cpu_usage {
     float system;
     float nice;
     float idle;
+    float total;        /* total cpu usage percentage, use it */
 }ty_system_cpu_usage;
 
 typedef struct ty_app_cpu_usage {
@@ -25,13 +26,33 @@ typedef struct ty_app_cpu_usage {
 
 /**
  get app cpu usage ,if failed return 0
+ APP CPU使用率
  */
 + (float)getAppCPUUsage;
 
 /**
  get system cpu usage ,if failed return 0
+ 系统CPU使用率
  */
 + (float)getSystemCPUUsage;
+
+/**
+ CPU core number
+ CPU 核心数
+ */
++ (NSInteger)getCPUCoreNumber;
+
+/**
+ CPU frequency
+ CPU 频率
+ */
++ (NSUInteger)getCPUFrequency;
+
+/**
+ CPU processor architecture
+ CPU 架构
+ */
++ (NSString *)getCPUArchitectureString;
 
 + (ty_app_cpu_usage)getAppCPUUsageStruct;
 

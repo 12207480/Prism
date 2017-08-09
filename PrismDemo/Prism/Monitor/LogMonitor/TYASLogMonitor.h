@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TYLogMonitor.h"
 
+// 只支持iOS 10以下的系统
 @interface TYASLogMonitor : NSObject<TYLogMonitor>
 
 @property (nonatomic, weak) id<TYLogMonitorDelegate> delegate;

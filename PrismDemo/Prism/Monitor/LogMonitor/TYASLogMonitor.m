@@ -10,7 +10,6 @@
 #import <asl.h>
 #import "TYGCDTimer.h"
 
-// 只支持iOS 10一下的系统
 @interface TYASLogMonitor ()
 
 @property (nonatomic, assign) NSInteger lastMsgID;

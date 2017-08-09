@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5C2D171F3419DC0073E344 /* TYFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2D161F3419DC0073E344 /* TYFPSMonitor.m */; };
+		2B5C2D1A1F344D5E0073E344 /* TYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2D191F344D5E0073E344 /* TYFPSLabel.m */; };
 		2B8FAD341EB1E41C00B2CF70 /* TYSystemUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8FAD331EB1E41C00B2CF70 /* TYSystemUsageController.m */; };
 		2BB53B8B1EB09AD600D8E5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B8A1EB09AD600D8E5B5 /* main.m */; };
 		2BB53B8E1EB09AD600D8E5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B8D1EB09AD600D8E5B5 /* AppDelegate.m */; };
@@ -22,7 +24,6 @@
 		2BB53C381EB09D9C00D8E5B5 /* TYCrashMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BE31EB09D9C00D8E5B5 /* TYCrashMonitor.m */; };
 		2BB53C391EB09D9C00D8E5B5 /* TYASLogMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BE61EB09D9C00D8E5B5 /* TYASLogMonitor.m */; };
 		2BB53C3A1EB09D9C00D8E5B5 /* TYGCDLogMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BE81EB09D9C00D8E5B5 /* TYGCDLogMonitor.m */; };
-		2BB53C3B1EB09D9C00D8E5B5 /* TYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BEA1EB09D9C00D8E5B5 /* TYGCDTimer.m */; };
 		2BB53C3C1EB09D9C00D8E5B5 /* TYLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BEC1EB09D9C00D8E5B5 /* TYLogMessage.m */; };
 		2BB53C3D1EB09D9C00D8E5B5 /* NSURLSessionConfiguration+TYURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BF01EB09D9C00D8E5B5 /* NSURLSessionConfiguration+TYURLProtocol.m */; };
 		2BB53C3E1EB09D9C00D8E5B5 /* TYNetWorkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BF21EB09D9C00D8E5B5 /* TYNetWorkInfo.m */; };
@@ -63,6 +64,9 @@
 		2BB53CA61EB1CFA400D8E5B5 /* TYPrismTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53CA51EB1CFA400D8E5B5 /* TYPrismTabBarController.m */; };
 		2BB53CA91EB1D43100D8E5B5 /* TestANRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53CA81EB1D43100D8E5B5 /* TestANRViewController.m */; };
 		2BB53CAC1EB1DB6C00D8E5B5 /* TYPrismNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53CAB1EB1DB6C00D8E5B5 /* TYPrismNavigationController.m */; };
+		2BD589481F3AA49500A79119 /* TYSystemMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD589471F3AA49500A79119 /* TYSystemMonitor.m */; };
+		2BD5894B1F3AA4E800A79119 /* TYCPUUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD5894A1F3AA4E800A79119 /* TYCPUUsage.m */; };
+		2BD589561F3AEAAD00A79119 /* TYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD589551F3AEAAD00A79119 /* TYGCDTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B5C2D151F3419DC0073E344 /* TYFPSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYFPSMonitor.h; sourceTree = "<group>"; };
+		2B5C2D161F3419DC0073E344 /* TYFPSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYFPSMonitor.m; sourceTree = "<group>"; };
+		2B5C2D181F344D5E0073E344 /* TYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYFPSLabel.h; sourceTree = "<group>"; };
+		2B5C2D191F344D5E0073E344 /* TYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYFPSLabel.m; sourceTree = "<group>"; };
 		2B8FAD321EB1E41C00B2CF70 /* TYSystemUsageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSystemUsageController.h; sourceTree = "<group>"; };
 		2B8FAD331EB1E41C00B2CF70 /* TYSystemUsageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSystemUsageController.m; sourceTree = "<group>"; };
 		2B8FAD471EB1EBF800B2CF70 /* TYPrismMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPrismMonitor.h; sourceTree = "<group>"; };
@@ -109,8 +117,6 @@
 		2BB53BE61EB09D9C00D8E5B5 /* TYASLogMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYASLogMonitor.m; sourceTree = "<group>"; };
 		2BB53BE71EB09D9C00D8E5B5 /* TYGCDLogMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYGCDLogMonitor.h; sourceTree = "<group>"; };
 		2BB53BE81EB09D9C00D8E5B5 /* TYGCDLogMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYGCDLogMonitor.m; sourceTree = "<group>"; };
-		2BB53BE91EB09D9C00D8E5B5 /* TYGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYGCDTimer.h; sourceTree = "<group>"; };
-		2BB53BEA1EB09D9C00D8E5B5 /* TYGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYGCDTimer.m; sourceTree = "<group>"; };
 		2BB53BEB1EB09D9C00D8E5B5 /* TYLogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogMessage.h; sourceTree = "<group>"; };
 		2BB53BEC1EB09D9C00D8E5B5 /* TYLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLogMessage.m; sourceTree = "<group>"; };
 		2BB53BED1EB09D9C00D8E5B5 /* TYLogMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLogMonitor.h; sourceTree = "<group>"; };
@@ -189,6 +195,12 @@
 		2BB53CA81EB1D43100D8E5B5 /* TestANRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestANRViewController.m; sourceTree = "<group>"; };
 		2BB53CAA1EB1DB6C00D8E5B5 /* TYPrismNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismNavigationController.h; sourceTree = "<group>"; };
 		2BB53CAB1EB1DB6C00D8E5B5 /* TYPrismNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismNavigationController.m; sourceTree = "<group>"; };
+		2BD589461F3AA49500A79119 /* TYSystemMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSystemMonitor.h; sourceTree = "<group>"; };
+		2BD589471F3AA49500A79119 /* TYSystemMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSystemMonitor.m; sourceTree = "<group>"; };
+		2BD589491F3AA4E800A79119 /* TYCPUUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCPUUsage.h; sourceTree = "<group>"; };
+		2BD5894A1F3AA4E800A79119 /* TYCPUUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCPUUsage.m; sourceTree = "<group>"; };
+		2BD589541F3AEAAD00A79119 /* TYGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYGCDTimer.h; sourceTree = "<group>"; };
+		2BD589551F3AEAAD00A79119 /* TYGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYGCDTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +221,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B5C2D141F3419C10073E344 /* SystemMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				2B5C2D151F3419DC0073E344 /* TYFPSMonitor.h */,
+				2B5C2D161F3419DC0073E344 /* TYFPSMonitor.m */,
+				2B5C2D181F344D5E0073E344 /* TYFPSLabel.h */,
+				2B5C2D191F344D5E0073E344 /* TYFPSLabel.m */,
+				2BD589491F3AA4E800A79119 /* TYCPUUsage.h */,
+				2BD5894A1F3AA4E800A79119 /* TYCPUUsage.m */,
+				2BD589461F3AA49500A79119 /* TYSystemMonitor.h */,
+				2BD589471F3AA49500A79119 /* TYSystemMonitor.m */,
+			);
+			path = SystemMonitor;
+			sourceTree = "<group>";
+		};
 		2B8FAD311EB1E11E00B2CF70 /* System */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +328,7 @@
 				2BB53BE11EB09D9C00D8E5B5 /* CrashMonitor */,
 				2BB53BE41EB09D9C00D8E5B5 /* LogMonitor */,
 				2BB53BEE1EB09D9C00D8E5B5 /* NetWorkMonitor */,
+				2B5C2D141F3419C10073E344 /* SystemMonitor */,
 				2B8FAD471EB1EBF800B2CF70 /* TYPrismMonitor.h */,
 			);
 			path = Monitor;
@@ -339,8 +367,8 @@
 				2BB53BE61EB09D9C00D8E5B5 /* TYASLogMonitor.m */,
 				2BB53BE71EB09D9C00D8E5B5 /* TYGCDLogMonitor.h */,
 				2BB53BE81EB09D9C00D8E5B5 /* TYGCDLogMonitor.m */,
-				2BB53BE91EB09D9C00D8E5B5 /* TYGCDTimer.h */,
-				2BB53BEA1EB09D9C00D8E5B5 /* TYGCDTimer.m */,
+				2BD589541F3AEAAD00A79119 /* TYGCDTimer.h */,
+				2BD589551F3AEAAD00A79119 /* TYGCDTimer.m */,
 				2BB53BEB1EB09D9C00D8E5B5 /* TYLogMessage.h */,
 				2BB53BEC1EB09D9C00D8E5B5 /* TYLogMessage.m */,
 				2BB53BED1EB09D9C00D8E5B5 /* TYLogMonitor.h */,
@@ -647,6 +675,7 @@
 				2BB53C421EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodeld in Sources */,
 				2B8FAD341EB1E41C00B2CF70 /* TYSystemUsageController.m in Sources */,
 				2BB53C8E1EB0A00200D8E5B5 /* TYANRRecordDataController.m in Sources */,
+				2B5C2D1A1F344D5E0073E344 /* TYFPSLabel.m in Sources */,
 				2BB53C9A1EB0A00200D8E5B5 /* TYRecordDateCell.m in Sources */,
 				2BB53C981EB0A00200D8E5B5 /* TYRecordConsoleCell.m in Sources */,
 				2BB53C951EB0A00200D8E5B5 /* TYPrismView.m in Sources */,
@@ -662,6 +691,7 @@
 				2BB53C371EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m in Sources */,
 				2BB53C3A1EB09D9C00D8E5B5 /* TYGCDLogMonitor.m in Sources */,
 				2BB53C4F1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodeld in Sources */,
+				2BD5894B1F3AA4E800A79119 /* TYCPUUsage.m in Sources */,
 				2BB53C351EB09D9C00D8E5B5 /* TYANRLogInfo.m in Sources */,
 				2BB53C4A1EB09D9C00D8E5B5 /* TYLogCoreDataRecord.m in Sources */,
 				2BB53CA91EB1D43100D8E5B5 /* TestANRViewController.m in Sources */,
@@ -675,12 +705,13 @@
 				2BB53C9E1EB0A05600D8E5B5 /* TYPrismRecordController.m in Sources */,
 				2BB53C3F1EB09D9C00D8E5B5 /* TYNetWorkMonitor.m in Sources */,
 				2BB53C411EB09D9C00D8E5B5 /* TYANRCoreDataRecord.m in Sources */,
-				2BB53C3B1EB09D9C00D8E5B5 /* TYGCDTimer.m in Sources */,
+				2BD589481F3AA49500A79119 /* TYSystemMonitor.m in Sources */,
 				2BB53B8E1EB09AD600D8E5B5 /* AppDelegate.m in Sources */,
 				2BB53C931EB0A00200D8E5B5 /* TYNetworkRecordDataController.m in Sources */,
 				2BB53C941EB0A00200D8E5B5 /* TYNetworkRecordDetailController.m in Sources */,
 				2BB53C341EB09D9C00D8E5B5 /* __BSBacktraceLogger.m in Sources */,
 				2BB53C471EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.xcdatamodeld in Sources */,
+				2BD589561F3AEAAD00A79119 /* TYGCDTimer.m in Sources */,
 				2BB53B8B1EB09AD600D8E5B5 /* main.m in Sources */,
 				2BB53C541EB09EC400D8E5B5 /* TYPrismManager.m in Sources */,
 				2BB53C461EB09D9C00D8E5B5 /* TYCrashCoreDataRecord.m in Sources */,
@@ -692,6 +723,7 @@
 				2BB53C361EB09D9C00D8E5B5 /* TYGCDANRMonitor.m in Sources */,
 				2BB53C431EB09D9C00D8E5B5 /* TYANRDateRecord.m in Sources */,
 				2BB53C4E1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.m in Sources */,
+				2B5C2D171F3419DC0073E344 /* TYFPSMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

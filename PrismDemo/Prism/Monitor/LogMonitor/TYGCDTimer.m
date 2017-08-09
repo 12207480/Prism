@@ -61,18 +61,19 @@
 
 - (void)timerFire {
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
-    if (!_target) {
+    id target = _target;
+    if (!target) {
         dispatch_semaphore_signal(_lock);
         [self invalidate];
-    }else {
-        dispatch_semaphore_signal(_lock);
+        return;
+    }
+    dispatch_semaphore_signal(_lock);
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [_target performSelector:_selector withObject:self];
+    [target performSelector:_selector withObject:self];
 #pragma clang diagnostic pop
-        if (!_repeats) {
-            [self invalidate];
-        }
+    if (!_repeats) {
+        [self invalidate];
     }
 }
 

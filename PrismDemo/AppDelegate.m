@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TYPrismManager.h"
+#import "TYFPSLabel.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [TYPrismManager start];
+    [TYFPSLabel showInStutasBar];
     return YES;
 }
 

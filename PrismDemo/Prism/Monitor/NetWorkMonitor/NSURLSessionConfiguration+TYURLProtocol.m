@@ -21,12 +21,10 @@ static BOOL isHookWorking = NO;
         Method origMethod = class_getInstanceMethod(cls, @selector(protocolClasses));
         Method replMethod = class_getInstanceMethod(self, @selector(ty_protocolClasses));
         if (origMethod && replMethod) {
-            if (class_addMethod(cls, @selector(protocolClasses), method_getImplementation(replMethod), method_getTypeEncoding(replMethod)))
-            {
+            if (class_addMethod(cls, @selector(protocolClasses), method_getImplementation(replMethod), method_getTypeEncoding(replMethod))) {
                 class_replaceMethod(self, @selector(ty_protocolClasses), method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
             }
-            else
-            {
+            else {
                 method_exchangeImplementations(origMethod, replMethod);
             }
         }

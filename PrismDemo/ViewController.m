@@ -34,12 +34,24 @@
     [[TYSystemMonitor sharedInstance] start];
 }
 
+- (void)systemMonitorDidUpdateUsage:(TYSystemMonitor *)systemMonitor {
+    
+}
+
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemCPUUsage:(ty_system_cpu_usage)system_cpu_usage {
     NSLog(@"system cpu %.1f",system_cpu_usage.total);
 }
 
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppCPUUsage:(ty_app_cpu_usage)app_cpu_usage {
     NSLog(@"app cpu %.1f",app_cpu_usage.cpu_usage);
+}
+
+- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppMemoryUsage:(unsigned long long)app_memory_usage {
+    
+}
+
+- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemMemoryUsage:(ty_system_memory_usage)system_memory_usage {
+    
 }
 
 - (void)time1 {

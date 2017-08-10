@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TYCPUUsage.h"
+#import "TYMemoryUsage.h"
 
 @class TYSystemMonitor;
 @protocol TYSystemMonitorDelegate <NSObject>
@@ -21,6 +22,9 @@
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemCPUUsage:(ty_system_cpu_usage)system_cpu_usage;
 
 // Memory Usage
+
+- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppMemoryUsage:(unsigned long long)app_memory_usage;
+- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemMemoryUsage:(ty_system_memory_usage)system_memory_usage;
 
 @end
 

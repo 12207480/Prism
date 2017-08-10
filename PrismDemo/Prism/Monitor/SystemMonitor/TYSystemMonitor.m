@@ -14,6 +14,9 @@
         unsigned int didUpdateUsage   :1;
         unsigned int didUpdateAppCPUUsage   :1;
         unsigned int didUpdateSystemCPUUsage   :1;
+        unsigned int didUpdateAppMemoryUsage   :1;
+        unsigned int didUpdateSystemMemoryUsage   :1;
+        
     }_delegateFlags;
 }
 
@@ -60,6 +63,8 @@
     _delegateFlags.didUpdateUsage = [delegate respondsToSelector:@selector(systemMonitorDidUpdateUsage:)];
     _delegateFlags.didUpdateAppCPUUsage = [delegate respondsToSelector:@selector(systemMonitor:didUpdateAppCPUUsage:)];
     _delegateFlags.didUpdateSystemCPUUsage= [delegate respondsToSelector:@selector(systemMonitor:didUpdateSystemCPUUsage:)];
+    _delegateFlags.didUpdateAppMemoryUsage = [delegate respondsToSelector:@selector(systemMonitor:didUpdateAppMemoryUsage:)];
+    _delegateFlags.didUpdateSystemMemoryUsage = [delegate respondsToSelector:@selector(systemMonitor:didUpdateSystemMemoryUsage:)];
 }
 
 #pragma mark - public 
@@ -72,6 +77,7 @@
     [self removeTimer];
 }
 
+#pragma mark - action
 
 - (void)timerFire {
     if (_delegateFlags.didUpdateUsage) {
@@ -82,6 +88,12 @@
     }
     if (_delegateFlags.didUpdateSystemCPUUsage) {
         [_delegate systemMonitor:self didUpdateSystemCPUUsage:[TYCPUUsage getSystemCPUUsageStruct]];
+    }
+    if (_delegateFlags.didUpdateAppMemoryUsage) {
+        [_delegate systemMonitor:self didUpdateAppMemoryUsage:[TYMemoryUsage getAppMemoryUsage]];
+    }
+    if (_delegateFlags.didUpdateSystemMemoryUsage) {
+        [_delegate systemMonitor:self didUpdateSystemMemoryUsage:[TYMemoryUsage getSystemMemoryUsageStruct]];
     }
 }
 

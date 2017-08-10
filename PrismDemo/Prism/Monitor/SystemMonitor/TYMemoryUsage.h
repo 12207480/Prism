@@ -8,6 +8,34 @@
 
 #import <Foundation/Foundation.h>
 
+typedef struct ty_system_memory_usage {
+    unsigned long long used_size;
+    unsigned long long available_size;
+    unsigned long long total_size;
+}ty_system_memory_usage;
+
 @interface TYMemoryUsage : NSObject
+
+/**
+ get app used memory .byte
+ */
++ (unsigned long long)getAppMemoryUsage;
+
+/**
+ get system used memory .byte
+ */
++ (unsigned long long)getSystemMemoryUsage;
+
+/**
+ get system available memory .byte
+ */
++ (unsigned long long)getSystemMemoryAvailable;
+
+/**
+ get system total memory .byte
+ */
++ (unsigned long long)getSystemTotalMemory;
+
++ (ty_system_memory_usage)getSystemMemoryUsageStruct;
 
 @end

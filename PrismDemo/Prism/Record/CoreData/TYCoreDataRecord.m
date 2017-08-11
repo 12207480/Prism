@@ -31,7 +31,7 @@ dispatch_queue_t ty_coredata_record_queue() {
     static dispatch_queue_t ty_coredata_record_queue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        ty_coredata_record_queue = dispatch_queue_create("com.YeBlueColor.TYCoreDataRecord", NULL);
+        ty_coredata_record_queue = dispatch_queue_create("com.YeBlueColor.TYCoreDataRecord", DISPATCH_QUEUE_CONCURRENT);
     });
     return ty_coredata_record_queue;
 }
@@ -143,14 +143,10 @@ dispatch_queue_t ty_coredata_record_queue() {
 
 - (void)performBackgroundBlockAndWait:(TYCoreDataRecordBlock)block {
     if (block) {
-        __weak typeof(self) weakSelf = self;
-        [_backgroundContext performBlockAndWait:^{
-            @autoreleasepool {
-                if (weakSelf.backgroundContext) {
-                    block(weakSelf.backgroundContext);
-                    [self saveContext:weakSelf.backgroundContext];
-                }
-            }
+        NSManagedObjectContext *backgroundContext = _backgroundContext;
+        [backgroundContext performBlockAndWait:^{
+            block(backgroundContext);
+            [self saveContext:backgroundContext];
         }];
     }
 }

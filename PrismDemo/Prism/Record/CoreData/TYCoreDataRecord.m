@@ -16,6 +16,7 @@ static NSString * const ManagedObjectModelExtension = @"momd";
 
 @property (nonatomic, strong) NSManagedObjectContext *masterContext;
 @property (nonatomic, strong) NSManagedObjectContext *mainContext;
+@property (nonatomic, strong) NSManagedObjectContext *backgroundContext;
 
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 
@@ -97,6 +98,9 @@ dispatch_queue_t ty_coredata_record_queue() {
     
     _mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     _mainContext.parentContext = _masterContext;
+    
+    _backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    _backgroundContext.parentContext = _mainContext;
 }
 
 - (void)configurePersistentStore {
@@ -130,20 +134,27 @@ dispatch_queue_t ty_coredata_record_queue() {
 - (void)saveContext:(NSManagedObjectContext *)context {
     if (context && [context hasChanges]) {
         NSError *error;
-        if (![context save:&error]) {
-            NSLog(@"Error saving context: %@ %@ %@", self, error, [error userInfo]);
+        @try {
+            if (![context save:&error]) {
+                NSLog(@"Error saving context: %@ %@ %@", self, error, [error userInfo]);
+            }
+        } @catch (NSException *exception) {
+            NSLog(@"error : %@",exception.userInfo);
         }
         [self saveContext:context.parentContext];
     }
 }
 
 - (void)performBackgroundBlockAndWait:(TYCoreDataRecordBlock)block {
-    NSManagedObjectContext *backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    backgroundContext.parentContext = self.mainContext;
     if (block) {
-        [backgroundContext performBlockAndWait:^{
-            block(backgroundContext);
-            [self saveContext:backgroundContext];
+        __weak typeof(self) weakSelf = self;
+        [_backgroundContext performBlockAndWait:^{
+            @autoreleasepool {
+                if (weakSelf.backgroundContext) {
+                    block(weakSelf.backgroundContext);
+                    [self saveContext:weakSelf.backgroundContext];
+                }
+            }
         }];
     }
 }

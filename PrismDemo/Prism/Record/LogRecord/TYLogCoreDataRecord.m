@@ -166,7 +166,7 @@
 
 - (NSArray *)fetchRecordDateResultsWithContext:(NSManagedObjectContext *)context {
     NSFetchRequest *request = [TYLogDateRecord fetchRequest];
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES]];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:NO]];
     NSArray *results = [context executeFetchRequest:request error:nil];
     return results;
 }

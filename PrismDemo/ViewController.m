@@ -47,11 +47,11 @@
 }
 
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppMemoryUsage:(unsigned long long)app_memory_usage {
-    
+    NSLog(@"app memory %llu MB",app_memory_usage/1024/1024);
 }
 
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemMemoryUsage:(ty_system_memory_usage)system_memory_usage {
-    
+    NSLog(@"system memory %.1f %%",100.0*system_memory_usage.used_size/system_memory_usage.total_size);
 }
 
 - (void)time1 {

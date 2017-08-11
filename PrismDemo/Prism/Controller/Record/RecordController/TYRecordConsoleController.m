@@ -167,4 +167,9 @@
 //    });
 //}
 
+- (void)dealloc {
+    _fetchedResultsController.delegate = nil;
+    _tableView.delegate = nil;
+}
+
 @end

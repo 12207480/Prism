@@ -7,7 +7,7 @@
 //
 
 #import "TYSystemMonitor.h"
-#import "TYGCDTimer.h"
+#import "TYWeakProxy.h"
 
 @interface TYSystemMonitor () {
     struct {
@@ -46,7 +46,7 @@
     if (_timer) {
         [self removeTimer];
     }
-    _timer = [NSTimer timerWithTimeInterval:_timeInterval target:self selector:@selector(timerFire) userInfo:nil repeats:YES];
+    _timer = [NSTimer timerWithTimeInterval:_timeInterval target:[TYWeakProxy proxyWithTarget:self] selector:@selector(timerFire) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 

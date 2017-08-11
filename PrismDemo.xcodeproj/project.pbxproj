@@ -11,6 +11,7 @@
 		2B5C2D1A1F344D5E0073E344 /* TYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2D191F344D5E0073E344 /* TYFPSLabel.m */; };
 		2B6B7BAF1F3AEDA10041620C /* TYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B7BAE1F3AEDA10041620C /* TYWeakProxy.m */; };
 		2B6B7BB21F3AF9B90041620C /* TYMemoryUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B7BB11F3AF9B90041620C /* TYMemoryUsage.m */; };
+		2B6B7BB51F3D9EA60041620C /* TYNetworkFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B7BB41F3D9EA60041620C /* TYNetworkFlow.m */; };
 		2B8FAD341EB1E41C00B2CF70 /* TYSystemUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8FAD331EB1E41C00B2CF70 /* TYSystemUsageController.m */; };
 		2BB53B8B1EB09AD600D8E5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B8A1EB09AD600D8E5B5 /* main.m */; };
 		2BB53B8E1EB09AD600D8E5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B8D1EB09AD600D8E5B5 /* AppDelegate.m */; };
@@ -90,6 +91,8 @@
 		2B6B7BAE1F3AEDA10041620C /* TYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYWeakProxy.m; sourceTree = "<group>"; };
 		2B6B7BB01F3AF9B90041620C /* TYMemoryUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemoryUsage.h; sourceTree = "<group>"; };
 		2B6B7BB11F3AF9B90041620C /* TYMemoryUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemoryUsage.m; sourceTree = "<group>"; };
+		2B6B7BB31F3D9EA60041620C /* TYNetworkFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetworkFlow.h; sourceTree = "<group>"; };
+		2B6B7BB41F3D9EA60041620C /* TYNetworkFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetworkFlow.m; sourceTree = "<group>"; };
 		2B8FAD321EB1E41C00B2CF70 /* TYSystemUsageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSystemUsageController.h; sourceTree = "<group>"; };
 		2B8FAD331EB1E41C00B2CF70 /* TYSystemUsageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSystemUsageController.m; sourceTree = "<group>"; };
 		2B8FAD471EB1EBF800B2CF70 /* TYPrismMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPrismMonitor.h; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 				2BD5894A1F3AA4E800A79119 /* TYCPUUsage.m */,
 				2B6B7BB01F3AF9B90041620C /* TYMemoryUsage.h */,
 				2B6B7BB11F3AF9B90041620C /* TYMemoryUsage.m */,
+				2B6B7BB31F3D9EA60041620C /* TYNetworkFlow.h */,
+				2B6B7BB41F3D9EA60041620C /* TYNetworkFlow.m */,
 				2BD589461F3AA49500A79119 /* TYSystemMonitor.h */,
 				2BD589471F3AA49500A79119 /* TYSystemMonitor.m */,
 			);
@@ -698,6 +703,7 @@
 				2B6B7BB21F3AF9B90041620C /* TYMemoryUsage.m in Sources */,
 				2BB53CAC1EB1DB6C00D8E5B5 /* TYPrismNavigationController.m in Sources */,
 				2BB53C451EB09D9C00D8E5B5 /* TYCoreDataRecord.m in Sources */,
+				2B6B7BB51F3D9EA60041620C /* TYNetworkFlow.m in Sources */,
 				2BB53C991EB0A00200D8E5B5 /* TYRecordConsoleController.m in Sources */,
 				2BB53C371EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m in Sources */,
 				2BB53C3A1EB09D9C00D8E5B5 /* TYGCDLogMonitor.m in Sources */,

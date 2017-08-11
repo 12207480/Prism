@@ -134,12 +134,8 @@ dispatch_queue_t ty_coredata_record_queue() {
 - (void)saveContext:(NSManagedObjectContext *)context {
     if (context && [context hasChanges]) {
         NSError *error;
-        @try {
-            if (![context save:&error]) {
-                NSLog(@"Error saving context: %@ %@ %@", self, error, [error userInfo]);
-            }
-        } @catch (NSException *exception) {
-            NSLog(@"error : %@",exception.userInfo);
+        if (![context save:&error]) {
+            NSLog(@"Error saving context: %@ %@ %@", self, error, [error userInfo]);
         }
         [self saveContext:context.parentContext];
     }

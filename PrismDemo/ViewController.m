@@ -26,7 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    NSLog(@"disk total size: %.1f \nGB free size: %.1f GB",1.0*[TYDiskUsage getDiskTotalSize]/1024/1024/1024,1.0*[TYDiskUsage getDiskFreeSize]/1024/1024/1024);
+    NSLog(@"IPAdress: %@  %@",[TYNetworkFlow getWifiIPAddress],[TYNetworkFlow getCellularIPAddress]);
     NSLog(@"start");
     _timer1 = [TYGCDTimer scheduledTimerOnAsynWithInterval:1.0 target:self selector:@selector(time1) repeats:YES];
     //_timer2 = [TYGCDTimer scheduledTimerOnAsynWithInterval:1.0 target:self selector:@selector(time2) repeats:YES];
@@ -52,6 +53,10 @@
 
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemMemoryUsage:(ty_system_memory_usage)system_memory_usage {
     NSLog(@"system memory %.1f %%",100.0*system_memory_usage.used_size/system_memory_usage.total_size);
+}
+
+- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateNetworkFlowSent:(unsigned int)sent received:(unsigned int)received {
+    NSLog(@"流量 上行%u B 下行%u B",sent,received);
 }
 
 - (void)time1 {

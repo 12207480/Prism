@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef struct ty_system_cpu_usage {
+typedef struct {
     float user;         /* user state cpu usage percentage*/
     float system;
     float nice;

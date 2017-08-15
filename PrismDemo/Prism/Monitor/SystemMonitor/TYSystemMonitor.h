@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "TYCPUUsage.h"
 #import "TYMemoryUsage.h"
+#import "TYDiskUsage.h"
+#import "TYNetworkFlow.h"
 
 @class TYSystemMonitor;
 @protocol TYSystemMonitorDelegate <NSObject>
@@ -26,13 +28,22 @@
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppMemoryUsage:(unsigned long long)app_memory_usage;
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemMemoryUsage:(ty_system_memory_usage)system_memory_usage;
 
+// network flow
+
+/**
+ 网络流量监控
+ @param sent 上行 byte/timeInterval
+ @param received 下行 byte/timeInterval
+ */
+- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateNetworkFlowSent:(unsigned int)sent received:(unsigned int)received;
+
 @end
 
 @interface TYSystemMonitor : NSObject
 
 @property (nonatomic, weak) id<TYSystemMonitorDelegate> delegate;
 
-@property (nonatomic, assign) float timeInterval;
+@property (nonatomic, assign) float timeInterval; // default 1s
 
 + (TYSystemMonitor *)sharedInstance;
 

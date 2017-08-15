@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef struct ty_system_memory_usage {
+typedef struct {
     unsigned long long used_size;
     unsigned long long available_size;
     unsigned long long total_size;
 }ty_system_memory_usage;
 
+// memory usge is different to xcode
 @interface TYMemoryUsage : NSObject
 
 /**

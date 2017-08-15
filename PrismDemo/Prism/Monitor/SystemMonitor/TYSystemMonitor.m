@@ -16,11 +16,15 @@
         unsigned int didUpdateSystemCPUUsage   :1;
         unsigned int didUpdateAppMemoryUsage   :1;
         unsigned int didUpdateSystemMemoryUsage   :1;
-        
+        unsigned int didUpdateSystemNetworkFlow   :1;
     }_delegateFlags;
+    ty_flow_IOBytes _networkFlow;
+    BOOL _isFisrtGetNetworkFlow;
 }
 
 @property (nonatomic, strong) NSTimer *timer;
+
+
 
 @end
 
@@ -38,6 +42,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         _timeInterval = 1.0;
+        _isFisrtGetNetworkFlow = YES;
     }
     return self;
 }
@@ -65,6 +70,7 @@
     _delegateFlags.didUpdateSystemCPUUsage= [delegate respondsToSelector:@selector(systemMonitor:didUpdateSystemCPUUsage:)];
     _delegateFlags.didUpdateAppMemoryUsage = [delegate respondsToSelector:@selector(systemMonitor:didUpdateAppMemoryUsage:)];
     _delegateFlags.didUpdateSystemMemoryUsage = [delegate respondsToSelector:@selector(systemMonitor:didUpdateSystemMemoryUsage:)];
+    _delegateFlags.didUpdateSystemNetworkFlow = [delegate respondsToSelector:@selector(systemMonitor:didUpdateNetworkFlowSent:received:)];
 }
 
 #pragma mark - public 
@@ -94,6 +100,14 @@
     }
     if (_delegateFlags.didUpdateSystemMemoryUsage) {
         [_delegate systemMonitor:self didUpdateSystemMemoryUsage:[TYMemoryUsage getSystemMemoryUsageStruct]];
+    }
+    if (_delegateFlags.didUpdateSystemNetworkFlow) {
+        ty_flow_IOBytes networkFlow = [TYNetworkFlow getFlowIOBytes];
+        if (!_isFisrtGetNetworkFlow) {
+            [_delegate systemMonitor:self didUpdateNetworkFlowSent:networkFlow.totalSent - _networkFlow.totalSent received:networkFlow.totalReceived - _networkFlow.totalReceived];
+        }
+        _isFisrtGetNetworkFlow = NO;
+        _networkFlow = networkFlow;
     }
 }
 

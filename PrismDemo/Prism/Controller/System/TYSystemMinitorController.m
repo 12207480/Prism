@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *flowReceived;
 @property (weak, nonatomic) IBOutlet UILabel *flowTotalSendLabel;
 @property (weak, nonatomic) IBOutlet UILabel *flowTotalReceivedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *systemInfo;
 
 @end
 
@@ -29,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [TYSystemMonitor sharedInstance].delegate = self;
-    
+    self.systemInfo.text = [NSString stringWithFormat:@"%@: %@ %@",[TYDeviceInfo getDeviceName],[TYDeviceInfo getSystemName], [TYDeviceInfo getSystemVersion]];
     self.freeDiskLabel.text = [NSString stringWithFormat:@"%.1fGB",1.0*[TYDiskUsage getDiskFreeSize]/1024/1024/1024];
     self.totalDiskLabel.text = [NSString stringWithFormat:@"%.1fGB",1.0*[TYDiskUsage getDiskTotalSize]/1024/1024/1024];
 }

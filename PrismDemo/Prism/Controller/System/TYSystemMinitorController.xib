@@ -20,6 +20,7 @@
                 <outlet property="freeDiskLabel" destination="5Wf-vU-ybN" id="kOi-5M-T1u"/>
                 <outlet property="sysCPULabel" destination="sCL-cr-TF9" id="6P0-az-CSU"/>
                 <outlet property="sysRAMLabel" destination="dY6-4S-Ecr" id="4QR-Oq-upD"/>
+                <outlet property="systemInfo" destination="RtG-cS-6Xb" id="3qn-rG-A9T"/>
                 <outlet property="totalDiskLabel" destination="5ft-bA-Olw" id="2Gg-9R-kje"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gfa-G3-3Bu">
-                    <rect key="frame" x="0.0" y="72" width="375" height="80"/>
+                    <rect key="frame" x="0.0" y="100" width="375" height="80"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP -- Memory Usage -- System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E62-KH-r8c">
                             <rect key="frame" x="74.5" y="57" width="227" height="18"/>
@@ -85,7 +86,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90f-Kq-kKz">
-                    <rect key="frame" x="0.0" y="160" width="375" height="80"/>
+                    <rect key="frame" x="0.0" y="188" width="375" height="80"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP -- CPU Usage -- System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bF-r6-2mT">
                             <rect key="frame" x="87.5" y="57" width="201.5" height="18"/>
@@ -140,7 +141,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAn-eR-2BS">
-                    <rect key="frame" x="0.0" y="248" width="375" height="80"/>
+                    <rect key="frame" x="0.0" y="276" width="375" height="80"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avalible -- Disk Usage -- Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egY-xZ-OLf">
                             <rect key="frame" x="84.5" y="57" width="207" height="18"/>
@@ -195,7 +196,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJA-Vh-vIb">
-                    <rect key="frame" x="0.0" y="336" width="375" height="130"/>
+                    <rect key="frame" x="0.0" y="364" width="375" height="130"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send -- Network Flow -- Received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUy-QZ-Bgb">
                             <rect key="frame" x="71" y="107" width="234.5" height="18"/>
@@ -267,6 +268,12 @@
                         <constraint firstItem="Ebu-Ai-ksu" firstAttribute="top" secondItem="s80-ep-KPG" secondAttribute="bottom" constant="18" id="wwF-14-4TB"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtG-cS-6Xb">
+                    <rect key="frame" x="159.5" y="72" width="56" height="27.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -275,12 +282,14 @@
                 <constraint firstAttribute="trailing" secondItem="pAn-eR-2BS" secondAttribute="trailing" id="9om-4J-gJ0"/>
                 <constraint firstItem="pAn-eR-2BS" firstAttribute="top" secondItem="90f-Kq-kKz" secondAttribute="bottom" constant="8" id="Mmr-FI-BMA"/>
                 <constraint firstItem="dJA-Vh-vIb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RGD-VK-D7b"/>
+                <constraint firstItem="RtG-cS-6Xb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UZ9-bH-KyG"/>
                 <constraint firstItem="90f-Kq-kKz" firstAttribute="top" secondItem="Gfa-G3-3Bu" secondAttribute="bottom" constant="8" id="WNG-oL-aEl"/>
-                <constraint firstItem="Gfa-G3-3Bu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="Xqr-4H-5Nt"/>
+                <constraint firstItem="Gfa-G3-3Bu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="Xqr-4H-5Nt"/>
                 <constraint firstAttribute="trailing" secondItem="90f-Kq-kKz" secondAttribute="trailing" id="ZXd-4H-FAW"/>
                 <constraint firstItem="pAn-eR-2BS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nFz-Lf-043"/>
                 <constraint firstItem="Gfa-G3-3Bu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o6L-Ne-gqs"/>
                 <constraint firstItem="90f-Kq-kKz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="omn-3b-zSh"/>
+                <constraint firstItem="RtG-cS-6Xb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="tzY-ZM-uDV"/>
                 <constraint firstAttribute="trailing" secondItem="dJA-Vh-vIb" secondAttribute="trailing" id="xpr-Dh-Y8y"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="54.5"/>

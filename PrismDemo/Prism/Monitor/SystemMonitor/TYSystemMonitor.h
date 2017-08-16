@@ -11,6 +11,7 @@
 #import "TYMemoryUsage.h"
 #import "TYDiskUsage.h"
 #import "TYNetworkFlow.h"
+#import "TYDeviceInfo.h"
 
 @class TYSystemMonitor;
 @protocol TYSystemMonitorDelegate <NSObject>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B3A72841F44234200EAFAC1 /* TYSystemMinitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A72821F44234200EAFAC1 /* TYSystemMinitorController.m */; };
 		2B3A72851F44234200EAFAC1 /* TYSystemMinitorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A72831F44234200EAFAC1 /* TYSystemMinitorController.xib */; };
+		2B3A728B1F44452300EAFAC1 /* TYDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A728A1F44452300EAFAC1 /* TYDeviceInfo.m */; };
 		2B5C2D171F3419DC0073E344 /* TYFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2D161F3419DC0073E344 /* TYFPSMonitor.m */; };
 		2B5C2D1A1F344D5E0073E344 /* TYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2D191F344D5E0073E344 /* TYFPSLabel.m */; };
 		2B6B7BAF1F3AEDA10041620C /* TYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B7BAE1F3AEDA10041620C /* TYWeakProxy.m */; };
@@ -88,6 +89,8 @@
 		2B3A72811F44234200EAFAC1 /* TYSystemMinitorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSystemMinitorController.h; sourceTree = "<group>"; };
 		2B3A72821F44234200EAFAC1 /* TYSystemMinitorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSystemMinitorController.m; sourceTree = "<group>"; };
 		2B3A72831F44234200EAFAC1 /* TYSystemMinitorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYSystemMinitorController.xib; sourceTree = "<group>"; };
+		2B3A72891F44452300EAFAC1 /* TYDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDeviceInfo.h; sourceTree = "<group>"; };
+		2B3A728A1F44452300EAFAC1 /* TYDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDeviceInfo.m; sourceTree = "<group>"; };
 		2B5C2D151F3419DC0073E344 /* TYFPSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYFPSMonitor.h; sourceTree = "<group>"; };
 		2B5C2D161F3419DC0073E344 /* TYFPSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYFPSMonitor.m; sourceTree = "<group>"; };
 		2B5C2D181F344D5E0073E344 /* TYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYFPSLabel.h; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				2B6B7BB81F413CB30041620C /* TYDiskUsage.m */,
 				2B6B7BB31F3D9EA60041620C /* TYNetworkFlow.h */,
 				2B6B7BB41F3D9EA60041620C /* TYNetworkFlow.m */,
+				2B3A72891F44452300EAFAC1 /* TYDeviceInfo.h */,
+				2B3A728A1F44452300EAFAC1 /* TYDeviceInfo.m */,
 				2BD589461F3AA49500A79119 /* TYSystemMonitor.h */,
 				2BD589471F3AA49500A79119 /* TYSystemMonitor.m */,
 			);
@@ -732,6 +737,7 @@
 				2BB53C9E1EB0A05600D8E5B5 /* TYPrismRecordController.m in Sources */,
 				2BB53C3F1EB09D9C00D8E5B5 /* TYNetWorkMonitor.m in Sources */,
 				2BB53C411EB09D9C00D8E5B5 /* TYANRCoreDataRecord.m in Sources */,
+				2B3A728B1F44452300EAFAC1 /* TYDeviceInfo.m in Sources */,
 				2BD589481F3AA49500A79119 /* TYSystemMonitor.m in Sources */,
 				2BB53B8E1EB09AD600D8E5B5 /* AppDelegate.m in Sources */,
 				2BB53C931EB0A00200D8E5B5 /* TYNetworkRecordDataController.m in Sources */,

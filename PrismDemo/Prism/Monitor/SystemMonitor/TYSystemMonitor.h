@@ -14,7 +14,7 @@
 
 @class TYSystemMonitor;
 @protocol TYSystemMonitorDelegate <NSObject>
-
+@optional
 // monitor timer 
 - (void)systemMonitorDidUpdateUsage:(TYSystemMonitor *)systemMonitor;
 
@@ -25,6 +25,10 @@
 
 // Memory Usage
 
+
+/**
+ get app used memory .byte
+ */
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppMemoryUsage:(unsigned long long)app_memory_usage;
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemMemoryUsage:(ty_system_memory_usage)system_memory_usage;
 
@@ -35,7 +39,7 @@
  @param sent 上行 byte/timeInterval
  @param received 下行 byte/timeInterval
  */
-- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateNetworkFlowSent:(unsigned int)sent received:(unsigned int)received;
+- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateNetworkFlowSent:(unsigned int)sent received:(unsigned int)received total:(ty_flow_IOBytes)total;
 
 @end
 

@@ -10,9 +10,8 @@
 #import "TYGCDTimer.h"
 #import "TYDLog.h"
 #import "TestANRViewController.h"
-#import "TYSystemMonitor.h"
 
-@interface ViewController ()<TYSystemMonitorDelegate>
+@interface ViewController ()
 
 @property (nonatomic, strong) TYGCDTimer* timer1;
 @property (nonatomic, strong) TYGCDTimer* timer2;
@@ -26,37 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"disk total size: %.1f \nGB free size: %.1f GB",1.0*[TYDiskUsage getDiskTotalSize]/1024/1024/1024,1.0*[TYDiskUsage getDiskFreeSize]/1024/1024/1024);
-    NSLog(@"IPAdress: %@  %@",[TYNetworkFlow getWifiIPAddress],[TYNetworkFlow getCellularIPAddress]);
     NSLog(@"start");
     _timer1 = [TYGCDTimer scheduledTimerOnAsynWithInterval:1.0 target:self selector:@selector(time1) repeats:YES];
     //_timer2 = [TYGCDTimer scheduledTimerOnAsynWithInterval:1.0 target:self selector:@selector(time2) repeats:YES];
-    [TYSystemMonitor sharedInstance].delegate = self;
-    [[TYSystemMonitor sharedInstance] start];
-}
-
-- (void)systemMonitorDidUpdateUsage:(TYSystemMonitor *)systemMonitor {
-    
-}
-
-- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemCPUUsage:(ty_system_cpu_usage)system_cpu_usage {
-    NSLog(@"system cpu %.1f",system_cpu_usage.total);
-}
-
-- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppCPUUsage:(ty_app_cpu_usage)app_cpu_usage {
-    NSLog(@"app cpu %.1f",app_cpu_usage.cpu_usage);
-}
-
-- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppMemoryUsage:(unsigned long long)app_memory_usage {
-    NSLog(@"app memory %llu MB",app_memory_usage/1024/1024);
-}
-
-- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemMemoryUsage:(ty_system_memory_usage)system_memory_usage {
-    NSLog(@"system memory %.1f %%",100.0*system_memory_usage.used_size/system_memory_usage.total_size);
-}
-
-- (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateNetworkFlowSent:(unsigned int)sent received:(unsigned int)received {
-    NSLog(@"流量 上行%u B 下行%u B",sent,received);
 }
 
 - (void)time1 {

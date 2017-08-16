@@ -59,7 +59,7 @@
     TYFPSLabel *label = [[TYFPSLabel alloc]initWithFrame:CGRectMake(([self correctWindowWidth])/2+30, 0, 50, 20)];
     label.tag = kStautsBarTag;
     label.layer.zPosition = 1000;
-    [[self mainWindow].rootViewController.view addSubview:label];
+    [[self mainWindow] addSubview:label];
     [label start];
 }
 

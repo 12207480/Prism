@@ -11,8 +11,8 @@
 typedef struct {
     unsigned int wifiSent;
     unsigned int wifiReceived;
-    unsigned int wwanSent;
-    unsigned int wwanReceived;
+    unsigned int cellularSent;
+    unsigned int cellularReceived;
     unsigned int totalSent;
     unsigned int totalReceived;
 }ty_flow_IOBytes;

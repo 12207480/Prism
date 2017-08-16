@@ -113,39 +113,42 @@
     }else if(p.state == UIGestureRecognizerStateEnded
              || p.state == UIGestureRecognizerStateCancelled) {
         self.alpha = _isSelected ? _openAlpha : _closeAlpha;
-        
-        CGFloat ballWidth = self.frame.size.width;
-        CGFloat ballHeight = self.frame.size.height;
-        CGFloat screenWidth = kScreenWidth;
-        CGFloat screenHeight = kScreenHeight;
-        
-        CGFloat left = fabs(panPoint.x);
-        CGFloat right = fabs(screenWidth - left);
-        
-        CGFloat minSpace = MIN(left, right);
-        CGPoint newCenter = CGPointZero;
-        CGFloat targetY = 0;
-        
-        //Correcting Y
-        if (panPoint.y < kVerticalMargin + ballHeight / 2.0) {
-            targetY = kVerticalMargin + ballHeight / 2.0;
-        }else if (panPoint.y > (screenHeight - ballHeight / 2.0 - kVerticalMargin)) {
-            targetY = screenHeight - ballHeight / 2.0 - kVerticalMargin;
-        }else{
-            targetY = panPoint.y;
-        }
-        
-        CGFloat centerXSpace = kHorizenMargin + ballWidth/2;
-        if (minSpace == left) {
-            newCenter = CGPointMake(centerXSpace, targetY);
-        }else if (minSpace == right) {
-            newCenter = CGPointMake(screenWidth - centerXSpace, targetY);
-        }
-        
-        [UIView animateWithDuration:.25 animations:^{
-            self.center = newCenter;
-        }];
+        [self layoutAnimateWithPosition:panPoint];
     }
+}
+
+- (void)layoutAnimateWithPosition:(CGPoint)postion {
+    CGFloat ballWidth = self.frame.size.width;
+    CGFloat ballHeight = self.frame.size.height;
+    CGFloat screenWidth = kScreenWidth;
+    CGFloat screenHeight = kScreenHeight;
+    
+    CGFloat left = fabs(postion.x);
+    CGFloat right = fabs(screenWidth - left);
+    
+    CGFloat minSpace = MIN(left, right);
+    CGPoint newCenter = CGPointZero;
+    CGFloat targetY = 0;
+    
+    //Correcting Y
+    if (postion.y < kVerticalMargin + ballHeight / 2.0) {
+        targetY = kVerticalMargin + ballHeight / 2.0;
+    }else if (postion.y > (screenHeight - ballHeight / 2.0 - kVerticalMargin)) {
+        targetY = screenHeight - ballHeight / 2.0 - kVerticalMargin;
+    }else{
+        targetY = postion.y;
+    }
+    
+    CGFloat centerXSpace = kHorizenMargin + ballWidth/2;
+    if (minSpace == left) {
+        newCenter = CGPointMake(centerXSpace, targetY);
+    }else if (minSpace == right) {
+        newCenter = CGPointMake(screenWidth - centerXSpace, targetY);
+    }
+    
+    [UIView animateWithDuration:.25 animations:^{
+        self.center = newCenter;
+    }];
 }
 
 - (void)layoutSubviews {

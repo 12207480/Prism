@@ -9,6 +9,7 @@
 #import "TYPrismTabBarController.h"
 #import "TYPrismNavigationController.h"
 #import "TYPrismRecordController.h"
+#import "TYSystemMinitorController.h"
 
 @interface TYPrismTabBarController ()
 
@@ -26,12 +27,25 @@
 - (void)configureChildViewControllers
 {
     [self addRecordController];
+    
+    [self addSystemMonitorController];
 }
 
 - (void)addRecordController {
     TYPrismRecordController *recordVC = [[TYPrismRecordController alloc]init];
     TYPrismNavigationController *nav = [[TYPrismNavigationController alloc] initWithRootViewController:recordVC];
+    recordVC.title = @"Record";
     recordVC.tabBarItem.title = @"Record";
+    
+    [self addChildViewController:nav];
+}
+
+- (void)addSystemMonitorController {
+    TYSystemMinitorController *monitorVC = [[TYSystemMinitorController alloc]init];
+    TYPrismNavigationController *nav = [[TYPrismNavigationController alloc] initWithRootViewController:monitorVC];
+    monitorVC.title = @"Monitor";
+    monitorVC.tabBarItem.title = @"Monitor";
+    
     [self addChildViewController:nav];
 }
 

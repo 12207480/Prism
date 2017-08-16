@@ -10,6 +10,8 @@
 #import "TYPrismView.h"
 #import "TYPrismTabBarController.h"
 #import "TYPrismRecord.h"
+#import "TYFPSLabel.h"
+#import "TYSystemMonitor.h"
 
 @interface TYPrismManager () <TYPrismViewDelegate>
 
@@ -45,18 +47,22 @@
 #pragma mark - publc
 
 - (void)start {
+    [TYFPSLabel showInStutasBar];
     [[TYLogCoreDataRecord sharedInstance] start];
     [[TYCrashCoreDataRecord sharedInstance] start];
     [[TYANRCoreDataRecord sharedInstance] start];
     [[TYNetworkCoreDataRecord sharedInstance] start];
+    [[TYSystemMonitor sharedInstance] start];
     [self.prismView show];
 }
 
 - (void)stop {
+    [TYFPSLabel hide];
     [[TYLogCoreDataRecord sharedInstance] stop];
     [[TYCrashCoreDataRecord sharedInstance] stop];
     [[TYANRCoreDataRecord sharedInstance] stop];
     [[TYNetworkCoreDataRecord sharedInstance] stop];
+    [[TYSystemMonitor sharedInstance] stop];
 }
 
 + (void)start {

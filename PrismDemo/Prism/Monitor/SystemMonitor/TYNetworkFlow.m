@@ -41,12 +41,12 @@
             flow.wifiSent  += if_data->ifi_obytes;
         }else if (strcmp(ifa->ifa_name, "pdp_ip0") == 0) {
             struct if_data *if_data = (struct if_data *)ifa->ifa_data;
-            flow.wwanReceived  += if_data->ifi_ibytes;
-            flow.wwanSent += if_data->ifi_obytes;
+            flow.cellularReceived  += if_data->ifi_ibytes;
+            flow.cellularSent += if_data->ifi_obytes;
         }
     }
-    flow.totalReceived = flow.wifiReceived + flow.wwanReceived;
-    flow.totalSent = flow.wifiSent + flow.wwanSent;
+    flow.totalReceived = flow.wifiReceived + flow.cellularReceived;
+    flow.totalSent = flow.wifiSent + flow.cellularSent;
     freeifaddrs(ifa_list);
     return flow;
 }

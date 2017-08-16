@@ -19,6 +19,7 @@
         unsigned int didUpdateSystemNetworkFlow   :1;
     }_delegateFlags;
     ty_flow_IOBytes _networkFlow;
+    ty_flow_IOBytes _startNetworkFlow;
     BOOL _isFisrtGetNetworkFlow;
 }
 
@@ -74,6 +75,9 @@
 #pragma mark - public 
 
 - (void)start {
+    if (!_timer) {
+        _startNetworkFlow = [TYNetworkFlow getFlowIOBytes];
+    }
     [self addTimer];
 }
 
@@ -101,8 +105,15 @@
     }
     if (_delegateFlags.didUpdateSystemNetworkFlow) {
         ty_flow_IOBytes networkFlow = [TYNetworkFlow getFlowIOBytes];
+        ty_flow_IOBytes startNetworkFlow;
+        startNetworkFlow.wifiReceived = networkFlow.wifiReceived - _startNetworkFlow.wifiReceived;
+        startNetworkFlow.wifiSent = networkFlow.wifiSent - _startNetworkFlow.wifiSent;
+        startNetworkFlow.cellularSent = networkFlow.cellularSent - _startNetworkFlow.cellularSent;
+        startNetworkFlow.cellularReceived = networkFlow.cellularReceived - _startNetworkFlow.cellularReceived;
+        startNetworkFlow.totalReceived = networkFlow.totalReceived - _startNetworkFlow.totalReceived;
+        startNetworkFlow.totalSent = networkFlow.totalSent - _startNetworkFlow.totalSent;
         if (!_isFisrtGetNetworkFlow) {
-            [_delegate systemMonitor:self didUpdateNetworkFlowSent:networkFlow.totalSent - _networkFlow.totalSent received:networkFlow.totalReceived - _networkFlow.totalReceived total:networkFlow];
+            [_delegate systemMonitor:self didUpdateNetworkFlowSent:networkFlow.totalSent - _networkFlow.totalSent received:networkFlow.totalReceived - _networkFlow.totalReceived total:startNetworkFlow];
         }
         _isFisrtGetNetworkFlow = NO;
         _networkFlow = networkFlow;

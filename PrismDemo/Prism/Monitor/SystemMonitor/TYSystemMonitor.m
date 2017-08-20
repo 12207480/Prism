@@ -63,6 +63,7 @@
 }
 
 - (void)setDelegate:(id<TYSystemMonitorDelegate>)delegate {
+    BOOL immediatelyUpdate = _delegate == nil;
     _delegate = delegate;
     _delegateFlags.didUpdateUsage = [delegate respondsToSelector:@selector(systemMonitorDidUpdateUsage:)];
     _delegateFlags.didUpdateAppCPUUsage = [delegate respondsToSelector:@selector(systemMonitor:didUpdateAppCPUUsage:)];
@@ -70,6 +71,9 @@
     _delegateFlags.didUpdateAppMemoryUsage = [delegate respondsToSelector:@selector(systemMonitor:didUpdateAppMemoryUsage:)];
     _delegateFlags.didUpdateSystemMemoryUsage = [delegate respondsToSelector:@selector(systemMonitor:didUpdateSystemMemoryUsage:)];
     _delegateFlags.didUpdateSystemNetworkFlow = [delegate respondsToSelector:@selector(systemMonitor:didUpdateNetworkFlowSent:received:total:)];
+    if (immediatelyUpdate && [_timer isValid]) {
+        [self timerFire];
+    }
 }
 
 #pragma mark - public 

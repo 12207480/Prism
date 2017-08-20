@@ -10,12 +10,15 @@
 		2B3A72841F44234200EAFAC1 /* TYSystemMinitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A72821F44234200EAFAC1 /* TYSystemMinitorController.m */; };
 		2B3A72851F44234200EAFAC1 /* TYSystemMinitorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A72831F44234200EAFAC1 /* TYSystemMinitorController.xib */; };
 		2B3A728B1F44452300EAFAC1 /* TYDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A728A1F44452300EAFAC1 /* TYDeviceInfo.m */; };
+		2B3A728F1F452D6900EAFAC1 /* TYPrismSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A728E1F452D6900EAFAC1 /* TYPrismSettingController.m */; };
 		2B5C2D171F3419DC0073E344 /* TYFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2D161F3419DC0073E344 /* TYFPSMonitor.m */; };
 		2B5C2D1A1F344D5E0073E344 /* TYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2D191F344D5E0073E344 /* TYFPSLabel.m */; };
 		2B6B7BAF1F3AEDA10041620C /* TYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B7BAE1F3AEDA10041620C /* TYWeakProxy.m */; };
 		2B6B7BB21F3AF9B90041620C /* TYMemoryUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B7BB11F3AF9B90041620C /* TYMemoryUsage.m */; };
 		2B6B7BB51F3D9EA60041620C /* TYNetworkFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B7BB41F3D9EA60041620C /* TYNetworkFlow.m */; };
 		2B6B7BB91F413CB30041620C /* TYDiskUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B7BB81F413CB30041620C /* TYDiskUsage.m */; };
+		2B7164201F468A7B00B967B7 /* TYPrismSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B71641F1F468A7B00B967B7 /* TYPrismSettingItem.m */; };
+		2B7164231F468ADD00B967B7 /* TYPrismSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7164221F468ADD00B967B7 /* TYPrismSettingCell.m */; };
 		2BB53B8B1EB09AD600D8E5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B8A1EB09AD600D8E5B5 /* main.m */; };
 		2BB53B8E1EB09AD600D8E5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B8D1EB09AD600D8E5B5 /* AppDelegate.m */; };
 		2BB53B911EB09AD600D8E5B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53B901EB09AD600D8E5B5 /* ViewController.m */; };
@@ -91,6 +94,8 @@
 		2B3A72831F44234200EAFAC1 /* TYSystemMinitorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYSystemMinitorController.xib; sourceTree = "<group>"; };
 		2B3A72891F44452300EAFAC1 /* TYDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDeviceInfo.h; sourceTree = "<group>"; };
 		2B3A728A1F44452300EAFAC1 /* TYDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDeviceInfo.m; sourceTree = "<group>"; };
+		2B3A728D1F452D6900EAFAC1 /* TYPrismSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismSettingController.h; sourceTree = "<group>"; };
+		2B3A728E1F452D6900EAFAC1 /* TYPrismSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismSettingController.m; sourceTree = "<group>"; };
 		2B5C2D151F3419DC0073E344 /* TYFPSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYFPSMonitor.h; sourceTree = "<group>"; };
 		2B5C2D161F3419DC0073E344 /* TYFPSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYFPSMonitor.m; sourceTree = "<group>"; };
 		2B5C2D181F344D5E0073E344 /* TYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYFPSLabel.h; sourceTree = "<group>"; };
@@ -103,6 +108,10 @@
 		2B6B7BB41F3D9EA60041620C /* TYNetworkFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetworkFlow.m; sourceTree = "<group>"; };
 		2B6B7BB71F413CB30041620C /* TYDiskUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDiskUsage.h; sourceTree = "<group>"; };
 		2B6B7BB81F413CB30041620C /* TYDiskUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDiskUsage.m; sourceTree = "<group>"; };
+		2B71641E1F468A7B00B967B7 /* TYPrismSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismSettingItem.h; sourceTree = "<group>"; };
+		2B71641F1F468A7B00B967B7 /* TYPrismSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismSettingItem.m; sourceTree = "<group>"; };
+		2B7164211F468ADD00B967B7 /* TYPrismSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismSettingCell.h; sourceTree = "<group>"; };
+		2B7164221F468ADD00B967B7 /* TYPrismSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPrismSettingCell.m; sourceTree = "<group>"; };
 		2B8FAD471EB1EBF800B2CF70 /* TYPrismMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPrismMonitor.h; sourceTree = "<group>"; };
 		2B8FAD481EB1EC2D00B2CF70 /* TYPrismRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPrismRecord.h; sourceTree = "<group>"; };
 		2B8FAD491EB1EC8300B2CF70 /* TYDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDLog.h; sourceTree = "<group>"; };
@@ -238,6 +247,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B3A728C1F452D4A00EAFAC1 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2B3A728D1F452D6900EAFAC1 /* TYPrismSettingController.h */,
+				2B3A728E1F452D6900EAFAC1 /* TYPrismSettingController.m */,
+				2B71641E1F468A7B00B967B7 /* TYPrismSettingItem.h */,
+				2B71641F1F468A7B00B967B7 /* TYPrismSettingItem.m */,
+				2B7164211F468ADD00B967B7 /* TYPrismSettingCell.h */,
+				2B7164221F468ADD00B967B7 /* TYPrismSettingCell.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		2B5C2D141F3419C10073E344 /* SystemMonitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +367,7 @@
 				2BB53CA31EB1CF7800D8E5B5 /* Main */,
 				2BB53C681EB0A00200D8E5B5 /* Record */,
 				2B8FAD311EB1E11E00B2CF70 /* System */,
+				2B3A728C1F452D4A00EAFAC1 /* Setting */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -702,6 +725,7 @@
 				2BB53C511EB09D9C00D8E5B5 /* TYNetworkInfoRecord.m in Sources */,
 				2BB53C3E1EB09D9C00D8E5B5 /* TYNetWorkInfo.m in Sources */,
 				2BB53C421EB09D9C00D8E5B5 /* TYANRCoreDataRecord.xcdatamodeld in Sources */,
+				2B7164231F468ADD00B967B7 /* TYPrismSettingCell.m in Sources */,
 				2B6B7BB91F413CB30041620C /* TYDiskUsage.m in Sources */,
 				2BB53C8E1EB0A00200D8E5B5 /* TYANRRecordDataController.m in Sources */,
 				2B5C2D1A1F344D5E0073E344 /* TYFPSLabel.m in Sources */,
@@ -720,6 +744,7 @@
 				2B6B7BB51F3D9EA60041620C /* TYNetworkFlow.m in Sources */,
 				2BB53C991EB0A00200D8E5B5 /* TYRecordConsoleController.m in Sources */,
 				2B3A72841F44234200EAFAC1 /* TYSystemMinitorController.m in Sources */,
+				2B7164201F468A7B00B967B7 /* TYPrismSettingItem.m in Sources */,
 				2BB53C371EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m in Sources */,
 				2BB53C3A1EB09D9C00D8E5B5 /* TYGCDLogMonitor.m in Sources */,
 				2BB53C4F1EB09D9C00D8E5B5 /* TYNetworkCoreDataRecord.xcdatamodeld in Sources */,
@@ -732,6 +757,7 @@
 				2BB53CA61EB1CFA400D8E5B5 /* TYPrismTabBarController.m in Sources */,
 				2BB53C4D1EB09D9C00D8E5B5 /* TYLogMsgRecord.m in Sources */,
 				2BB53B911EB09AD600D8E5B5 /* ViewController.m in Sources */,
+				2B3A728F1F452D6900EAFAC1 /* TYPrismSettingController.m in Sources */,
 				2BB53C391EB09D9C00D8E5B5 /* TYASLogMonitor.m in Sources */,
 				2BB53C481EB09D9C00D8E5B5 /* TYCrashInfoRecord.m in Sources */,
 				2BB53C9E1EB0A05600D8E5B5 /* TYPrismRecordController.m in Sources */,

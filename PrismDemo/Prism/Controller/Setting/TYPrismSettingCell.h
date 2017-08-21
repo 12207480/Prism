@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TYPrismSettingItem.h"
 
 @interface TYPrismSettingCell : UITableViewCell
+
+@property (nonatomic, strong) TYPrismSettingItem * item;
 
 @end

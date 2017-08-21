@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class TYPrismRecordItem;
-typedef void(^ClickedHandle)(TYPrismRecordItem *item);
+@class TYPrismSettingItem;
+typedef void(^ClickedHandle)(TYPrismSettingItem *item);
+typedef void(^AccessoryHandle)(TYPrismSettingItem *item, UIView *accessoryView);
 
 @interface TYPrismSettingItem : NSObject
 
@@ -21,6 +22,6 @@ typedef void(^ClickedHandle)(TYPrismRecordItem *item);
 
 @property (nonatomic, copy) ClickedHandle selectCellHandle;
 
-@property (nonatomic, copy) ClickedHandle accessoryViewHandle;
+@property (nonatomic, copy) AccessoryHandle accessoryViewHandle;
 
 @end

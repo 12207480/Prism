@@ -66,10 +66,8 @@
     fcntl(fd, F_SETFL, O_NONBLOCK);// set the reading of this file descriptor without delay
     
     dispatch_source_t source = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ, fd, 0, _queue);
-    
-    int writeEnd = fildes[1];
     dispatch_source_set_cancel_handler(source, ^{
-        close(writeEnd);
+        close(fd);
         dup2(originalStdHandle, origianlFD);//reset the original file descriptor
     });
     

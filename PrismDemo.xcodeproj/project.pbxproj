@@ -252,10 +252,10 @@
 			children = (
 				2B3A728D1F452D6900EAFAC1 /* TYPrismSettingController.h */,
 				2B3A728E1F452D6900EAFAC1 /* TYPrismSettingController.m */,
-				2B71641E1F468A7B00B967B7 /* TYPrismSettingItem.h */,
-				2B71641F1F468A7B00B967B7 /* TYPrismSettingItem.m */,
 				2B7164211F468ADD00B967B7 /* TYPrismSettingCell.h */,
 				2B7164221F468ADD00B967B7 /* TYPrismSettingCell.m */,
+				2B71641E1F468A7B00B967B7 /* TYPrismSettingItem.h */,
+				2B71641F1F468A7B00B967B7 /* TYPrismSettingItem.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";

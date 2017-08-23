@@ -153,7 +153,7 @@
 }
 
 - (void)fetchAsynDateRecordResultsComplete:(void(^)(NSArray *results))complete {
-    [_record performMainContextBlock:^(NSManagedObjectContext *context) {
+    [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
         NSArray *results = [self fetchRecordDateResultsWithContext:context];
         complete(results);
     }];
@@ -161,7 +161,7 @@
 
 - (NSArray *)fetchRecordDateResultsWithContext:(NSManagedObjectContext *)context {
     NSFetchRequest *request = [TYANRDateRecord fetchRequest];
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES]];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:NO]];
     NSArray *results = [context executeFetchRequest:request error:nil];
     return results;
 }

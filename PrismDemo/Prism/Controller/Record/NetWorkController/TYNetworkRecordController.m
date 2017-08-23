@@ -27,8 +27,13 @@
 #pragma mark - override
 
 - (void)loadData {
-    self.records = [[[TYNetworkCoreDataRecord sharedInstance] fetchDateRecordResults] mutableCopy];
-    [self.tableView reloadData];
+//    self.records = [[[TYNetworkCoreDataRecord sharedInstance] fetchDateRecordResults] mutableCopy];
+//    [self.tableView reloadData];
+    //异步获取
+    [[TYNetworkCoreDataRecord sharedInstance] fetchAsynDateRecordResultsComplete:^(NSArray *results) {
+        self.records = [results mutableCopy];
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)deleteRecordDataObjects:(NSArray *)deleteObjects {

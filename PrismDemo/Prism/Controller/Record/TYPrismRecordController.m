@@ -29,6 +29,7 @@ static NSString * const cellId = @"UITableViewCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Record";
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self addTableView];
     

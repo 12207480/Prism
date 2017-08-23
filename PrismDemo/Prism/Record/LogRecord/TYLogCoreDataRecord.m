@@ -153,7 +153,7 @@
 }
 
 - (void)fetchAsynDateRecordResultsComplete:(void(^)(NSArray *results))complete {
-    [_record performMainContextBlock:^(NSManagedObjectContext *context) {
+    [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
         NSArray *results = [self fetchRecordDateResultsWithContext:context];
         complete(results);
     }];

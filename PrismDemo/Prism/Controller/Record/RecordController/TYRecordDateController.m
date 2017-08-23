@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     if (!_cellId) {
         _cellId = @"TYRecordDateCell";
     }
@@ -32,7 +33,6 @@
     self.selectItem = [[UIBarButtonItem alloc]initWithTitle:@"全选" style:UIBarButtonItemStylePlain target:self action:@selector(selectAllAction)];
     self.navigationItem.rightBarButtonItem = self.deleteItem;
     [self addTableView];
-    [self.tableView registerClass:NSClassFromString(_cellId) forCellReuseIdentifier:_cellId];
 }
 
 - (void)addTableView {
@@ -42,6 +42,7 @@
     tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:tableView];
     _tableView = tableView;
+    [_tableView registerClass:NSClassFromString(_cellId) forCellReuseIdentifier:_cellId];
 }
 
 - (void)viewWillLayoutSubviews {

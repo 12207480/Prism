@@ -27,14 +27,14 @@
 #pragma mark - override
 
 - (void)loadData {
-    self.records = [[[TYLogCoreDataRecord sharedInstance] fetchDateRecordResults] mutableCopy];
-    [self.tableView reloadData];
+//    self.records = [[[TYLogCoreDataRecord sharedInstance] fetchDateRecordResults] mutableCopy];
+//    [self.tableView reloadData];
 
-// 异步获取
-//    [[TYLogCoreDataRecord sharedInstance] fetchAsynDateRecordResultsComplete:^(NSArray *results) {
-//        self.records = [results mutableCopy];
-//        [self.tableView reloadData];
-//    }];
+    //异步获取
+    [[TYLogCoreDataRecord sharedInstance] fetchAsynDateRecordResultsComplete:^(NSArray *results) {
+        self.records = [results mutableCopy];
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)deleteRecordDataObjects:(NSArray *)deleteObjects {

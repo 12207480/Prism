@@ -93,7 +93,7 @@
 - (void)scrollsToBottomAnimated:(BOOL)animated
 {
     CGFloat offset = self.tableView.contentSize.height - self.tableView.bounds.size.height;
-    if (offset > 0)
+    if (offset+64 > 0)
     {
         [self.tableView setContentOffset:CGPointMake(0, offset) animated:animated];
     }
@@ -101,7 +101,7 @@
 
 #pragma mark - NSFetchedResultsControllerDelegate
 
-/********* reloadData *********/
+/********* first method-> reloadData *********/
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     dispatch_async(dispatch_get_main_queue(), ^{
         // something
@@ -109,7 +109,7 @@
     });
 }
 
-/********* insertData *********/
+/********* second method-> insertData *********/
 //- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
 //           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
 //    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:sectionIndex];

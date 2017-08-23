@@ -30,12 +30,6 @@ typedef void (^TYCoreDataRecordBlock)(NSManagedObjectContext *context);
 
 - (instancetype)init NS_UNAVAILABLE;
 
-
-/**
- 异步线程执行block
- */
-+ (void)performAsyncQueueBlock:(void (^)())block;
-
 /**
  创建coreData数据库
 
@@ -47,7 +41,7 @@ typedef void (^TYCoreDataRecordBlock)(NSManagedObjectContext *context);
 /**
  后台执行数据操作
  */
-- (void)performBackgroundBlockAndWait:(TYCoreDataRecordBlock)block;
+- (void)performAsyncMainContextBlock:(TYCoreDataRecordBlock)block;
 
 
 /**

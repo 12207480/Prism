@@ -16,25 +16,14 @@ static NSString * const ManagedObjectModelExtension = @"momd";
 
 @property (nonatomic, strong) NSManagedObjectContext *masterContext;
 @property (nonatomic, strong) NSManagedObjectContext *mainContext;
-@property (nonatomic, strong) NSManagedObjectContext *backgroundContext;
 
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
-
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, strong) NSURL *persistentStoreURL;
 
 @end
 
 @implementation TYCoreDataRecord
-
-dispatch_queue_t ty_coredata_record_queue() {
-    static dispatch_queue_t ty_coredata_record_queue;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        ty_coredata_record_queue = dispatch_queue_create("com.YeBlueColor.TYCoreDataRecord", DISPATCH_QUEUE_CONCURRENT);
-    });
-    return ty_coredata_record_queue;
-}
 
 - (instancetype)initWithResourceName:(NSString *)resourceName {
     if (self = [super init]) {
@@ -98,9 +87,6 @@ dispatch_queue_t ty_coredata_record_queue() {
     
     _mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     _mainContext.parentContext = _masterContext;
-    
-    _backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    _backgroundContext.parentContext = _mainContext;
 }
 
 - (void)configurePersistentStore {
@@ -108,7 +94,6 @@ dispatch_queue_t ty_coredata_record_queue() {
     if ([[NSFileManager defaultManager] fileExistsAtPath:[self.persistentStoreURL path]]) {
         NSError *storeMetadataError = nil;
         NSDictionary *storeMetadata = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType URL:self.persistentStoreURL error:&storeMetadataError];
-        
         // If store is incompatible with the managed object model, remove the store file
         if (storeMetadataError || ![self.managedObjectModel isConfiguration:nil compatibleWithStoreMetadata:storeMetadata]) {
             storeWasRecreated = YES;
@@ -141,25 +126,21 @@ dispatch_queue_t ty_coredata_record_queue() {
     }
 }
 
-- (void)performBackgroundBlockAndWait:(TYCoreDataRecordBlock)block {
+- (void)performAsyncMainContextBlock:(TYCoreDataRecordBlock)block {
     if (block) {
-        NSManagedObjectContext *backgroundContext = _backgroundContext;
-        [backgroundContext performBlockAndWait:^{
-            block(backgroundContext);
-            [self saveContext:backgroundContext];
+        NSManagedObjectContext *mainContext = _mainContext;
+        [mainContext performBlock:^{
+            block(mainContext);
+            [self saveContext:mainContext];
         }];
     }
 }
 
 - (void)performMainContextBlock:(TYCoreDataRecordBlock)block {
     if (block) {
-        block(self.mainContext);
+        block(_mainContext);
         [self saveMainContext];
     }
-}
-
-+ (void)performAsyncQueueBlock:(void (^)())block {
-    dispatch_async(ty_coredata_record_queue(), block);
 }
 
 - (void)dealloc {

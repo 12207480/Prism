@@ -58,7 +58,7 @@
         [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
         NSString *dateString = [dateFormatter stringFromDate:_recordDate] ;
         _recordId = @(_recordDate.timeIntervalSince1970);
-        [_record performBackgroundBlockAndWait:^(NSManagedObjectContext *context) {
+        [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
             TYLogDateRecord *logRecord = [NSEntityDescription insertNewObjectForEntityForName:@"TYLogDateRecord" inManagedObjectContext:context];
             logRecord.date = dateString;
             logRecord.id = _recordId;
@@ -79,7 +79,7 @@
 #pragma mark - private
 
 - (void)addRecordLogMsgs:(NSArray<TYLogMessage*> *)logMsgs {
-    [_record performBackgroundBlockAndWait:^(NSManagedObjectContext *context) {
+    [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
         for (TYLogMessage* message in logMsgs) {
             TYLogMsgRecord *logMsg = [NSEntityDescription insertNewObjectForEntityForName:@"TYLogMsgRecord" inManagedObjectContext:context];
             logMsg.name = message.name;
@@ -97,11 +97,10 @@
 
 - (void)logMonitor:(id<TYLogMonitor>)LogMonitor didReceivedLogMsgs:(NSArray<TYLogMessage*> *)logMsgs
 {
-    [TYCoreDataRecord performAsyncQueueBlock:^{
-        [self addLogRecordIfNeed];
-        
-        [self addRecordLogMsgs:logMsgs];
-    }];
+    [self addLogRecordIfNeed];
+    
+    [self addRecordLogMsgs:logMsgs];
+
 }
 
 @end
@@ -110,26 +109,24 @@
 @implementation TYLogCoreDataRecord (CoreData)
 
 - (void)deleteRecordDates:(NSArray *)recordDates {
-    [TYCoreDataRecord performAsyncQueueBlock:^{
-        NSMutableArray *recordIds = [NSMutableArray array];
+    NSMutableArray *recordIds = [NSMutableArray array];
+    for (TYLogDateRecord *record in recordDates) {
+        [recordIds addObject:record.id];
+    }
+    
+    [_record performMainContextBlock:^(NSManagedObjectContext *context) {
         for (TYLogDateRecord *record in recordDates) {
-            [recordIds addObject:record.id];
+            if ([record.id isEqualToNumber:_recordId]) {
+                _recordId = nil;
+            }
+            [context deleteObject:record];
         }
-        
-        [_record performMainContextBlock:^(NSManagedObjectContext *context) {
-            for (TYLogDateRecord *record in recordDates) {
-                if ([record.id isEqualToNumber:_recordId]) {
-                    _recordId = nil;
-                }
-                [context deleteObject:record];
-            }
-        }];
-        
-        [_record performBackgroundBlockAndWait:^(NSManagedObjectContext *context) {
-            for (NSNumber *id in recordIds) {
-                [self deleteRecordDatasWithId:id context:context];
-            }
-        }];
+    }];
+    
+    [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
+        for (NSNumber *id in recordIds) {
+            [self deleteRecordDatasWithId:id context:context];
+        }
     }];
 }
 
@@ -156,11 +153,9 @@
 }
 
 - (void)fetchAsynDateRecordResultsComplete:(void(^)(NSArray *results))complete {
-    [TYCoreDataRecord performAsyncQueueBlock:^{
-        [_record performMainContextBlock:^(NSManagedObjectContext *context) {
-            NSArray *results = [self fetchRecordDateResultsWithContext:context];
-            complete(results);
-        }];
+    [_record performMainContextBlock:^(NSManagedObjectContext *context) {
+        NSArray *results = [self fetchRecordDateResultsWithContext:context];
+        complete(results);
     }];
 }
 

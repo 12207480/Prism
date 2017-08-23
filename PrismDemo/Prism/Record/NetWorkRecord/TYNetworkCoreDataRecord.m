@@ -72,7 +72,7 @@
         _recordId = @(_recordDate.timeIntervalSince1970);
         NSString *dateString = [_dateFormatter stringFromDate:_recordDate] ;
         
-        [_record performBackgroundBlockAndWait:^(NSManagedObjectContext *context) {
+        [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
             TYNetworkDateRecord *record = [NSEntityDescription insertNewObjectForEntityForName:@"TYNetworkDateRecord" inManagedObjectContext:context];
             record.date = dateString;
             record.id = _recordId;
@@ -93,7 +93,7 @@
         [responseAllHeaderFields appendFormat:@"%@: %@\n",key,obj];
     }];
     
-    [_record performBackgroundBlockAndWait:^(NSManagedObjectContext *context) {
+    [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
         TYNetworkInfoRecord *networkRecord = [NSEntityDescription insertNewObjectForEntityForName:@"TYNetworkInfoRecord" inManagedObjectContext:context];
         networkRecord.id = _recordId;
         networkRecord.time = @(networkInfo.time);
@@ -115,11 +115,9 @@
 #pragma mark - TYNetworkCoreDataRecord
 
 - (void)netWorkMonitor:(TYNetWorkMonitor *)monitor didCatchNetWorkInfo:(TYNetWorkInfo *)networkInfo {
-    [TYCoreDataRecord performAsyncQueueBlock:^{
-        [self addNetworkDateRecordIfNeed];
-        
-        [self addNetworkRecordWithInfo:networkInfo];
-    }];
+    [self addNetworkDateRecordIfNeed];
+    
+    [self addNetworkRecordWithInfo:networkInfo];
 }
 
 @end
@@ -127,27 +125,24 @@
 @implementation TYNetworkCoreDataRecord (CoreData)
 
 - (void)deleteRecordDates:(NSArray *)recordDates {
-    [TYCoreDataRecord performAsyncQueueBlock:^{
-        NSMutableArray *recordIds = [NSMutableArray array];
+    NSMutableArray *recordIds = [NSMutableArray array];
+    for (TYNetworkDateRecord *record in recordDates) {
+        [recordIds addObject:record.id];
+    }
+    
+    [_record performMainContextBlock:^(NSManagedObjectContext *context) {
         for (TYNetworkDateRecord *record in recordDates) {
-            [recordIds addObject:record.id];
+            if ([_recordId isEqualToNumber: record.id]) {
+                _recordId = nil;
+            }
+            [context deleteObject:record];
         }
-        
-        [_record performMainContextBlock:^(NSManagedObjectContext *context) {
-            for (TYNetworkDateRecord *record in recordDates) {
-                if ([_recordId isEqualToNumber: record.id]) {
-                    _recordId = nil;
-                }
-                [context deleteObject:record];
-            }
-        }];
-        
-        [_record performBackgroundBlockAndWait:^(NSManagedObjectContext *context) {
-            for (NSNumber *id in recordIds) {
-                [self deleteRecordDatasWithId:id context:context];
-            }
-        }];
-        
+    }];
+    
+    [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
+        for (NSNumber *id in recordIds) {
+            [self deleteRecordDatasWithId:id context:context];
+        }
     }];
 }
 
@@ -174,11 +169,9 @@
 }
 
 - (void)fetchAsynDateRecordResultsComplete:(void(^)(NSArray *results))complete {
-    [TYCoreDataRecord performAsyncQueueBlock:^{
-        [_record performMainContextBlock:^(NSManagedObjectContext *context) {
-            NSArray *results = [self fetchRecordDateResultsWithContext:context];
-            complete(results);
-        }];
+    [_record performMainContextBlock:^(NSManagedObjectContext *context) {
+        NSArray *results = [self fetchRecordDateResultsWithContext:context];
+        complete(results);
     }];
 }
 

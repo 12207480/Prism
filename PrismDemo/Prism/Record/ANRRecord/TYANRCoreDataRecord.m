@@ -72,7 +72,7 @@
         _recordId = @(_recordDate.timeIntervalSince1970);
         NSString *dateString = [_dateFormatter stringFromDate:_recordDate] ;
         
-        [_record performBackgroundBlockAndWait:^(NSManagedObjectContext *context) {
+        [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
             TYANRDateRecord *ANRRecord = [NSEntityDescription insertNewObjectForEntityForName:@"TYANRDateRecord" inManagedObjectContext:context];
             ANRRecord.date = dateString;
             ANRRecord.id = _recordId;
@@ -82,7 +82,7 @@
 
 - (void)addANRRecordWithInfo:(TYANRLogInfo *)ANRInfo {
     NSString *date = [_dateFormatter stringFromDate:ANRInfo.date];
-    [_record performBackgroundBlockAndWait:^(NSManagedObjectContext *context) {
+    [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
         TYANRInfoRecord *ANRRecord = [NSEntityDescription insertNewObjectForEntityForName:@"TYANRInfoRecord" inManagedObjectContext:context];
         ANRRecord.date = date;
         ANRRecord.time = @(ANRInfo.time);
@@ -95,11 +95,9 @@
 #pragma mark - TYANRMonitorDelegate
 
 - (void)ANRMonitor:(id<TYANRMonitor>)ANRMonitor didRecievedANRTimeOutInfo:(TYANRLogInfo *)ANRLogInfo {
-    [TYCoreDataRecord performAsyncQueueBlock:^{
-        [self addANRDateRecordIfNeed];
-        
-        [self addANRRecordWithInfo:ANRLogInfo];
-    }];
+    [self addANRDateRecordIfNeed];
+    
+    [self addANRRecordWithInfo:ANRLogInfo];
     
 #ifdef DEBUG
     NSLog(@"\nANR LOG-->:\n%@",ANRLogInfo.content);
@@ -111,27 +109,24 @@
 @implementation TYANRCoreDataRecord (CoreData)
 
 - (void)deleteRecordDates:(NSArray *)recordDates {
-    [TYCoreDataRecord performAsyncQueueBlock:^{
-        NSMutableArray *recordIds = [NSMutableArray array];
+    NSMutableArray *recordIds = [NSMutableArray array];
+    for (TYANRDateRecord *record in recordDates) {
+        [recordIds addObject:record.id];
+    }
+    
+    [_record performMainContextBlock:^(NSManagedObjectContext *context) {
         for (TYANRDateRecord *record in recordDates) {
-            [recordIds addObject:record.id];
+            if ([_recordId isEqualToNumber: record.id]) {
+                _recordId = nil;
+            }
+            [context deleteObject:record];
         }
-        
-        [_record performMainContextBlock:^(NSManagedObjectContext *context) {
-            for (TYANRDateRecord *record in recordDates) {
-                if ([_recordId isEqualToNumber: record.id]) {
-                    _recordId = nil;
-                }
-                [context deleteObject:record];
-            }
-        }];
-        
-        [_record performBackgroundBlockAndWait:^(NSManagedObjectContext *context) {
-            for (NSNumber *id in recordIds) {
-                [self deleteRecordDatasWithId:id context:context];
-            }
-        }];
-
+    }];
+    
+    [_record performAsyncMainContextBlock:^(NSManagedObjectContext *context) {
+        for (NSNumber *id in recordIds) {
+            [self deleteRecordDatasWithId:id context:context];
+        }
     }];
 }
 
@@ -158,11 +153,9 @@
 }
 
 - (void)fetchAsynDateRecordResultsComplete:(void(^)(NSArray *results))complete {
-    [TYCoreDataRecord performAsyncQueueBlock:^{
-        [_record performMainContextBlock:^(NSManagedObjectContext *context) {
-            NSArray *results = [self fetchRecordDateResultsWithContext:context];
-            complete(results);
-        }];
+    [_record performMainContextBlock:^(NSManagedObjectContext *context) {
+        NSArray *results = [self fetchRecordDateResultsWithContext:context];
+        complete(results);
     }];
 }
 

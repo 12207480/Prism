@@ -40,6 +40,10 @@
     tableView.backgroundColor = [UIColor colorWithRed:253/255. green:246/255. blue:227/255. alpha:1];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.tableFooterView = [[UIView alloc] init];
+    if ([tableView respondsToSelector:@selector(setEstimatedRowHeight:)]) {
+        tableView.estimatedRowHeight = 36;
+        tableView.rowHeight = UITableViewAutomaticDimension;
+    }
     [self.view addSubview:tableView];
     _tableView = tableView;
 }

@@ -19,7 +19,7 @@
 #endif
         return 0;
     }
-    return [[directory objectForKey:NSFileSystemSize] longLongValue];
+    return [[directory objectForKey:NSFileSystemSize] unsignedLongLongValue];
 }
 
 + (unsigned long long) getDiskFreeSize {
@@ -31,7 +31,7 @@
 #endif
         return 0;
     }
-    return [[directory objectForKey:NSFileSystemFreeSize] longLongValue];
+    return [[directory objectForKey:NSFileSystemFreeSize] unsignedLongLongValue];
 }
 
 + (unsigned long long)fileSizeAtPath:(NSString *)filePath
@@ -51,7 +51,7 @@
     }
     NSEnumerator *filesEnumerator = [[fileManager subpathsAtPath:folderPath] objectEnumerator];
     NSString *fileName;
-    long long folerSize = 0;
+    unsigned long long folerSize = 0;
     while ((fileName = [filesEnumerator nextObject]) != nil) {
         NSString *filePath = [folderPath stringByAppendingPathComponent:fileName];
         folerSize += [self fileSizeAtPath:filePath];

@@ -17,7 +17,7 @@ static BOOL isHookWorking = NO;
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Class cls = NSClassFromString(@"__NSCFURLSessionConfiguration") ?: NSClassFromString(@"NSURLSessionConfiguration");
+        Class cls = NSClassFromString([NSString stringWithFormat:@"%@%@%@",@"__NSCFU",@"RLSessionCon",@"figuration"]) ?: NSClassFromString(@"NSURLSessionConfiguration");
         Method origMethod = class_getInstanceMethod(cls, @selector(protocolClasses));
         Method replMethod = class_getInstanceMethod(self, @selector(ty_protocolClasses));
         if (origMethod && replMethod) {

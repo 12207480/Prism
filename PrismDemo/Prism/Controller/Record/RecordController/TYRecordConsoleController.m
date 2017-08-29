@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     if (!_cellId) {
         _cellId = @"TYRecordConsoleCell";
     }
@@ -56,7 +57,9 @@
 - (void)reloadData {
     [_tableView reloadData];
     if (_needScrollToBottom && _scrollToBottom) {
-        [self scrollsToBottomAnimated:NO];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self scrollsToBottomAnimated:NO];
+        });
     }
 }
 
@@ -96,10 +99,10 @@
 
 - (void)scrollsToBottomAnimated:(BOOL)animated
 {
-    CGFloat offset = self.tableView.contentSize.height - self.tableView.bounds.size.height;
-    if (offset+64 > 0)
+    CGFloat offset = _tableView.contentSize.height - _tableView.bounds.size.height;
+    if (offset+_tableView.contentInset.top > 0)
     {
-        [self.tableView setContentOffset:CGPointMake(0, offset) animated:animated];
+        [_tableView setContentOffset:CGPointMake(0, offset) animated:animated];
     }
 }
 

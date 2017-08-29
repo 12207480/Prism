@@ -106,7 +106,7 @@
     if (self.tableView.indexPathsForSelectedRows.count == 0) {
         self.navigationItem.rightBarButtonItem = self.cancleItem;
     }else {
-        self.deleteItem.title = [NSString stringWithFormat:@"删除%ld",self.tableView.indexPathsForSelectedRows.count];
+        self.deleteItem.title = [NSString stringWithFormat:@"删除%d",(int)self.tableView.indexPathsForSelectedRows.count];
         self.navigationItem.rightBarButtonItem = self.deleteItem;
     }
 }

@@ -41,7 +41,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"row %ld",indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"row %ld",(long)indexPath.row];
     if (indexPath.row != 0 && indexPath.row % 21 == 0) {
         usleep(2000*1000);
     }
@@ -58,15 +58,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

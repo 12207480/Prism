@@ -42,7 +42,7 @@
 
 - (void)addCrashMonitor {
     _crashMonitor = [[TYCrashMonitor alloc]init];
-    _crashMonitor.delegate = self;
+    [_crashMonitor addDelegate:self];
 }
 
 #pragma mark - public

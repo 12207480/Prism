@@ -10,12 +10,22 @@
 #import "TYURLProtocol.h"
 
 @interface TYNetWorkMonitor ()<TYURLProtocolDelegate>
-
+@property (nonatomic, strong) NSHashTable *hashTable;
 @property (nonatomic, assign) BOOL isRunning;
 
 @end
 
 @implementation TYNetWorkMonitor
+
++ (TYNetWorkMonitor *)sharedInstance {
+    static TYNetWorkMonitor *sharedInstance = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -23,6 +33,27 @@
     }
     return self;
 }
+
+- (NSHashTable *)hashTable {
+    if (!_hashTable) {
+        _hashTable = [NSHashTable weakObjectsHashTable];
+    }
+    return _hashTable;
+}
+
+- (void)addDelegate:(id<TYNetWorkMonitorDelegate>)delegate {
+    [self.hashTable addObject:delegate];
+}
+
+- (void)removeDelegate:(id<TYNetWorkMonitorDelegate>)delegate {
+    [self.hashTable removeObject:delegate];
+}
+
+- (void)removeAllDelegates {
+    [self.hashTable removeAllObjects];
+}
+
+#pragma mark - public
 
 - (void)start {
     if (_isRunning) {
@@ -43,7 +74,9 @@
 #pragma mark - TYURLProtocolDelegate
 
 - (void)URLProtocolDidCatchURLRequest:(TYURLProtocol *)URLProtocol {
-    
+    if (!_hashTable) {
+        return;
+    }
     TYNetWorkInfo *info = [[TYNetWorkInfo alloc]init];
     info.startDate = URLProtocol.startDate;
     info.endDate = URLProtocol.endDate;
@@ -53,13 +86,16 @@
     info.response = (NSHTTPURLResponse *)URLProtocol.ty_response;
     info.data = [URLProtocol.ty_data copy];
     
-    if ([_delegate respondsToSelector:@selector(netWorkMonitor:didCatchNetWorkInfo:)]) {
-        [_delegate netWorkMonitor:self didCatchNetWorkInfo:info];
+    for (id<TYNetWorkMonitorDelegate> delegate in _hashTable) {
+        if ([delegate respondsToSelector:@selector(netWorkMonitor:didCatchNetWorkInfo:)]) {
+            [delegate netWorkMonitor:self didCatchNetWorkInfo:info];
+        }
     }
 }
 
 - (void)dealloc {
     [self stop];
+    [self removeAllDelegates];
 }
 
 @end

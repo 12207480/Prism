@@ -11,6 +11,8 @@
 
 @interface TYGCDANRMonitor ()
 
+@property (nonatomic, strong) NSHashTable *hashTable;
+
 @property (nonatomic, assign) BOOL isRunning;
 
 @property (nonatomic, strong) dispatch_semaphore_t semaphore;
@@ -27,6 +29,15 @@
 
 @implementation TYGCDANRMonitor
 
++ (TYGCDANRMonitor *)sharedInstance {
+    static TYGCDANRMonitor *sharedInstance = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
 - (instancetype)initWithTimeOutInterval:(NSTimeInterval)timeOutInterval timeOutCount:(NSInteger)timeOutCount {
     if (self = [super init]) {
         _timeOutInterval = timeOutInterval;
@@ -41,6 +52,27 @@
     }
     return self;
 }
+
+- (NSHashTable *)hashTable {
+    if (!_hashTable) {
+        _hashTable = [NSHashTable weakObjectsHashTable];
+    }
+    return _hashTable;
+}
+
+- (void)addDelegate:(id<TYANRMonitorDelegate>)delegate {
+    [self.hashTable addObject:delegate];
+}
+
+- (void)removeDelegate:(id<TYANRMonitorDelegate>)delegate {
+    [self.hashTable removeObject:delegate];
+}
+
+- (void)removeAllDelegates {
+    [self.hashTable removeAllObjects];
+}
+
+#pragma mark - public
 
 - (void)start {
     if (_isRunning) {
@@ -91,17 +123,23 @@
 #pragma mark - handle timeout
 
 - (void)handleANRTimeOut {
+    if (!_hashTable) {
+        return;
+    }
     TYANRLogInfo *logInfo = [[TYANRLogInfo alloc]init];
     logInfo.content = [__BSBacktraceLogger bs_backtraceOfAllThread];
     logInfo.date = [NSDate date];
     logInfo.time = [logInfo.date timeIntervalSince1970];
-    if ([_delegate respondsToSelector:@selector(ANRMonitor:didRecievedANRTimeOutInfo:)]) {
-        [_delegate ANRMonitor:self didRecievedANRTimeOutInfo:logInfo];
+    for (id<TYANRMonitorDelegate> delegate in _hashTable) {
+        if ([delegate respondsToSelector:@selector(ANRMonitor:didRecievedANRTimeOutInfo:)]) {
+            [delegate ANRMonitor:self didRecievedANRTimeOutInfo:logInfo];
+        }
     }
 }
 
 - (void)dealloc {
     [self stop];
+    [self removeAllDelegates];
 }
 
 @end

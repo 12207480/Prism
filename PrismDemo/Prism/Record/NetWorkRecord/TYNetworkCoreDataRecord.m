@@ -52,7 +52,7 @@
 
 - (void)addNetworkMonitor {
     _networkMonitor = [[TYNetWorkMonitor alloc]init];
-    _networkMonitor.delegate = self;
+    [_networkMonitor addDelegate:self];
 }
 
 #pragma mark - public

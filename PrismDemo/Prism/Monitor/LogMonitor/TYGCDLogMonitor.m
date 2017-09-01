@@ -9,6 +9,7 @@
 #import "TYGCDLogMonitor.h"
 
 @interface TYGCDLogMonitor ()
+@property (nonatomic, strong) NSHashTable *hashTable;
 @property (nonatomic, strong) NSString *bundleName;
 @property (nonatomic, assign) int originalStdHandle;//original file descriptor
 @property (nonatomic, strong) dispatch_source_t source_t;//file descriptor mointor
@@ -17,6 +18,15 @@
 @end
 
 @implementation TYGCDLogMonitor
+
++ (TYGCDLogMonitor *)sharedInstance {
+    static TYGCDLogMonitor *sharedInstance = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
 
 - (instancetype)init
 {
@@ -27,6 +37,25 @@
         _queue = dispatch_queue_create("com.YeBlueColor.GCDLogMonitor", NULL);
     }
     return self;
+}
+
+- (NSHashTable *)hashTable {
+    if (!_hashTable) {
+        _hashTable = [NSHashTable weakObjectsHashTable];
+    }
+    return _hashTable;
+}
+
+- (void)addDelegate:(id<TYLogMonitorDelegate>)delegate {
+    [self.hashTable addObject:delegate];
+}
+
+- (void)removeDelegate:(id<TYLogMonitorDelegate>)delegate {
+    [self.hashTable removeObject:delegate];
+}
+
+- (void)removeAllDelegates {
+    [self.hashTable removeAllObjects];
 }
 
 #pragma mark - public
@@ -76,7 +105,7 @@
         @autoreleasepool {
             char buffer[1024 * 10] = {0};
             ssize_t size = read(fd, (void*)buffer, (size_t)(sizeof(buffer)));
-            if (size == 0) {
+            if (size == 0 || !_hashTable) {
                 return ;
             }
             
@@ -89,8 +118,10 @@
             printf("%s\n",[logString UTF8String]);
             
             TYLogMessage *logMsg = [self parseLogString:logString];
-            if (logMsg && [weakSelf.delegate respondsToSelector:@selector(logMonitor:didReceivedLogMsgs:)]) {
-                [weakSelf.delegate logMonitor:self didReceivedLogMsgs:(NSArray<TYLogMessage*> *)@[logMsg]];
+            for (id<TYLogMonitorDelegate> delegate in weakSelf.hashTable) {
+                if (logMsg && [delegate respondsToSelector:@selector(logMonitor:didReceivedLogMsgs:)]) {
+                    [delegate logMonitor:self didReceivedLogMsgs:(NSArray<TYLogMessage*> *)@[logMsg]];
+                }
             }
         }
     });
@@ -122,6 +153,7 @@
 - (void)dealloc
 {
     [self stop];
+    [self removeAllDelegates];
 }
 
 @end

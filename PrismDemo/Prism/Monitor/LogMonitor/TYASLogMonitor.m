@@ -11,7 +11,7 @@
 #import "TYGCDTimer.h"
 
 @interface TYASLogMonitor ()
-
+@property (nonatomic, strong) NSHashTable *hashTable;
 @property (nonatomic, assign) NSInteger lastMsgID;
 @property (nonatomic, strong) TYGCDTimer *timer;
 @property (nonatomic, strong) dispatch_queue_t queue;
@@ -20,6 +20,15 @@
 @end
 
 @implementation TYASLogMonitor
+
++ (TYASLogMonitor *)sharedInstance {
+    static TYASLogMonitor *sharedInstance = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
 
 - (instancetype)init
 {
@@ -31,6 +40,25 @@
         _queue = dispatch_queue_create("com.YeBlueColor.ASLogMonitor", NULL);
     }
     return self;
+}
+
+- (NSHashTable *)hashTable {
+    if (!_hashTable) {
+        _hashTable = [NSHashTable weakObjectsHashTable];
+    }
+    return _hashTable;
+}
+
+- (void)addDelegate:(id<TYLogMonitorDelegate>)delegate {
+    [self.hashTable addObject:delegate];
+}
+
+- (void)removeDelegate:(id<TYLogMonitorDelegate>)delegate {
+    [self.hashTable removeObject:delegate];
+}
+
+- (void)removeAllDelegates {
+    [self.hashTable removeAllObjects];
 }
 
 #pragma mark - public
@@ -58,9 +86,14 @@
 
 - (void)pullASLogMessages
 {
+    if (!_hashTable) {
+        return;
+    }
     NSArray<TYLogMessage*> *logMsgs = [self queryAslMsgs];
-    if (logMsgs.count > 0 && [_delegate respondsToSelector:@selector(logMonitor:didReceivedLogMsgs:)]) {
-        [_delegate logMonitor:self didReceivedLogMsgs:logMsgs];
+    for (id<TYLogMonitorDelegate> delegate in _hashTable) {
+        if (logMsgs.count > 0 && [delegate respondsToSelector:@selector(logMonitor:didReceivedLogMsgs:)]) {
+            [delegate logMonitor:self didReceivedLogMsgs:logMsgs];
+        }
     }
 }
 
@@ -141,6 +174,7 @@
 - (void)dealloc {
     [_timer invalidate];
     _queue = nil;
+    [self removeAllDelegates];
 }
 
 @end

@@ -23,7 +23,9 @@
 
 @property (nonatomic, assign, readonly) BOOL isRunning;
 
-@property (nonatomic, weak) id<TYANRMonitorDelegate> delegate;
+- (void)addDelegate:(id<TYANRMonitorDelegate>)delegate;
+
+- (void)removeDelegate:(id<TYANRMonitorDelegate>)delegate;
 
 - (void)start;
 

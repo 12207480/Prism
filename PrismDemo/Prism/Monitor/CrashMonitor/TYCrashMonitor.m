@@ -13,6 +13,8 @@ static BOOL isSetUncaughtHandler = NO;
 
 @interface TYCrashMonitor ()
 
+@property (nonatomic, strong) NSHashTable *hashTable;
+
 @property (nonatomic, assign) BOOL isRunning;
 
 @end
@@ -28,11 +30,39 @@ static BOOL isSetUncaughtHandler = NO;
     return hashTable;
 }
 
++ (TYCrashMonitor *)sharedInstance {
+    static TYCrashMonitor *sharedInstance = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         _isRunning = NO;
     }
     return self;
+}
+
+- (NSHashTable *)hashTable {
+    if (!_hashTable) {
+        _hashTable = [NSHashTable weakObjectsHashTable];
+    }
+    return _hashTable;
+}
+
+- (void)addDelegate:(id<TYCrashMonitorDelegate>)delegate {
+    [self.hashTable addObject:delegate];
+}
+
+- (void)removeDelegate:(id<TYCrashMonitorDelegate>)delegate {
+    [self.hashTable removeObject:delegate];
+}
+
+- (void)removeAllDelegates {
+    [self.hashTable removeAllObjects];
 }
 
 #pragma mark - public
@@ -101,14 +131,14 @@ void ty_stopUncaughtCrashHandlerIfNeed() {
 
 void ty_hashTableAddObject(TYCrashMonitor *object) {
     if (object) {
-        [[TYCrashMonitor hashTable] addObject:(object)];
+        [[TYCrashMonitor hashTable] addObject:object];
         ty_startUncaughtCrashHandlerIfNeed();
     }
 }
 
 void ty_hashTableRemoveObject(TYCrashMonitor *object) {
     if (object) {
-        [[TYCrashMonitor hashTable] removeObject:(object)];
+        [[TYCrashMonitor hashTable] removeObject:object];
         ty_stopUncaughtCrashHandlerIfNeed();
     }
 }
@@ -169,32 +199,38 @@ void uncaughtSignalHandler(int signal) {
 }
 
 - (void)uncaughtExceptionHandler:(NSException *)exception {
-    if (_delegate && [_delegate respondsToSelector:@selector(crashMonitor:didCatchExceptionInfo:)]) {
-        TYCrashInfo *info = [[TYCrashInfo alloc]init];
-        info.date = [NSDate date];
-        info.signal = kTYCrashException;
-        info.exception = exception;
-        info.name = exception.name;
-        info.reason = exception.reason;
-        info.callBackTrace = [exception.callStackSymbols componentsJoinedByString:@"\n"];
-        [_delegate crashMonitor:self didCatchExceptionInfo:info];
+    if (!_hashTable) {
+        return;
+    }
+    TYCrashInfo *info = [[TYCrashInfo alloc]init];
+    info.date = [NSDate date];
+    info.signal = kTYCrashException;
+    info.exception = exception;
+    info.name = exception.name;
+    info.reason = exception.reason;
+    info.callBackTrace = [exception.callStackSymbols componentsJoinedByString:@"\n"];
+    for (id<TYCrashMonitorDelegate>delegate in _hashTable) {
+        [delegate crashMonitor:self didCatchExceptionInfo:info];
     }
 }
 
 - (void)uncaughtSignalHandler:(int)signal {
-    if (_delegate && [_delegate respondsToSelector:@selector(crashMonitor:didCatchExceptionInfo:)]) {
-        NSMutableArray *callStackSymbols = [[NSThread callStackSymbols] mutableCopy];
-        if (callStackSymbols.count > 2) {
-            [callStackSymbols removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 3)]];
-        }
-        TYCrashInfo *info = [[TYCrashInfo alloc]init];
-        info.date = [NSDate date];
-        info.signal = signal;
-        info.name = [self signalName:signal];
-        info.reason = [NSString stringWithFormat:@"Signal %@ crash.",
-                       [self signalName:signal]];
-        info.callBackTrace = [callStackSymbols componentsJoinedByString:@"\n"];
-        [_delegate crashMonitor:self didCatchExceptionInfo:info];
+    if (!_hashTable) {
+        return;
+    }
+    NSMutableArray *callStackSymbols = [[NSThread callStackSymbols] mutableCopy];
+    if (callStackSymbols.count > 2) {
+        [callStackSymbols removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 3)]];
+    }
+    TYCrashInfo *info = [[TYCrashInfo alloc]init];
+    info.date = [NSDate date];
+    info.signal = signal;
+    info.name = [self signalName:signal];
+    info.reason = [NSString stringWithFormat:@"Signal %@ crash.",
+                   [self signalName:signal]];
+    info.callBackTrace = [callStackSymbols componentsJoinedByString:@"\n"];
+    for (id<TYCrashMonitorDelegate>delegate in _hashTable) {
+        [delegate crashMonitor:self didCatchExceptionInfo:info];
     }
     [self stop];
     kill(getpid(), SIGKILL);
@@ -202,6 +238,7 @@ void uncaughtSignalHandler(int signal) {
 
 - (void)dealloc {
     [self stop];
+    [self removeAllDelegates];
 }
 
 //#include <libkern/OSAtomic.h>

@@ -20,7 +20,11 @@
 
 @property (nonatomic, assign, readonly) BOOL isRunning;
 
-@property (nonatomic, weak) id<TYNetWorkMonitorDelegate> delegate;
++ (TYNetWorkMonitor *)sharedInstance;
+
+- (void)addDelegate:(id<TYNetWorkMonitorDelegate>)delegate;
+
+- (void)removeDelegate:(id<TYNetWorkMonitorDelegate>)delegate;
 
 - (void)start;
 

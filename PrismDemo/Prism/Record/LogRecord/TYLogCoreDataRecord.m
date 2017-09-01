@@ -45,7 +45,7 @@
 
 - (void)addLogMonitor {
     _logMonitor = [[TYGCDLogMonitor alloc]init];
-    _logMonitor.delegate = self;
+    [_logMonitor addDelegate:self];
 }
 
 - (void)addLogRecord {

@@ -22,11 +22,15 @@
 
 @interface TYCrashMonitor : NSObject
 
-@property (nonatomic, weak) id<TYCrashMonitorDelegate> delegate;
-
 @property (nonatomic, assign, readonly) BOOL isRunning;
 
 @property (nonatomic, strong, readonly) NSString *appInfo;
+
++ (TYCrashMonitor *)sharedInstance;
+
+- (void)addDelegate:(id<TYCrashMonitorDelegate>)delegate;
+
+- (void)removeDelegate:(id<TYCrashMonitorDelegate>)delegate;
 
 - (void)start;
 

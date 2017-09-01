@@ -21,9 +21,11 @@
 
 @protocol TYLogMonitor <NSObject>
 
-@property (nonatomic, weak) id<TYLogMonitorDelegate> delegate;
-
 @property (nonatomic, assign, readonly) BOOL isRunning; //  监控正在运行
+
+- (void)addDelegate:(id<TYLogMonitorDelegate>)delegate;
+
+- (void)removeDelegate:(id<TYLogMonitorDelegate>)delegate;
 
 - (void)start;
 

@@ -52,7 +52,7 @@
 
 - (void)addANRMonitor {
     _ANRMonitor = [[TYGCDANRMonitor alloc]init];
-    _ANRMonitor.delegate = self;
+    [_ANRMonitor addDelegate:self];
 }
 
 #pragma mark - public

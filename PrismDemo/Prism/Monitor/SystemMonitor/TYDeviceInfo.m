@@ -83,8 +83,8 @@
     if ([deviceString isEqualToString:@"AppleTV3,2"])      return @"Apple TV 3";
     if ([deviceString isEqualToString:@"AppleTV5,3"])      return @"Apple TV 4";
     
-    if ([deviceString isEqualToString:@"i386"])         return @"i386Simulator";
-    if ([deviceString isEqualToString:@"x86_64"])       return @"x86_64Simulator";
+    if ([deviceString isEqualToString:@"i386"])         return @"i386 Simulator";
+    if ([deviceString isEqualToString:@"x86_64"])       return @"x86_64 Simulator";
 
     return deviceString;
 }
@@ -103,9 +103,16 @@
     return systemInfo;
 }
 
-+ (NSDate *)getSystemStartUptime {
++ (NSDate *)getSystemStartUpTime {
     NSTimeInterval time = [[NSProcessInfo processInfo] systemUptime];
     return [[NSDate alloc] initWithTimeIntervalSinceNow:(0 - time)];
+}
+
++ (NSString *)getDeviceModel {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *deviceModel = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+    return deviceModel;
 }
 
 @end

@@ -13,6 +13,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self addAccessoryView];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
@@ -20,6 +21,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self addAccessoryView];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
@@ -27,6 +29,10 @@
 - (void)setItem:(TYPrismSettingItem *)item {
     _item = item;
     self.textLabel.text = item.title;
+    if (!item.accessoryViewHandle) {
+        self.accessoryView = nil;
+        self.accessoryType = item.accessoryType;
+    }
 }
 
 - (void)addAccessoryView {

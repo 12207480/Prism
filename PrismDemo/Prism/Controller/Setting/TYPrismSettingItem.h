@@ -20,6 +20,8 @@ typedef void(^AccessoryHandle)(TYPrismSettingItem *item, UIView *accessoryView);
 
 @property (nonatomic, assign) CGFloat cellHeight;
 
+@property (nonatomic, assign) UITableViewCellAccessoryType accessoryType;
+
 @property (nonatomic, copy) ClickedHandle selectCellHandle;
 
 @property (nonatomic, copy) AccessoryHandle accessoryViewHandle;

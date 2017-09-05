@@ -10,6 +10,7 @@
 #import "TYPrismSettingCell.h"
 #import "TYPrismSettingItem.h"
 #import "TYPrismRecord.h"
+#import "TYSystemAboutController.h"
 
 @interface TYPrismSettingController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -44,6 +45,15 @@ static NSString *cellId = @"TYPrismSettingCell";
 }
 
 - (void)addItems {
+    TYPrismSettingItem *aboutItem = [[TYPrismSettingItem alloc]init];
+    aboutItem.title = @"About";
+    aboutItem.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    __weak typeof(self) weakSelf = self;
+    [aboutItem setSelectCellHandle:^(TYPrismSettingItem *item){
+        TYSystemAboutController *vc = [[TYSystemAboutController alloc]init];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
+    }];
+    
     TYPrismSettingItem *logItem = [[TYPrismSettingItem alloc]init];
     logItem.title = @"Log Moniotor Switch";
     [logItem setAccessoryViewHandle:^(TYPrismSettingItem *item, UIView *accessoryView){
@@ -54,6 +64,7 @@ static NSString *cellId = @"TYPrismSettingCell";
             [[TYLogCoreDataRecord sharedInstance] start];
         }
     }];
+    
     TYPrismSettingItem *ANRItem = [[TYPrismSettingItem alloc]init];
     ANRItem.title = @"ANR Moniotor Switch";
     [ANRItem setAccessoryViewHandle:^(TYPrismSettingItem *item, UIView *accessoryView){
@@ -64,6 +75,7 @@ static NSString *cellId = @"TYPrismSettingCell";
             [[TYANRCoreDataRecord sharedInstance] start];
         }
     }];
+    
     TYPrismSettingItem *crashItem = [[TYPrismSettingItem alloc]init];
     crashItem.title = @"Crash Moniotor Switch";
     [crashItem setAccessoryViewHandle:^(TYPrismSettingItem *item, UIView *accessoryView){
@@ -74,6 +86,7 @@ static NSString *cellId = @"TYPrismSettingCell";
             [[TYCrashCoreDataRecord sharedInstance] start];
         }
     }];
+    
     TYPrismSettingItem *networkItem = [[TYPrismSettingItem alloc]init];
     networkItem.title = @"Network Moniotor Switch";
     [networkItem setAccessoryViewHandle:^(TYPrismSettingItem *item, UIView *accessoryView){
@@ -85,7 +98,7 @@ static NSString *cellId = @"TYPrismSettingCell";
         }
     }];
     
-    _items = @[logItem,ANRItem,crashItem,networkItem];
+    _items = @[aboutItem,logItem,ANRItem,crashItem,networkItem];
 }
 
 - (void)viewWillLayoutSubviews {

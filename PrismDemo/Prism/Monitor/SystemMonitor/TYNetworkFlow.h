@@ -24,8 +24,8 @@ typedef struct {
 // ip address
 + (NSString *)getWifiIPAddress;
 + (NSString *)getCellularIPAddress;
++ (NSDictionary *)getIPAddresses;
 
 + (NSString *)getIPAddress:(BOOL)preferIPv4;
-+ (NSDictionary *)getIPAddresses;
 
 @end

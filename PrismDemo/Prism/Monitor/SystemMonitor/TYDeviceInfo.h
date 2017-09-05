@@ -12,11 +12,13 @@
 
 + (NSString *)getDeviceName;
 
++ (NSString *)getDeviceModel;
+
 + (NSString *)getSystemVersion;
 
 + (NSString *)getSystemName;
 
-+ (NSDate *)getSystemStartUptime;
++ (NSDate *)getSystemStartUpTime;
 
 + (struct utsname)getSystemInfo;
 

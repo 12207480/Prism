@@ -10,7 +10,22 @@
 
 #define kTYCrashException -1
 
-@class TYCrashInfo;
+@interface TYCrashInfo : NSObject
+
+@property (nonatomic, strong) NSDate *date;
+
+@property (nonatomic, strong) NSString *name;
+
+@property (nonatomic, strong) NSString *reason;
+
+@property (nonatomic, strong) NSException *exception;
+
+@property (nonatomic, assign) NSInteger signal; // -1 exception, other signal
+
+@property (nonatomic, strong) NSString *callBackTrace;
+
+@end
+
 @class TYCrashMonitor;
 @protocol TYCrashMonitorDelegate <NSObject>
 // main thread
@@ -35,21 +50,5 @@
 - (void)start;
 
 - (void)stop;
-
-@end
-
-@interface TYCrashInfo : NSObject
-
-@property (nonatomic, strong) NSDate *date;
-
-@property (nonatomic, strong) NSString *name;
-
-@property (nonatomic, strong) NSString *reason;
-
-@property (nonatomic, strong) NSException *exception;
-
-@property (nonatomic, assign) NSInteger signal; // -1 exception, other signal
-
-@property (nonatomic, strong) NSString *callBackTrace;
 
 @end

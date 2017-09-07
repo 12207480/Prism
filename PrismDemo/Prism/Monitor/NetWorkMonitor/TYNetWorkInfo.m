@@ -62,7 +62,7 @@
     }else if ([mimeType isEqualToString:@"application/xml"] || [mimeType isEqualToString:@"text/xml"]){
         NSString *xmlString = [[NSString alloc]initWithData:self.data encoding:NSUTF8StringEncoding];
         if (xmlString && xmlString.length>0) {
-            _responseData = xmlString;//example http://webservice.webxml.com.cn/webservices/qqOnlineWebService.asmx/qqCheckOnline?qqCode=2121
+            _responseData = xmlString;
         }
     }
 }
@@ -73,10 +73,8 @@
     id returnValue = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
     if(error) {
         NSLog(@"JSON Parsing Error: %@", error);
-        //https://github.com/coderyi/NetworkEye/issues/3
         return nil;
     }
-    //https://github.com/coderyi/NetworkEye/issues/1
     if (!returnValue || returnValue == [NSNull null]) {
         return nil;
     }

@@ -55,10 +55,7 @@
     _prismBtn = prismBtn;
 }
 
-- (void)setIsSelected:(BOOL)isSelected {
-    _isSelected = isSelected;
-    self.alpha = isSelected ? _openAlpha : _closeAlpha;
-}
+#pragma mark - getter setter
 
 - (UIWindow *)mainWindow
 {
@@ -68,6 +65,11 @@
     } else {
         return [app keyWindow];
     }
+}
+
+- (void)setIsSelected:(BOOL)isSelected {
+    _isSelected = isSelected;
+    self.alpha = isSelected ? _openAlpha : _closeAlpha;
 }
 
 #pragma mark - public
@@ -83,7 +85,9 @@
     }
     self.layer.cornerRadius = self.frame.size.width <= self.frame.size.height ? self.frame.size.width / 2.0 : self.frame.size.height / 2.0;
     self.layer.masksToBounds = YES;
-    [_prismBtn removeFromSuperview];
+    if (_prismBtn.superview) {
+        [_prismBtn removeFromSuperview];
+    }
     [self makeKeyAndVisible];
     [self addSubview:_prismBtn];
     [keyWindow makeKeyAndVisible];

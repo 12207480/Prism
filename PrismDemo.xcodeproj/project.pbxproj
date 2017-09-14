@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1F784F1F6A667D00F6A496 /* TYSystemMinitorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1F784E1F6A667D00F6A496 /* TYSystemMinitorController.xib */; };
+		2B2A48421F68C85800D7E613 /* TYSandBoxFileListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A48411F68C85800D7E613 /* TYSandBoxFileListController.m */; };
+		2B2A48451F68CACB00D7E613 /* TYSandBoxFileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A48441F68CACB00D7E613 /* TYSandBoxFileItem.m */; };
+		2B2A48471F68D72B00D7E613 /* SandBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A48461F68D72B00D7E613 /* SandBox.bundle */; };
 		2B3A72841F44234200EAFAC1 /* TYSystemMinitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A72821F44234200EAFAC1 /* TYSystemMinitorController.m */; };
-		2B3A72851F44234200EAFAC1 /* TYSystemMinitorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A72831F44234200EAFAC1 /* TYSystemMinitorController.xib */; };
 		2B3A728B1F44452300EAFAC1 /* TYDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A728A1F44452300EAFAC1 /* TYDeviceInfo.m */; };
 		2B3A728F1F452D6900EAFAC1 /* TYPrismSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A728E1F452D6900EAFAC1 /* TYPrismSettingController.m */; };
 		2B5C2D171F3419DC0073E344 /* TYFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2D161F3419DC0073E344 /* TYFPSMonitor.m */; };
@@ -89,10 +92,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2B1F785D1F6A6AE300F6A496 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2B1F784E1F6A667D00F6A496 /* TYSystemMinitorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYSystemMinitorController.xib; sourceTree = "<group>"; };
+		2B2A48401F68C85800D7E613 /* TYSandBoxFileListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSandBoxFileListController.h; sourceTree = "<group>"; };
+		2B2A48411F68C85800D7E613 /* TYSandBoxFileListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSandBoxFileListController.m; sourceTree = "<group>"; };
+		2B2A48431F68CACB00D7E613 /* TYSandBoxFileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSandBoxFileItem.h; sourceTree = "<group>"; };
+		2B2A48441F68CACB00D7E613 /* TYSandBoxFileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSandBoxFileItem.m; sourceTree = "<group>"; };
+		2B2A48461F68D72B00D7E613 /* SandBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SandBox.bundle; sourceTree = "<group>"; };
 		2B3A72811F44234200EAFAC1 /* TYSystemMinitorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSystemMinitorController.h; sourceTree = "<group>"; };
 		2B3A72821F44234200EAFAC1 /* TYSystemMinitorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSystemMinitorController.m; sourceTree = "<group>"; };
-		2B3A72831F44234200EAFAC1 /* TYSystemMinitorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYSystemMinitorController.xib; sourceTree = "<group>"; };
 		2B3A72891F44452300EAFAC1 /* TYDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDeviceInfo.h; sourceTree = "<group>"; };
 		2B3A728A1F44452300EAFAC1 /* TYDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDeviceInfo.m; sourceTree = "<group>"; };
 		2B3A728D1F452D6900EAFAC1 /* TYPrismSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPrismSettingController.h; sourceTree = "<group>"; };
@@ -250,6 +271,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B2A483F1F68C7D800D7E613 /* SandBox */ = {
+			isa = PBXGroup;
+			children = (
+				2B2A48461F68D72B00D7E613 /* SandBox.bundle */,
+				2B2A48401F68C85800D7E613 /* TYSandBoxFileListController.h */,
+				2B2A48411F68C85800D7E613 /* TYSandBoxFileListController.m */,
+				2B2A48431F68CACB00D7E613 /* TYSandBoxFileItem.h */,
+				2B2A48441F68CACB00D7E613 /* TYSandBoxFileItem.m */,
+			);
+			path = SandBox;
+			sourceTree = "<group>";
+		};
 		2B3A728C1F452D4A00EAFAC1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +328,7 @@
 			children = (
 				2B3A72811F44234200EAFAC1 /* TYSystemMinitorController.h */,
 				2B3A72821F44234200EAFAC1 /* TYSystemMinitorController.m */,
-				2B3A72831F44234200EAFAC1 /* TYSystemMinitorController.xib */,
+				2B1F784E1F6A667D00F6A496 /* TYSystemMinitorController.xib */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -373,6 +406,7 @@
 				2BB53C681EB0A00200D8E5B5 /* Record */,
 				2B8FAD311EB1E11E00B2CF70 /* System */,
 				2B3A728C1F452D4A00EAFAC1 /* Setting */,
+				2B2A483F1F68C7D800D7E613 /* SandBox */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -630,6 +664,7 @@
 				2BB53B821EB09AD600D8E5B5 /* Sources */,
 				2BB53B831EB09AD600D8E5B5 /* Frameworks */,
 				2BB53B841EB09AD600D8E5B5 /* Resources */,
+				2B1F785D1F6A6AE300F6A496 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -704,9 +739,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2A48471F68D72B00D7E613 /* SandBox.bundle in Resources */,
 				2BB53B991EB09AD600D8E5B5 /* LaunchScreen.storyboard in Resources */,
+				2B1F784F1F6A667D00F6A496 /* TYSystemMinitorController.xib in Resources */,
 				2BB53B961EB09AD600D8E5B5 /* Assets.xcassets in Resources */,
-				2B3A72851F44234200EAFAC1 /* TYSystemMinitorController.xib in Resources */,
 				2BB53B941EB09AD600D8E5B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -749,6 +785,7 @@
 				2B6B7BB51F3D9EA60041620C /* TYNetworkFlow.m in Sources */,
 				2BB53C991EB0A00200D8E5B5 /* TYRecordConsoleController.m in Sources */,
 				2B3A72841F44234200EAFAC1 /* TYSystemMinitorController.m in Sources */,
+				2B2A48421F68C85800D7E613 /* TYSandBoxFileListController.m in Sources */,
 				2B7164201F468A7B00B967B7 /* TYPrismSettingItem.m in Sources */,
 				2BB53C371EB09D9C00D8E5B5 /* TYRunLoopANRMonitor.m in Sources */,
 				2BB53C3A1EB09D9C00D8E5B5 /* TYGCDLogMonitor.m in Sources */,
@@ -763,6 +800,7 @@
 				2BB53C4D1EB09D9C00D8E5B5 /* TYLogMsgRecord.m in Sources */,
 				2BB53B911EB09AD600D8E5B5 /* ViewController.m in Sources */,
 				2B3A728F1F452D6900EAFAC1 /* TYPrismSettingController.m in Sources */,
+				2B2A48451F68CACB00D7E613 /* TYSandBoxFileItem.m in Sources */,
 				2BB53C391EB09D9C00D8E5B5 /* TYASLogMonitor.m in Sources */,
 				2BB53C481EB09D9C00D8E5B5 /* TYCrashInfoRecord.m in Sources */,
 				2BB53C9E1EB0A05600D8E5B5 /* TYPrismRecordController.m in Sources */,

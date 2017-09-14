@@ -26,6 +26,14 @@
 
 @implementation TYSystemMinitorController
 
+- (instancetype)init {
+    NSBundle *boundle = [NSBundle bundleForClass:[TYSystemMinitorController class]];
+    if (self = [self initWithNibName:@"TYSystemMinitorController" bundle:boundle]) {
+        
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

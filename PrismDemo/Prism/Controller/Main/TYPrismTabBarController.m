@@ -10,6 +10,7 @@
 #import "TYPrismNavigationController.h"
 #import "TYPrismRecordController.h"
 #import "TYSystemMinitorController.h"
+#import "TYSandBoxFileListController.h"
 #import "TYPrismSettingController.h"
 
 @interface TYPrismTabBarController ()
@@ -31,6 +32,8 @@
     
     [self addSystemMonitorController];
     
+    [self addSandBoxFileListController];
+    
     [self addSettingController];
 }
 
@@ -48,6 +51,15 @@
     TYPrismNavigationController *nav = [[TYPrismNavigationController alloc] initWithRootViewController:monitorVC];
     monitorVC.title = @"Monitor";
     monitorVC.tabBarItem.title = @"Monitor";
+    
+    [self addChildViewController:nav];
+}
+
+- (void)addSandBoxFileListController {
+    TYSandBoxFileListController *settingVC = [[TYSandBoxFileListController alloc]init];
+    TYPrismNavigationController *nav = [[TYPrismNavigationController alloc] initWithRootViewController:settingVC];
+    settingVC.title = @"SandBox";
+    settingVC.tabBarItem.title = @"SandBox";
     
     [self addChildViewController:nav];
 }

@@ -9,7 +9,6 @@
 #import "TYPrismManager.h"
 #import "TYPrismView.h"
 #import "TYPrismTabBarController.h"
-#import "TYFPSLabel.h"
 #import "TYPrismRecord.h"
 #import "TYSystemMonitor.h"
 

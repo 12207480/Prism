@@ -107,6 +107,7 @@
 
 /* Begin PBXFileReference section */
 		2B1F784E1F6A667D00F6A496 /* TYSystemMinitorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYSystemMinitorController.xib; sourceTree = "<group>"; };
+		2B1F7E0B1F6A826400F6A496 /* Prism.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prism.h; sourceTree = "<group>"; };
 		2B2A48401F68C85800D7E613 /* TYSandBoxFileListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSandBoxFileListController.h; sourceTree = "<group>"; };
 		2B2A48411F68C85800D7E613 /* TYSandBoxFileListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSandBoxFileListController.m; sourceTree = "<group>"; };
 		2B2A48431F68CACB00D7E613 /* TYSandBoxFileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSandBoxFileItem.h; sourceTree = "<group>"; };
@@ -395,6 +396,7 @@
 				2BB53BAF1EB09D9C00D8E5B5 /* Controller */,
 				2BB53C521EB09EC400D8E5B5 /* TYPrismManager.h */,
 				2BB53C531EB09EC400D8E5B5 /* TYPrismManager.m */,
+				2B1F7E0B1F6A826400F6A496 /* Prism.h */,
 			);
 			path = Prism;
 			sourceTree = "<group>";

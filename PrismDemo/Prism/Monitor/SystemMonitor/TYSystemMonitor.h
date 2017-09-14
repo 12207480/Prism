@@ -12,6 +12,7 @@
 #import "TYDiskUsage.h"
 #import "TYNetworkFlow.h"
 #import "TYDeviceInfo.h"
+#import "TYFPSLabel.h"
 
 @class TYSystemMonitor;
 @protocol TYSystemMonitorDelegate <NSObject>

@@ -107,12 +107,11 @@
 }
 
 + (NSURL *)bundleURL {
-    static dispatch_once_t onceToken;
     static NSURL *url = nil;
-    dispatch_once(&onceToken, ^{
+    if (!url) {
         url = [[NSBundle mainBundle] URLForResource:@"PrismLibResource"
-                                             withExtension:@"bundle"];
-    });
+                                      withExtension:@"bundle"];
+    }
     return url;
 }
 

@@ -287,10 +287,10 @@
 			children = (
 				2B1F80301F6B8CAB00F6A496 /* Controller */,
 				2B1F80751F6B8CAB00F6A496 /* Monitor */,
-				2B1F80AB1F6B8CAB00F6A496 /* Prism.h */,
 				2B1F80AC1F6B8CAB00F6A496 /* Record */,
 				2B1F80D41F6B8CAB00F6A496 /* TYPrismManager.h */,
 				2B1F80D51F6B8CAB00F6A496 /* TYPrismManager.m */,
+				2B1F80AB1F6B8CAB00F6A496 /* Prism.h */,
 			);
 			path = Prism;
 			sourceTree = "<group>";
@@ -327,7 +327,6 @@
 				2B1F80441F6B8CAB00F6A496 /* NetWorkController */,
 				2B1F804B1F6B8CAB00F6A496 /* PrismView */,
 				2B1F804E1F6B8CAB00F6A496 /* RecordController */,
-				2B1F80591F6B8CAB00F6A496 /* System */,
 				2B1F805A1F6B8CAB00F6A496 /* TYPrismRecordController.h */,
 				2B1F805B1F6B8CAB00F6A496 /* TYPrismRecordController.m */,
 			);
@@ -402,13 +401,6 @@
 				2B1F80581F6B8CAB00F6A496 /* TYRecordDateController.m */,
 			);
 			path = RecordController;
-			sourceTree = "<group>";
-		};
-		2B1F80591F6B8CAB00F6A496 /* System */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = System;
 			sourceTree = "<group>";
 		};
 		2B1F805C1F6B8CAB00F6A496 /* SandBox */ = {

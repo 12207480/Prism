@@ -27,8 +27,10 @@
 @implementation TYSystemMinitorController
 
 - (instancetype)init {
-    NSBundle *boundle = [NSBundle bundleForClass:[TYSystemMinitorController class]];
-    if (self = [self initWithNibName:@"TYSystemMinitorController" bundle:boundle]) {
+    NSURL *bundleUrl = [[NSBundle mainBundle] URLForResource:@"PrismLibResource"
+                                         withExtension:@"bundle"];
+    NSBundle *bundle = bundleUrl ? [NSBundle bundleWithURL:bundleUrl]:[NSBundle mainBundle];;
+    if (self = [self initWithNibName:@"TYSystemMinitorController" bundle:bundle]) {
         
     }
     return self;

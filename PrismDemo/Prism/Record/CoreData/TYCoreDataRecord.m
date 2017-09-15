@@ -43,8 +43,11 @@ static NSString * const ManagedObjectModelExtension = @"momd";
     if (_managedObjectModel) {
         return _managedObjectModel;
     }
-    NSURL *url = [[NSBundle mainBundle] URLForResource:_resourceName withExtension:ManagedObjectModelExtension];
-    _managedObjectModel= [[NSManagedObjectModel alloc]initWithContentsOfURL:url];
+    NSURL *bundleUrl = [[NSBundle mainBundle] URLForResource:@"PrismLibResource"
+                                               withExtension:@"bundle"];
+    NSBundle *bundle = bundleUrl ? [NSBundle bundleWithURL:bundleUrl]:[NSBundle mainBundle];
+    NSURL *url = [bundle URLForResource:_resourceName withExtension:ManagedObjectModelExtension];
+    _managedObjectModel= [[NSManagedObjectModel alloc] initWithContentsOfURL:url];
     return _managedObjectModel;
 }
 

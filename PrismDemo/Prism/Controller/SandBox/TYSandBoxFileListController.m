@@ -80,7 +80,7 @@
 #pragma mark - private
 
 - (UIImage *)imageWithFileType:(TYSandBoxFileType)fileType {
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"SandBox" ofType:@"bundle"];
+    NSURL *url = [[self class] bundleURL];
     NSString *imageName= nil;
     switch (fileType) {
         case TYSandBoxFileTypeDir:
@@ -103,7 +103,17 @@
             imageName = @"file.png";
             break;
     }
-    return [UIImage imageWithContentsOfFile:[path stringByAppendingPathComponent:imageName]];
+    return url ? [UIImage imageNamed:[NSString stringWithFormat:@"PrismLibResource.bundle/%@",imageName]] : [UIImage imageNamed:imageName];
+}
+
++ (NSURL *)bundleURL {
+    static dispatch_once_t onceToken;
+    static NSURL *url = nil;
+    dispatch_once(&onceToken, ^{
+        url = [[NSBundle mainBundle] URLForResource:@"PrismLibResource"
+                                             withExtension:@"bundle"];
+    });
+    return url;
 }
 
 + (NSDateFormatter *)dateFormatter {

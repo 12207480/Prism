@@ -4,40 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PrismDemo.xcscheme</key>
+		<key>PrismLib.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<key>PrismLibResource.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2B1F78541F6A6AE300F6A496</key>
+		<key>2B1F7E451F6A890500F6A496</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B1F7FD11F6B7BA000F6A496</key>
+		<key>2B1F7FC71F6B7B7400F6A496</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B1F7FDB1F6B7BB500F6A496</key>
+		<key>2B1F7FE51F6B7BF400F6A496</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B1F800B1F6B802F00F6A496</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2BB53B851EB09AD600D8E5B5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2BB53B9E1EB09AD700D8E5B5</key>
+		<key>2B1F80151F6B805200F6A496</key>
 		<dict>
 			<key>primary</key>
 			<true/>

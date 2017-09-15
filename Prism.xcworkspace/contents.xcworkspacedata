@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:PrismDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PrismLib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PrismLibDemo.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -105,9 +105,9 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
      CFStringRef	(*copyDescription)(const void *info);
      } CFRunLoopObserverContext;
      */
-     CFRunLoopObserverContext context = {0,(__bridge void*)self,NULL,NULL};
+     CFRunLoopObserverContext context = {0,(__bridge void*)self,&CFRetain,&CFRelease};
     
-    _observer = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, &runLoopObserverCallBack, &context);
+    _observer = CFRunLoopObserverCreate(CFAllocatorGetDefault(), kCFRunLoopAllActivities, true, 0, &runLoopObserverCallBack, &context);
     CFRunLoopAddObserver(CFRunLoopGetMain(), _observer, kCFRunLoopCommonModes);
     
     dispatch_async(_queue, ^{

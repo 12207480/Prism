@@ -153,7 +153,9 @@
         TYSandBoxFileListController *listVC = [[TYSandBoxFileListController alloc]init];
         listVC.filePath = fileItem.filePath;
         [self.navigationController pushViewController:listVC animated:YES];
-        return;
+    }else {
+        UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:@[[NSURL fileURLWithPath:fileItem.filePath]] applicationActivities:nil];
+        [self presentViewController:activityVC animated:YES completion:nil];
     }
 }
 

@@ -13,7 +13,6 @@
 @property (nonatomic, assign, readonly) BOOL isRunning;
 
 @property (nonatomic, assign, readonly) NSTimeInterval timeOutInterval; // 超时时间  default 0.2s
-
 @property (nonatomic, assign, readonly) NSInteger timeOutCount; // 超时次数 default 5次
 
 + (TYRunLoopANRMonitor *)sharedInstance;

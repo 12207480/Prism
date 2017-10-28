@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSHTTPURLResponse *response;
 @property (nonatomic, strong) NSData *data;
 
+// date
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
 

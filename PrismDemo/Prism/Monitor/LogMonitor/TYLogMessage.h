@@ -18,7 +18,7 @@
 
 @property (nonatomic, assign) NSInteger level; // log等级
 
-@property (nonatomic, assign) NSTimeInterval time;
+@property (nonatomic, assign) NSTimeInterval time;// 时间
 
 @property (nonatomic, strong) NSString *message;
 

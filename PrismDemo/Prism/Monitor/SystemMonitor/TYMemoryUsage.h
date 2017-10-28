@@ -14,26 +14,25 @@ typedef struct {
     unsigned long long total_size;
 }ty_system_memory_usage;
 
-// memory usge is different to xcode
 @interface TYMemoryUsage : NSObject
 
 /**
- get app used memory .byte
+ 获取APP内存使用量 .byte
  */
 + (unsigned long long)getAppMemoryUsage;
 
 /**
- get system used memory .byte
+ 获取系统内存使用量 .byte
  */
 + (unsigned long long)getSystemMemoryUsage;
 
 /**
- get system available memory .byte
+ 获取系统可用内存量 .byte
  */
 + (unsigned long long)getSystemMemoryAvailable;
 
 /**
- get system total memory .byte
+ 获取系统内存总量 .byte
  */
 + (unsigned long long)getSystemTotalMemory;
 

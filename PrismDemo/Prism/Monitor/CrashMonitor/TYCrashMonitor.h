@@ -7,24 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#define kTYCrashException -1
-
-@interface TYCrashInfo : NSObject
-
-@property (nonatomic, strong) NSDate *date;
-
-@property (nonatomic, strong) NSString *name;
-
-@property (nonatomic, strong) NSString *reason;
-
-@property (nonatomic, strong) NSException *exception;
-
-@property (nonatomic, assign) NSInteger signal; // -1 exception, other signal
-
-@property (nonatomic, strong) NSString *callBackTrace;
-
-@end
+#import "TYCrashInfo.h"
 
 @class TYCrashMonitor;
 @protocol TYCrashMonitorDelegate <NSObject>
@@ -39,13 +22,13 @@
 
 @property (nonatomic, assign, readonly) BOOL isRunning;
 
-@property (nonatomic, strong, readonly) NSString *appInfo;
-
 + (TYCrashMonitor *)sharedInstance;
 
 - (void)addDelegate:(id<TYCrashMonitorDelegate>)delegate;
 
 - (void)removeDelegate:(id<TYCrashMonitorDelegate>)delegate;
+
+- (NSString *)getAppInfo;
 
 - (void)start;
 

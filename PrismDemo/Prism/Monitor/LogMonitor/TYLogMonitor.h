@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TYDLog.h"
 #import "TYLogMessage.h"
 
 @protocol TYLogMonitor;

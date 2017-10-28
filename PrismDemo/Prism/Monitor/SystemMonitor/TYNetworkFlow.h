@@ -19,9 +19,13 @@ typedef struct {
 
 @interface TYNetworkFlow : NSObject
 
+
+/**
+ 获取系统网络流量
+ */
 +(ty_flow_IOBytes)getFlowIOBytes;
 
-// ip address
+// 获取ip地址
 + (NSString *)getWifiIPAddress;
 + (NSString *)getCellularIPAddress;
 + (NSDictionary *)getIPAddresses;

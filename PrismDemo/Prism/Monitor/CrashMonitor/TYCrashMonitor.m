@@ -90,7 +90,6 @@ static BOOL isSetUncaughtHandler = NO;
                          [UIDevice currentDevice].model,
                          [UIDevice currentDevice].systemName,
                          [UIDevice currentDevice].systemVersion];
-    NSLog(@"Crash!!!! %@", appInfo);
     return appInfo;
 }
 
@@ -257,9 +256,5 @@ void uncaughtSignalHandler(int signal) {
 //    free(strs);
 //    return backtrace;
 //}
-
-@end
-
-@implementation TYCrashInfo
 
 @end

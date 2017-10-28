@@ -54,7 +54,12 @@ typedef struct ty_app_cpu_usage {
  */
 + (NSString *)getCPUArchitectureString;
 
+
+/**
+ app CPU使用信息
+ */
 + (ty_app_cpu_usage)getAppCPUUsageStruct;
+
 
 + (ty_system_cpu_usage)getSystemCPUUsageStruct;
 

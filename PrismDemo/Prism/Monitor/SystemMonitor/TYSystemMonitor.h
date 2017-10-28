@@ -27,10 +27,6 @@
 
 // Memory Usage
 
-
-/**
- get app used memory .byte
- */
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateAppMemoryUsage:(unsigned long long)app_memory_usage;
 - (void)systemMonitor:(TYSystemMonitor *)systemMonitor didUpdateSystemMemoryUsage:(ty_system_memory_usage)system_memory_usage;
 

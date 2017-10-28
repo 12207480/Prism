@@ -85,6 +85,7 @@
 		2BB53B991EB09AD600D8E5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB53B971EB09AD600D8E5B5 /* LaunchScreen.storyboard */; };
 		2BB53BA41EB09AD700D8E5B5 /* PrismDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53BA31EB09AD700D8E5B5 /* PrismDemoTests.m */; };
 		2BB53CA91EB1D43100D8E5B5 /* TestANRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53CA81EB1D43100D8E5B5 /* TestANRViewController.m */; };
+		B0CE7CCA1FA47E4B00D83669 /* TYCrashInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CE7CC91FA47E4B00D83669 /* TYCrashInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +263,8 @@
 		2BB53BA51EB09AD700D8E5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BB53CA71EB1D43100D8E5B5 /* TestANRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestANRViewController.h; sourceTree = "<group>"; };
 		2BB53CA81EB1D43100D8E5B5 /* TestANRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestANRViewController.m; sourceTree = "<group>"; };
+		B0CE7CC81FA47E4B00D83669 /* TYCrashInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCrashInfo.h; sourceTree = "<group>"; };
+		B0CE7CC91FA47E4B00D83669 /* TYCrashInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCrashInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +488,8 @@
 		2B1F80801F6B8CAB00F6A496 /* CrashMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				B0CE7CC81FA47E4B00D83669 /* TYCrashInfo.h */,
+				B0CE7CC91FA47E4B00D83669 /* TYCrashInfo.m */,
 				2B1F80811F6B8CAB00F6A496 /* TYCrashMonitor.h */,
 				2B1F80821F6B8CAB00F6A496 /* TYCrashMonitor.m */,
 			);
@@ -496,13 +501,13 @@
 			children = (
 				2B1F80841F6B8CAB00F6A496 /* TYASLogMonitor.h */,
 				2B1F80851F6B8CAB00F6A496 /* TYASLogMonitor.m */,
-				2B1F80861F6B8CAB00F6A496 /* TYDLog.h */,
 				2B1F80871F6B8CAB00F6A496 /* TYGCDLogMonitor.h */,
 				2B1F80881F6B8CAB00F6A496 /* TYGCDLogMonitor.m */,
 				2B1F80891F6B8CAB00F6A496 /* TYGCDTimer.h */,
 				2B1F808A1F6B8CAB00F6A496 /* TYGCDTimer.m */,
 				2B1F808B1F6B8CAB00F6A496 /* TYLogMessage.h */,
 				2B1F808C1F6B8CAB00F6A496 /* TYLogMessage.m */,
+				2B1F80861F6B8CAB00F6A496 /* TYDLog.h */,
 				2B1F808D1F6B8CAB00F6A496 /* TYLogMonitor.h */,
 			);
 			path = LogMonitor;
@@ -853,6 +858,7 @@
 				2BB53B8E1EB09AD600D8E5B5 /* AppDelegate.m in Sources */,
 				2B1F80FF1F6B8CAB00F6A496 /* TYNetWorkInfo.m in Sources */,
 				2B1F80FD1F6B8CAB00F6A496 /* TYLogMessage.m in Sources */,
+				B0CE7CCA1FA47E4B00D83669 /* TYCrashInfo.m in Sources */,
 				2B1F80EE1F6B8CAB00F6A496 /* TYSandBoxFileListController.m in Sources */,
 				2B1F81091F6B8CAB00F6A496 /* TYSystemMonitor.m in Sources */,
 				2BB53B8B1EB09AD600D8E5B5 /* main.m in Sources */,

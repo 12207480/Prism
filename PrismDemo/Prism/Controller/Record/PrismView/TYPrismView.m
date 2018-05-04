@@ -77,9 +77,7 @@
 - (void)show {
     self.alpha = _isSelected ? _openAlpha : _closeAlpha;
     UIWindow *keyWindow = [self mainWindow];
-    if (CGRectEqualToRect(self.frame, keyWindow.frame)) {
-        self.frame = CGRectMake(kScreenWidth-kPrismViewWidth-kHorizenMargin, kScreenHeight-kPrismViewHeight*5, kPrismViewWidth, kPrismViewHeight);
-    }
+    self.frame = CGRectMake(kScreenWidth-kPrismViewWidth-kHorizenMargin, kScreenHeight-kPrismViewHeight*5, kPrismViewWidth, kPrismViewHeight);
     if (!self.rootViewController) {
         self.rootViewController = [[UIViewController alloc]init];
     }

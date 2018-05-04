@@ -289,7 +289,7 @@ bool __bs_dladdr(const uintptr_t address, Dl_info* const info) {
     const struct mach_header* header = _dyld_get_image_header(idx);
     const uintptr_t imageVMAddrSlide = (uintptr_t)_dyld_get_image_vmaddr_slide(idx);
     const uintptr_t addressWithSlide = address - imageVMAddrSlide;
-    const uintptr_t segmentBase = bs_segmentBaseOfImageIndex(idx) + imageVMAddrSlide;
+    const uintptr_t segmentBase = __bs_segmentBaseOfImageIndex(idx) + imageVMAddrSlide;
     if(segmentBase == 0) {
         return false;
     }
@@ -390,7 +390,7 @@ uint32_t __bs_imageIndexContainingAddress(const uintptr_t address) {
     return UINT_MAX;
 }
 
-uintptr_t bs_segmentBaseOfImageIndex(const uint32_t idx) {
+uintptr_t __bs_segmentBaseOfImageIndex(const uint32_t idx) {
     const struct mach_header* header = _dyld_get_image_header(idx);
     
     // Look for a segment command and return the file image address.

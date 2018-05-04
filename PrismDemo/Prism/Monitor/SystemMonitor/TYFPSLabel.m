@@ -100,11 +100,11 @@
 
 + (UIWindow *)mainWindow {
     UIApplication *app = [UIApplication sharedApplication];
-    if ([app.delegate respondsToSelector:@selector(window)]) {
-        return [app.delegate window];
-    } else {
-        return [app keyWindow];
+    UIWindow *window = [app keyWindow];
+    if (!window) {
+        window = app.windows.firstObject;
     }
+    return window;
 }
 
 #pragma mark - TYFPSMonitorDelegate

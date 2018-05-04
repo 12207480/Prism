@@ -60,7 +60,11 @@
 - (UIWindow *)mainWindow
 {
     UIApplication *app = [UIApplication sharedApplication];
-    return [app keyWindow];
+    UIWindow *window = [app keyWindow];
+    if (!window) {
+        window = app.windows.firstObject;
+    }
+    return window;
 }
 
 - (void)setIsSelected:(BOOL)isSelected {
